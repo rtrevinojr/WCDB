@@ -1,5 +1,32 @@
 World crises:
 
+*** Unique Crises ***
+South China Martime Conflicts
+China Democracy
+Arizona Wild Fires
+
+*** Non-Unique Crises ***
+Unrest in Egypt politics
+
+*** Unique People ***
+John Kerry
+Mohammed Morsi
+CY Leung
+
+*** Non-Unique people ***
+Barrack Obama
+
+*** Unique Orgs ***
+ASEAN
+Pink Ribbon Red Ribbon
+Prescott Fire Dept.
+
+*** Non-Unique Orgs ***
+
+
+
+TODO: Please categorize the following
+
 * Arab Spring
 * North Korea
 * I couldn't think of many but what might help is to go to reddit/r/worldnews, sort by top, and we might find several crises that haven't been taken`  
