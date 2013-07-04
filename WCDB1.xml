@@ -1,0 +1,68 @@
+<?xml version="1.0" ?>
+
+<!-- XML file for our events, people, and organizations. -->
+
+<WorldCrises>
+	<Crises team="Cache Money">
+		<CrisisID></CrisisID>
+		<CrisisID></CrisisID>
+		<CrisisID></CrisisID>
+		<CrisisID></CrisisID>
+	</Crises>
+	
+	<Crisis ID="" Name="">
+		<People>
+			<PersonID>PER_OBAMA</PersonID>
+		</People>
+		<Organizations>
+			<OrgID></OrgID>
+		</Organizations>
+		<PlaceID></PlaceID>
+		<Year></Year>
+	</Crisis>
+	<Crisis ID="" Name="">
+		<People>
+			<PersonID></PersonID>
+		</People>
+		<Organizations>
+			<OrgID></OrgID>
+		</Organizations>
+		<PlaceID></PlaceID>
+		<Year></Year>
+	</Crisis>
+	<Crisis ID="" Name="">
+		<People>
+			<PersonID></PersonID>
+		</People>
+		<Organizations>
+			<OrgID></OrgID>
+		</Organizations>
+		<PlaceID></PlaceID>
+		<Year></Year>
+	</Crisis>
+	<Crisis ID="" Name="">
+		<People>
+			<PersonID></PersonID>
+		</People>
+		<Organizations>
+			<OrgID></OrgID>
+		</Organizations>
+		<PlaceID></PlaceID>
+		<Year></Year>
+	</Crisis>
+
+	<Person ID="PER_OBAMA" Name="">
+		<Born></Born>
+		<Office></Office>
+	</Person>
+
+	<Place ID="" Name=""></Place>
+
+	<Organization ID="" Name="">
+		<OrgHeadID></OrgHeadID>
+	</Organization>
+
+	
+
+
+</WorldCrises>

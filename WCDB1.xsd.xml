@@ -1,0 +1,103 @@
+<?xml version="1.0" ?>
+
+<!-- XSD for World Crises database -->
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="WorldCrises">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="Crises" type="CrisesType" minOccurs="1" maxOccurs="1" />
+                <xsd:element name="Crisis" type="CrisisType" minOccurs="1" maxOccurs="unbounded" />
+                <xsd:element name="Person" type="PersonType" minOccurs="1" maxOccurs="unbounded" />
+                <xsd:element name="Place" type="PlaceType" minOccurs="1" maxOccurs="unbounded" />
+                <xsd:element name="Organization" type="OrgType" minOccurs="1" maxOccurs="unbounded" />
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    
+    <xsd:complexType name="CrisesType">
+        <xsd:sequence>
+            <xsd:element name="CrisisID" type="CrisisIDType" minOccurs="1" maxOccurs="unbounded" />
+        </xsd:sequence>
+        <xsd:attribute name="Team" type="xsd:token" />
+    </xsd:complexType>
+    
+    <xsd:complexType name="CrisisType">
+        <xsd:sequence>
+            <xsd:element name="People" minOccurs="1" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="PersonID" type="PersonIDType" minOccurs="1" maxOccurs="unbounded" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="Organizations" minOccurs="1" maxOccurs="1">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="OrgID" type="OrgIDType" minOccurs="1" maxOccurs="unbounded" />
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name="PlaceID" type="PlaceIDType"  minOccurs="1" maxOccurs="1" />
+            <xsd:element name="Year" type="xsd:gYear" minOccurs="1" maxOccurs="1" />
+            <!-- More elements here -->
+        </xsd:sequence>
+        <xsd:attribute name="ID" type="CrisisIDType" use="required" />
+        <xsd:attribute name="Name" type="xsd:token" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="PersonType">
+        <xsd:sequence>
+            <xsd:element name="Born" type="xsd:gYear" minOccurs="0" maxOccurs="1" />
+            <xsd:element name="Office" type="xsd:token" minOccurs="0" maxOccurs="1" />
+            <!-- More elements here -->
+        </xsd:sequence>
+        <xsd:attribute name="ID" type="PersonIDType" use="required" />
+        <xsd:attribute name="Name" type="xsd:token" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="OrgType">
+        <xsd:sequence>
+            <xsd:element name="OrgHeadID" type="PersonIDType" minOccurs="0" maxOccurs="1" />
+            <!-- More elements here -->
+        </xsd:sequence>
+        <xsd:attribute name="ID" type="OrgIDType" use="required"/>
+        <xsd:attribute name="Name" type="xsd:token" use="required" />
+    </xsd:complexType>
+
+    <xsd:complexType name="PlaceType">
+        <!-- Add elements here -->
+        <xsd:attribute name="ID" type="PlaceIDType" use="required" />
+        <xsd:attribute name="Name" type="xsd:token" use="required" />
+    </xsd:complexType>
+    
+    <xsd:simpleType name="CrisisIDType">
+        <xsd:restriction base="IDType">
+            <xsd:pattern value="CRI_[A-Z]{6}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="PersonIDType">
+        <xsd:restriction base="IDType">
+            <xsd:pattern value="PER_[A-Z]{6}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="PlaceIDType">
+        <xsd:restriction base="IDType">
+            <xsd:pattern value="PLA_[A-Z]{6}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+    
+    <xsd:simpleType name="OrgIDType">
+        <xsd:restriction base="IDType">
+            <xsd:pattern value="ORG_[A-Z]{6}" />
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <xsd:simpleType name="IDType">
+        <xsd:restriction base="xsd:token">
+            <xsd:length value="10" />
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>
