@@ -42,6 +42,7 @@ Social Network Feeds:
 
 Organizations:
     a. International Monetary Fund
+    b. BNP Paribas
 
 People:
     a. Barrack Obama
