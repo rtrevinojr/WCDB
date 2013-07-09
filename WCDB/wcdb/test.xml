@@ -1,0 +1,18 @@
+<?xml version="1.0" ?>
+
+<!-- World Crises XML using schema (WorldCrises.xsd) -->
+
+<WorldCrises>
+    <!-- Example Person element -->
+    <Person ID="PER_MNSNGH" Name="Manmohan Singh">
+        <Crises>
+            <Crisis ID="CRI_NRINFL" />
+        </Crises>
+        <Organizations>
+            <Org ID="ORG_PMRLFD" />
+        </Organizations>
+        <Kind>Politician</Kind>
+        <Location>India</Location>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+    </Person>
+</WorldCrises>
