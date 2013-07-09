@@ -15,7 +15,9 @@ def index(request):
 	xml_etree2mods(tree)
 
 	peeps = People.objects.all()
-	c = Context({'c' : peeps[0].name,})
+	crises = Crises.objects.all()
+	orgs = Organizations.objects.all()
+	c = Context({'p' : peeps, 'c' : crises, 'o' : orgs, })
 
 	f.close()
 	return HttpResponse(t.render(c))
