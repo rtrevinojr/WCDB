@@ -4,7 +4,17 @@
 Hello world.
 </p>
 
-DB contents: {{c}}
+People contents: {% for x in p %}
+				{{ x.name }} <br/>
+			{% endfor %}
+
+Crises contents: {% for x in c %}
+				{{ x.name }} <br/>
+			{% endfor %}
+
+Orgs contents: {% for x in o %}
+				{{ x.name }} <br/>
+			{% endfor %}
 
 <button type="button" formaction="/v/filer4b/v38q001/taylor91/school/summer_2013/cs373/cs373-wcdb/WCDB/wcdb/wcdb_ie.py">Import</button>
 
