@@ -1,0 +1,38 @@
+Name: HIV-AIDS Epidemic
+
+Kind: Disease
+
+Location: global with an estimated 34 million cases as of 2010. Sub-Saharan 
+	Africa is the most impacted. 
+
+Date and Time: indefinite (ongoing)
+
+Human Impact: Incurrable life threatening disease that has seen an exponential
+	rate of increse in the number of cases since 1984.
+
+Economic Impact: reduces the availability of human capital. People with AIDS grow sick and cannot work.
+
+Resources Needed: N/A
+
+Ways To Help: Donate to organizations such as The Global Fund and UNAIDS (links below)
+
+Citations: http://www.rappler.com/move-ph/ispeak/33044-hiv-aids-epidemic-action
+           http://en.wikipedia.org/wiki/Economic_impact_of_HIV/AIDS#cite_note-Bell-et-al-2003-1
+
+External Links: http://www.unaids.org/en/AboutUNAIDS/default.asp
+		http://www.theglobalfund.org/en/
+	        http://pinkribbonredribbon.org/
+
+Images:
+
+Videos:
+
+Maps:
+
+Social Network Feeds:
+
+Organizations: United Nations
+	       World Health Org.
+	       Pink Ribbon Red Ribbon
+
+People:
