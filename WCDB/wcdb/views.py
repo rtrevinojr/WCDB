@@ -2,11 +2,22 @@
 from django.template import Context, loader
 from django.http import HttpResponse
 from wcdb.models import Crises, People, Organizations, List_Item
+from wcdb_ie import xml_reader, xml_etree2mods
+import xml.etree.ElementTree as ET
 
 def index(request):
-	crises = Crises.objects.all()
 	t = loader.get_template('wcdb/index.html')
-	c = Context({'Our Crises:' : crises,})
+
+	dummy = ET.ElementTree()
+	f = open('tester.txt', 'w')
+	tree = xml_reader("test.xml", f, dummy)
+	tree = tree.getroot()
+	xml_etree2mods(tree)
+
+	peeps = People.objects.all()
+	c = Context({'c' : peeps[0].name,})
+
+	f.close()
 	return HttpResponse(t.render(c))
 
 

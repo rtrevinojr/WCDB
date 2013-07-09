@@ -3,7 +3,7 @@
 import django
 from wcdb.models import Crises, Organizations, People, List_Item
 import xml.etree.ElementTree as ET
-from minixsv import pyxsval
+#from minixsv import pyxsval
 
 """
 Create an import/export facility from the XML into the Django models and back using ElementTree.
@@ -42,32 +42,32 @@ def xml_reader (xf, sf, et):
 	sf is an XML Schema file
 	returns an ElementTree
 	"""
-
+	
 	try:
 		f = open(xf, 'r')
 	except IOError as e:
-		pass
 		# handle without crashing
 		# maybe give the user a warning to 
 		# try again
+		sf.write("Fails in first try\n")
 		return False
+
 	"""
 	if (not xml_validate(xf, sf)):
-	pass
-	# handle still without crashing
-	# warn user that xml isn't valid
-	return False
-	"""
+		# handle still without crashing
+		# warn user that xml isn't valid
+		return False
+	"""	
 
 	try:
 		et = ET.parse(xf)
-	except:
+	except Exception as e:
 		# assuming syntax is not valid
 		# once again tell the user that 
 		# the import did not work
 		return False
-
-	return True
+	
+	return et
 
 def xml_etree2mods (et):
 	"""
@@ -97,5 +97,4 @@ def xml_etree2xml (et):
 
 
 
-xml_read("test.xml", "", tree)
-xml_etree2mods(tree)
+

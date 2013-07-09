@@ -1,7 +1,3 @@
-<?xml version="1.0" ?>
-
-<!-- World Crises XML using schema (WorldCrises.xsd) -->
-
 <WorldCrises>
     <!-- Example Person element -->
     <Person ID="PER_MNSNGH" Name="Manmohan Singh">
