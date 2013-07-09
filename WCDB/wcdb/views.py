@@ -1,10 +1,16 @@
 # Create your views here.
+from django.template import Context, loader
+from django.http import HttpResponse
+from wcdb.models import Crises, People, Organizations, List_Item
 
-from django.shortcuts import render_to_response
+def index(request):
+	crises = Crises.objects.all()
+	t = loader.get_template('wcdb/index.html')
+	c = Context({'Our Crises:' : crises,})
+	return HttpResponse(t.render(c))
 
-def static_one(request):
-    return render_to_response('static1.html');
 
+"""
 def static_two(request):
     return render_to_response('static2.html');
 
@@ -28,3 +34,4 @@ def static_eight(request):
 
 def static_nine(request):
     return render_to_response('static9.html');
+"""
