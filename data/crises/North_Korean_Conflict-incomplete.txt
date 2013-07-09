@@ -3,3 +3,9 @@ Name: North Korean Conflic
 Kind: Internation tension
 
 Date and time: early 2013
+
+links:
+
+http://www.abc15.com/dpp/news/national/north-korea-conflict-country-allegedly-launches-three-short-range-missiles-reports-say
+
+http://www.cnn.com/2013/04/09/world/asia/koreas-tensions
