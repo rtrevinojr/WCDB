@@ -83,8 +83,9 @@ def xml_etree2mods (et):
 		# Read in all of a person's data for our model
 		if child.tag == "Person" :
 			# look for a previously created instance of a person
-			p = People.objects.get(idref=child.attrib["ID"])
-			if p == None : 
+			try :
+				p = People.objects.get(idref=child.attrib["ID"])
+			except People.DoesNotExist as dne :
 				p = People()
 				p.idref = child.attrib["ID"]
 
@@ -125,8 +126,9 @@ def xml_etree2mods (et):
 					c.time = datetime.datetime.strptime(temptime[0], "%H:%M:%S")
 				elif gc.tag == "Organizations" :
 					for ggc in list(gc) :
-						o = Organizations.objects.get(idref=ggc.attrib["ID"])
-						if o == None :
+						try :
+							o = Organizations.objects.get(idref=ggc.attrib["ID"])
+						except Organizations.DoesNotExist as dne :
 							o = Organizations()
 							o.idref = ggc.attrib["ID"]
 							o.save()
@@ -134,8 +136,9 @@ def xml_etree2mods (et):
 						c.organizations.add(o)
 				elif gc.tag == "People" :
 					for ggc in list(gc) :
-						p = People.objects.get(idref=ggc.attrib["ID"])
-						if p == None :
+						try :
+							p = People.objects.get(idref=ggc.attrib["ID"])
+						except People.DoesNotExist as dne :
 							p = People()
 							p.idref = ggc.attrib["ID"]
 							p.save()
@@ -188,8 +191,9 @@ def xml_etree2mods (et):
 		# Read in an organization's data for our model
 		elif child.tag == "Organization" :
 			# Check to see if we have already created an instance of an organization
-			o = Organizations.objects.get(idref=child.attrib["ID"])
-			if o == None : 
+			try :
+				o = Organizations.objects.get(idref=child.attrib["ID"])
+			except Organizations.DoesNotExist as dne :
 				o = Organizations()
 				o.idref = child.attrib["ID"]
 			

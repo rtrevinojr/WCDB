@@ -1,2 +1,3 @@
 WorldCrises
+Crisis {'ID': u'CRI_WCDBPR', 'Name': u'CS w373 Project 3'}
 Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}

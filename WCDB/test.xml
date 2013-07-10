@@ -77,6 +77,29 @@
             </Summary>
         </Common>
     </Crisis>
+
+    <!-- Example Crisis element -->
+    <Crisis ID="CRI_WCDBPR" Name="CS w373 Project 3">
+        <People>
+            <Person ID="PER_ABCD" />
+            <Person ID="PER_ASDF" />
+        </People>
+        <Organizations>
+            <Org ID="ORG_SLACKER" />
+        </Organizations>
+        <Kind>Natural Disaster</Kind>
+        <Date>2013-06-27</Date>
+        <Time>09:00:00+05:30</Time>
+        <Locations>
+            <li>University of Texas</li>
+        </Locations>
+        <HumanImpact>
+            <li>More than 1000 dead.</li>
+            <li>Over 70000 stranded.</li>
+            <li>Over 100000 more evacuated.</li>
+            <li>(yes i know this is stupid).</li>
+        </HumanImpact>
+    </Crisis>
     
     <!-- Example Person element -->
     <Person ID="PER_MNSNGH" Name="Manmohan Singh">
@@ -88,6 +111,32 @@
         </Organizations>
         <Kind>Politician</Kind>
         <Location>India</Location>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+    </Person>
+
+    <!-- Example Person element -->
+    <Person ID="PER_ABCDEF" Name="Fake Tester Guy">
+        <Crises>
+            <Crisis ID="CRI_NRINFL" />
+        </Crises>
+        <Organizations>
+            <Org ID="ORG_SLACKER" />
+        </Organizations>
+        <Kind>Nonexistant</Kind>
+        <Location>Data</Location>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+    </Person>
+
+    <!-- Example Person element -->
+    <Person ID="PER_ASDFXY" Name="Fake Tester Guy II">
+        <Crises>
+            <Crisis ID="CRI_NRINFL" />
+        </Crises>
+        <Organizations>
+            <Org ID="ORG_SLACKER" />
+        </Organizations>
+        <Kind>Nonexistant</Kind>
+        <Location>Data</Location>
         <!-- See Crisis element above for examples of everything under <Common> -->
     </Person>
     
@@ -103,6 +152,27 @@
         <Location>India</Location>
         <History>
             <li>Founded in 1948.</li>
+        </History>
+        <ContactInfo>
+            <li>Phone: (+91) 1-800-DONTKNOW</li>
+            <li>Email: donot@email.me</li>
+        </ContactInfo>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+    </Organization>
+
+    <!-- Example Organization element -->
+    <Organization ID="ORG_SLACKER" Name="Professional Slacker Society">
+        <Crises>
+            <Crisis ID="CRI_NRINFL" />
+        </Crises>
+        <People>
+            <Person ID="PER_ABCD" />
+            <Person ID="PER_ASDF" />
+        </People>
+        <Kind>Government Fund</Kind>
+        <Location>Somewhere</Location>
+        <History>
+            <li>I'll found it later.</li>
         </History>
         <ContactInfo>
             <li>Phone: (+91) 1-800-DONTKNOW</li>
