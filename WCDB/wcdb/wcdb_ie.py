@@ -235,7 +235,7 @@ def xml_mods2etree ():
 
 		# create and fill the organizations element for the crisis
 		org_elem = ET.Element("Organizations")
-		for organization in cr.organization.all() :
+		for organization in cr.organizations.all() :
 			temp_elem = ET.Element("Org", { "ID" : organization.idref })
 			org_elem.insert(0, temp_elem)	
 
@@ -258,7 +258,7 @@ def xml_mods2etree ():
 		
 		# create and fill the locations element for the crisis
 		location_elem = ET.Element("Locations")
-		for organization in cr.organization.all() :
+		for organization in cr.organizations.all() :
 			temp_elem = ET.Element("Org", { "ID" : organization.idref })
 			org_elem.insert(0, temp_elem)	
 

@@ -2,7 +2,7 @@ Name: Jean-Max Bellerive
 
 Kind: Politician
 
-Location: 
+Location: Haiti
 
 Citations:
     a. http://en.wikipedia.org/wiki/Jean-Max_Bellerive 
@@ -11,8 +11,8 @@ Citations:
 External Links:
 
 Images:
-    a.
-    b. 
+    a. http://static.guim.co.uk/sys-images/Guardian/Pix/pictures/2010/1/25/1264441367502/Jean-Max-Bellerive--001.jpg
+    b. http://www.lenouvelliste.com/images/nouvelliste/2009-12-18/jean_maxbellerive.jpg
 
 Videos:
     a.
