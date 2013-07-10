@@ -2,7 +2,7 @@ Name: Vladimir Putin
 
 Kind: President of Russia
 
-Location: 
+Location: Russia
 
 Citations:
     a. http://en.wikipedia.org/wiki/Vladimir_Putin
@@ -11,8 +11,8 @@ Citations:
 External Links:
 
 Images:
-    a.
-    b. 
+    a. http://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Vladimir_Putin_12015.jpg/220px-Vladimir_Putin_12015.jpg
+    b. http://img.timeinc.net/time/photoessays/2007/poy/putin/vladimir_putin_01.jpg
 
 Videos:
     a.
@@ -26,7 +26,7 @@ Social Network Feeds:
     b. https://www.facebook.com/VladimirPutinRussia 
 
 Crises:
-    a. 
+    a. North Korea
     b. 
 
 Organizations:
