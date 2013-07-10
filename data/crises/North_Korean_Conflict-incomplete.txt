@@ -1,8 +1,18 @@
-Name: North Korean Conflic
+Name: North Korean Conflict
 
 Kind: Internation tension
 
-Date and time: early 2013
+Location: North Korea
+
+Date and time: December 12, 2012 - Present
+
+Human impact: Rising tensions between North Korea and South Korea, the United States, and Japan
+
+Economic impact: Negligible and indirect
+
+Resources needed: N/A
+
+Ways to help: N/A
 
 links:
 

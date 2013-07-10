@@ -23,11 +23,12 @@ External Links: http://www.unaids.org/en/AboutUNAIDS/default.asp
 		http://www.theglobalfund.org/en/
 	        http://pinkribbonredribbon.org/
 
-Images:
+Images: http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Symptoms_of_AIDS.svg/275px-Symptoms_of_AIDS.svg.png
+http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Symptoms_of_acute_HIV_infection.svg/275px-Symptoms_of_acute_HIV_infection.svg.png
 
 Videos:
 
-Maps:
+Maps: http://i2.cdn.turner.com/cnn/dam/assets/111123061347-hiv-aids-united-states-map-county-level-data-story-top.jpg
 
 Social Network Feeds:
 
