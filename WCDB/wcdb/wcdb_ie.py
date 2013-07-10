@@ -96,7 +96,7 @@ def xml_etree2mods (et):
 				if gc.tag == "Kind" :
 					p.kind = gc.text.strip()
 				elif gc.tag == "Location" :
-					p.location == gc.text.strip()
+					p.location = gc.text.strip()
 				elif gc.tag == "Organizations" :
 					for ggc in list(gc) :
 						o = Organizations.objects.get(idref=ggc.attrib["ID"])
@@ -168,7 +168,7 @@ def xml_etree2mods (et):
 							for leaf in list(ggc) : 
 								li = List_Item()
 								li.idref = c.idref
-								li.body = leaf.text.strip()
+								li.body = leaf.text
 								li.list_type = ggc.tag
 								try :
 									li.href = leaf.attrib["href"]
@@ -210,7 +210,66 @@ def xml_mods2etree ():
 	them to xml
 	returns a string representing the xml
 	"""
-	pass
+	
+	# create an element tree for our data
+	et = ET.ElementTree()
+
+	# create a root which will be the global elem for the data
+	root_elem = ET.Element("WorldCrises")
+
+	# set the root of the element tree to the root_elem
+	et._setroot(root_elem)
+
+	# add the crises table to the element tree
+	crises_list = Crises.objects.all()
+	for cr in crises_list :
+		crisis_elem = ET.Element("Crisis", { "ID" : cr.idref, "Name" : cr.name })
+		
+		# create and fill the people element for the crisis
+		people_elem = ET.Element("People")
+		for person in cr.people.all() :
+			temp_elem = ET.Element("Person", { "ID" : person.idref })
+			people_elem.insert(0, temp_elem)	
+
+		crisis_elem.insert(0, people_elem)
+
+		# create and fill the organizations element for the crisis
+		org_elem = ET.Element("Organizations")
+		for organization in cr.organization.all() :
+			temp_elem = ET.Element("Org", { "ID" : organization.idref })
+			org_elem.insert(0, temp_elem)	
+
+		crisis_elem.insert(0, org_elem)
+
+		# create the kind element and add
+		kind_elem = ET.Element("Kind")
+		kind_elem.text = cr.kind
+		crisis_elem.insert(0, kind_elem)
+
+		# create the date element and add
+		date_elem = ET.Element("Date")
+		date_elem.text = str(cr.date)
+		crisis_elem.insert(0, date_elem)
+
+		# create the time element and add
+		time_elem = ET.Element("Time")
+		time_elem.text = str(cr.time)
+		crisis_elem.insert(0, time_elem)
+		
+		# create and fill the locations element for the crisis
+		location_elem = ET.Element("Locations")
+		for organization in cr.organization.all() :
+			temp_elem = ET.Element("Org", { "ID" : organization.idref })
+			org_elem.insert(0, temp_elem)	
+
+		crisis_elem.insert(0, org_elem)
+
+
+		# add the created crisis to the root
+		root_elem.insert(0, crisis_elem)
+
+		
+	return et
 
 def xml_etree2xml (et):
 	pass

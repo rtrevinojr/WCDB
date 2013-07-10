@@ -2,7 +2,7 @@
 from django.template import Context, loader
 from django.http import HttpResponse
 from wcdb.models import Crises, People, Organizations, List_Item
-from wcdb_ie import xml_reader, xml_etree2mods
+from wcdb_ie import xml_reader, xml_etree2mods, xml_mods2etree
 import xml.etree.ElementTree as ET
 
 def index(request):
@@ -13,6 +13,12 @@ def index(request):
 	tree = xml_reader("test.xml", f, dummy)
 	tree = tree.getroot()
 	xml_etree2mods(tree)
+
+	db_tree = xml_mods2etree()
+
+	f.write(db_tree.getroot().tag + "\n")
+	for c in list(db_tree.getroot()) :
+		f.write(c.tag + " " +  str(c.attrib) + "\n")	
 
 	peeps = People.objects.all()
 	crises = Crises.objects.all()
