@@ -1,0 +1,108 @@
+<?xml version="1.0" ?>
+
+<!-- World Crises XML using schema (WorldCrises.xsd) -->
+
+<WorldCrises>
+    <!-- Example Crisis element -->
+    <Crisis ID="" Name="Human Trafficking"> # CRI_NRINFL
+        <People>
+            <Person ID="" /> 
+        </People>
+        <Organizations>
+            <Org ID="ORG_PMRLFD" />
+        </Organizations>
+        <Kind>Crimes against humanity</Kind>
+        <Date>Ongoing</Date>
+        <Time>Ongoing</Time>
+        <Locations>
+            <li>Worldwide</li>
+        </Locations>
+        <HumanImpact>
+            <li>27 million people victims of human trafficking worldwide</li>
+        </HumanImpact>
+        <EconomicImpact>
+            <li>The human trafficking industry itself generates 32 billion USD, according to the International Labor Office, with about half of it (15.5 billion) being made in industrialized countries and a third of it (9.7 billion) made in Asia.</li>
+        </EconomicImpact>
+        <ResourcesNeeded>
+            <li>Donations</li>
+            <li>Human resources, including volunteers, activists, and healthcare professionals</li>
+            <li>A global communication infrastructure</li>
+        </ResourcesNeeded>
+        <WaysToHelp>
+            <!-- Put text with optional hyperlinks here -->
+            <li>At the local level, call available human trafficking resource centers to report human trafficking activity or to learn more about it by requesting training, technical assistance, or resources, if available.</li>
+            <li>Being informed about and reducing the use of material possessions (clothing, household goods, etc.) which may endorse and perpetuate human trafficking</li>
+            <li>Participate in or start a college organization to raise awareness of human trafficking</li>
+        </WaysToHelp>
+        <Common>
+            <Citations>
+                <!-- Put text with optional hyperlinks here -->
+                <li href="http://googleblog.blogspot.co.uk/2013/04/fighting-human-trafficking.html">Fighting Human Trafficking</li>
+                <li href="http://en.wikipedia.org/wiki/Human_trafficking">Human Trafficking</li>
+            </Citations>
+            <ExternalLinks>
+                <!-- Put text with compulsory hyperlinks here -->
+                <li href="http://www.state.gov/j/tip/id/help/">Ways to help</li>
+            </ExternalLinks>
+            
+            <!-- hrefs optional in the following depending on how you want them to behave on your site -->
+            <Images>
+                <!-- Put full URLs to images here, display them on your site in your own cool way -->
+                <li embed="http://cdn.theatlantic.com/static/mt/assets/international/Lisa_Kristine_com-Bricks-Nepal-615.jpg" text="Lisa with bricks" />
+                <li embed="http://www.themorningsidepost.com/wp-content/uploads/2012/12/Trafficking-e1354504232743.jpg" text="Trafficking" />
+            </Images>
+            <Videos>
+                <!-- Put youtube link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by youtube) -->
+                <!-- Embed example for your site: <iframe width="420" height="315" src="[THIS LINK]" frameborder="0" allowfullscreen></iframe> -->
+                <li embed="http://youtu.be/_iNBKlBcXkY" />
+            </Videos>
+            <Maps>
+                <!-- Put google maps link here (pull this URL out of the src="[GET THIS LINK]" attribute in the embed object given by google maps) -->
+                <!-- Embed example for your site: <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="[THIS LINK]"></iframe> -->
+                <li embed="http://en.wikipedia.org/wiki/File:Trafficking-in-persons-map-2011.png" text="Trafficking in persons" />
+            </Maps>
+            <Feeds>
+                <!-- Put feed URL here and embed on your site in your own cool way-->
+                <li embed="[WHATEVER A FEED URL LOOKS LIKE]" />
+            </Feeds>
+
+            <!-- Optional summary field for extra random data -->
+            <Summary>
+              Lorem ipsum...
+            </Summary>
+        </Common>
+    </Crisis>
+    
+    <!-- Example Person element -->
+    <Person ID="PER_MNSNGH" Name="Ricky Martin">
+        <Crises>
+            <Crisis ID="CRI_NRINFL" />
+        </Crises>
+        <Organizations>
+            <Org ID="ORG_PMRLFD" />
+        </Organizations>
+        <Kind>Celebrity</Kind>
+        <Location>Spain</Location>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+    </Person>
+    
+    <!-- Example Organization element -->
+    <Organization ID="ORG_PMRLFD" Name="Polaris Project">
+        <Crises>
+            <Crisis ID="CRI_NRINFL" />
+        </Crises>
+        <People>
+            <Person ID="PER_MNSNGH" />
+        </People>
+        <Kind>Non-governmental Organization</Kind>
+        <Location>Headquartered in Washington D.C., U.S.</Location>
+        <History>
+            <li>The Polaris Project was founded in 2002, by Derek Ellerman and Katherine Chon, who were seniors at Brown University, when they were inspired to create a nonprofit organization that focuses on ending human trafficking and modern-day slavery. </li>
+        </History>
+        <ContactInfo>
+            <li>Phone: + 1 (202) 745-1001</li>
+            <li>Email: info@polarisproject.org</li>
+        </ContactInfo>
+        <!-- See Crisis element above for examples of everything under <Common> -->
+    </Organization>
+</WorldCrises>
