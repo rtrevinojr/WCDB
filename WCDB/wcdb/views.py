@@ -1,8 +1,10 @@
 from django.template import Context, loader
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
+from django.shortcuts import render_to_response
 from wcdb.models import Crises, People, Organizations, List_Item
-from wcdb.forms import LoginForm
+from wcdb.forms import LoginForm, UploadFileForm
 from wcdb_ie import xml_reader, xml_etree2mods, xml_mods2etree, xml_etree2xml
 import xml.etree.ElementTree as ET
 from django.contrib.auth.middleware import AuthenticationMiddleware
@@ -43,16 +45,29 @@ def my_login(request) :
 		username = request.POST['username']
 		password = request.POST['password']
 		user = authenticate(username=username, password=password)
-	if user is not None :
-		if user.is_active :
-			login(request, user)
-			return HttpResponse('wcdb/index.html')
+		if user is not None :
+			if user.is_active :
+				login(request, user)
+				return render(request, 'wcdb/index.html')
+			else :
+				return HttpResponse("user not valid")
+				# disabled
 		else :
-			return HttpResponse("user not valid")
-			# disabled
+			return HttpResponse("login failed")
+			# invalid login error
+	elif request.user.is_authenticated() :
+		return render(request, 'wcdb/index.html')
+
+def upload_file(request) :
+	if request.method == 'POST' :
+		form = UploadFileForm(request.POST, request.FILES)
+		if form.is_valid() :
+			# handle_uploaded_file(request.FILES['file'])
+			# we may want to handle this from a separate file ?
+			return HttpResponseRedirect('/wcdb/')
 	else :
-		return HttpResponse("login failed")
-		# invalid login error
+		form = UploadFileForm()
+	return render_to_response('wcdb/upload.html', {'form' : form})
 
 
 """

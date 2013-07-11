@@ -13,6 +13,7 @@ urlpatterns = patterns('',
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
     url(r'^wcdb/$', 'wcdb.views.index'),
     url(r'^login/$', 'wcdb.views.my_login'),
+    url(r'^upload/$', 'wcdb.views.upload_file'),
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
