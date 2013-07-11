@@ -1,13 +1,12 @@
 #!/usr/bin/python
 
-import sys
-sys.path += '/v/filer4b/v38q001/jkunze/CS373/cs373-wcdb/WCDB'
 import django
 from models import Crises, Organizations, People, List_Item
+from minixsv import pyxsval, xsvalErrorHandler
+#pydoc refuses to run if it sees the above imports and they aren't commented out
 import xml.etree.ElementTree as ET
 import datetime
 import time
-from minixsv import pyxsval, xsvalErrorHandler
 
 
 """
