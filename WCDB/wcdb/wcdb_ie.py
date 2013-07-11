@@ -22,8 +22,7 @@ Import/export data on only the ten crises, ten organizations, and ten people of 
 def xml_validate (xf, sf):
 	"""
 	Takes in an xml file and checkes it against
-	a given XML Schema. Reports an error if not
-	valid.
+	a given XML Schema. Returns false if invalid.
 	xf is an XML file
 	sf is an XML Schema file
 	return true if xf validates
@@ -45,16 +44,6 @@ def xml_reader (xf, sf):
 	sf is an XML Schema file
 	returns an ElementTree
 	"""
-	"""
-	try:
-		f = open(xf, 'r')
-	except IOError as e:
-		# handle without crashing
-		# maybe give the user a warning to 
-		# try again
-		sf.write("Fails in first try\n")
-		return False
-	"""
 	
 	if (not xml_validate(xf, sf)):
 		# handle still without crashing
@@ -75,10 +64,10 @@ def xml_reader (xf, sf):
 
 def xml_etree2mods (et):
 	"""
-	Takes in an ElementTree and builds
+	Takes in an Element and builds
 	model instances from the elements
-	et is an ElementTree
-	returns void (for now. might need to return a list of instances)
+	et is an Element
+	returns void
 	"""
 	for child in list(et) :
 		# Read in all of a person's data for our model
@@ -218,6 +207,9 @@ def xml_etree2mods (et):
 			o.save()
 
 def xml_etree2mods_common (element, gc) :
+	"""
+	
+	"""
 	List_Item.objects.filter(idref=element.idref,list_type=gc.tag).all().delete()
 	if gc.tag == "Summary" :
 		element.summary = gc.text.strip()
@@ -406,6 +398,8 @@ def xml_mods2etree ():
 	return et
 
 def xml_mods2etree_common (db_entry, elem) :
+	"""
+	"""
 	commons = ["Feeds", "Maps", "Videos", "Images", "ExternalLinks", "Citations"]
 	common_elem = ET.Element("Common")
 		
@@ -431,12 +425,16 @@ def xml_mods2etree_common (db_entry, elem) :
 	elem.insert(0, common_elem)
 
 def xml_etree2xml (et):
+	"""
+	"""
 	et = et.getroot()
 	xml = []
 	xml_etree2xml_helper(et, xml, '')
 	return ''.join(xml)
 
 def xml_etree2xml_helper (et, xml, tabs) :
+	"""
+	"""
 	xml += tabs
 	xml += '<'
 	xml += et.tag
