@@ -64,15 +64,53 @@ def my_login(request) :
 		return render(request, 'wcdb/index.html')
 
 def import_file(request) :
+	t = loader.get_template('wcdb/import.html')
 	if request.method == 'POST' :
 		form = UploadFileForm(request.POST, request.FILES)
 		if form.is_valid() :
 			# handle_uploaded_file(request.FILES['file'])
 			# we may want to handle this from a separate file ?
-			return HttpResponseRedirect('/wcdb/')
+			xml = request.FILES["upload"]
+			xsd = open("WorldCrises.xsd.xml", 'r')
+			et = xml_reader(xml, xsd)
+			if (et == 1):
+				# xml is not valid against schema
+				success = 1
+			elif (et == 2):
+				success = 2
+			else: # et is an ElementTree
+				xml_etree2mods(et.getroot())
+				success = 0
+			c = RequestContext(request, {'success': success})
+			return HttpResponse(t.render(c))
 	else :
 		form = UploadFileForm()
-	return render_to_response('wcdb/import.html', {'form' : form})
+	#return render_to_response('wcdb/import.html', {'form' : form})
+	c = RequestContext(request)
+	return HttpResponse(t.render(c))
+	
+	"""
+	# template for the upload form page
+	t = loader.get_template('wcdb/import.html')
+	# template for the landing page for a successful upload
+	if request.method == 'POST':
+		xml = request.FILES["xml"]
+		xsd = open("/u/tbc399/Documents/cs373/p3/cs373-wcdb/WCDB/WorldCrises.xsd.xml", 'r')
+		et = xml_reader(xml, xsd)
+		if (et == 1):
+			# xml is not valid against schema
+			success = 1
+		elif (et == 2):
+			success = 2
+		else: # et is an ElementTree
+			xml_etree2mods(et.getroot())
+			success = 0
+		c = RequestContext(request, {'success': success})
+		return HttpResponse(t.render(c))
+
+	c = RequestContext(request)
+	return HttpResponse(t.render(c))
+	"""
 
 def export_file (request):
 	et = xml_mods2etree()
