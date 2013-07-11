@@ -14,8 +14,10 @@ from django.contrib.sessions.middleware import SessionMiddleware
 from django.contrib.auth import authenticate, login
 
 def index(request):
+	return render_to_response('wcdb/index.html')
+	"""
 	t = loader.get_template('wcdb/index.html')
-	
+
 	if request.user.is_authenticated() :
 		dummy = ET.ElementTree()
 		f = open('tester.txt', 'w')
@@ -39,6 +41,7 @@ def index(request):
 		return HttpResponse(t.render(c))
 	else :
 		return render(request, 'wcdb/login.html')
+	"""
 
 def my_login(request) :
 	user =""
@@ -60,7 +63,7 @@ def my_login(request) :
 	elif request.user.is_authenticated() :
 		return render(request, 'wcdb/index.html')
 
-def upload_file(request) :
+def import_file(request) :
 	if request.method == 'POST' :
 		form = UploadFileForm(request.POST, request.FILES)
 		if form.is_valid() :
@@ -69,7 +72,15 @@ def upload_file(request) :
 			return HttpResponseRedirect('/wcdb/')
 	else :
 		form = UploadFileForm()
-	return render_to_response('wcdb/upload.html', {'form' : form})
+	return render_to_response('wcdb/import.html', {'form' : form})
+
+def export_file (request):
+	et = xml_mods2etree()
+	xml_string = xml_etree2xml(et)
+	t = loader.get_template('wcdb/export.html')
+	c = Context({'xml_text': xml_string})
+	return HttpResponse(t.render(c))
+
 
 from tests import do_test
 def run_tests(request):
