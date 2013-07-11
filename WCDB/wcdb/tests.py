@@ -11,6 +11,7 @@ import StringIO
 from django.test.simple import DjangoTestSuiteRunner
 from django.http import HttpResponse
 from wcdb_ie import xml_validate
+from models import People, Crises, Organizations, List_Item
 import unittest
 
 class SimpleTest(unittest.TestCase):
@@ -75,7 +76,12 @@ class SimpleTest(unittest.TestCase):
         """)
         result = xml_validate(xml, "")
         self.assertEqual(result, True)
-        
+
+    def test_tables_exist(self) :
+        self.assertTrue(len(People.objects.all()) >= 0)
+        self.assertTrue(len(Crises.objects.all()) >= 0)
+        self.assertTrue(len(Organizations.objects.all()) >= 0)
+        self.assertTrue(len(List_Item.objects.all()) >= 0)
 
 class NoTestDbDatabaseTestRunner(DjangoTestSuiteRunner):
     #Override setup and teardown of databases to force test runner to work.
