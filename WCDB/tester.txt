@@ -24,10 +24,10 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 			<li>University of Texas</li >
 		</Locations >
 		<HumanImpact>
-			<li>(yes i know this is stupid).</li >
 			<li>More than 1000 dead.</li >
-			<li>Over 70000 stranded.</li >
+			<li>(yes i know this is stupid).</li >
 			<li>Over 100000 more evacuated.</li >
+			<li>Over 70000 stranded.</li >
 		</HumanImpact >
 		<EconomicImpact></EconomicImpact >
 		<ResourcesNeeded></ResourcesNeeded >
@@ -53,8 +53,8 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 		<Date>2013-06-14</Date >
 		<Time>09:00:00</Time >
 		<Locations>
-			<li>Nepal</li >
 			<li>Uttarakhand, India</li >
+			<li>Nepal</li >
 			<li>Himachal Pradesh, India</li >
 		</Locations >
 		<HumanImpact>
@@ -63,8 +63,8 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 			<li>More than 1000 dead.</li >
 		</HumanImpact >
 		<EconomicImpact>
-			<li>Estimates over 500 Billion INR (10 Billion USD)</li >
 			<li>Ongoing large-scale crisis, impact has not been evaluated as of July 5th 2013.</li >
+			<li>Estimates over 500 Billion INR (10 Billion USD)</li >
 		</EconomicImpact >
 		<ResourcesNeeded>
 			<li>The Indian Airforce has flown hundreds of sorties every day to airdrop food and fuel for trapped villages.</li >
@@ -171,8 +171,8 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 			<li>I'll found it later.</li >
 		</History >
 		<ContactInfo>
-			<li>Email: donot@email.me</li >
 			<li>Phone: (+91) 1-800-DONTKNOW</li >
+			<li>Email: donot@email.me</li >
 		</ContactInfo >
 		<Common>
 			<Citations></Citations >

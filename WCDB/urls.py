@@ -17,6 +17,18 @@ urlpatterns = patterns('',
     url(r'^login/$', 'wcdb.views.my_login'),
     url(r'^upload/$', 'wcdb.views.upload_file'),
 
+    url(r'^wcdb/China_Maritime_Conflict_page.html', 'wcdb.views.chinamaritime'),
+    url(r'^wcdb/Human_Trafficking_page.html', 'wcdb.views.humantrafficking'),
+    url(r'^wcdb/North_Korean_Conflict_page.html', 'wcdb.views.northkorea'),
+
+    url(r'^wcdb/John_Kerry_page.html', 'wcdb.views.johnkerry'),
+    url(r'^wcdb/Mohamed_Morsi_page.html', 'wcdb.views.mohamedmorsi'),
+    url(r'^wcdb/Ricky_Martin_page.html', 'wcdb.views.rickymartin'),
+
+    url(r'^wcdb/ASEAN_page.html', 'wcdb.views.asean'),
+    url(r'^wcdb/BNP_Paribas_page.html', 'wcdb.views.bnpparibas'),
+    url(r'^wcdb/Polaris_Project_page.html', 'wcdb.views.polaris'),
+
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
 )
