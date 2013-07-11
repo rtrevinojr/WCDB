@@ -17,6 +17,7 @@ DATABASES = {
         'PASSWORD': 'Ml6BaCJP8y',                  # Not used with sqlite3.
         'HOST': 'z',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'TEST_NAME': 'cs373_zlozano',
     }
 }
 
@@ -112,7 +113,7 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
     #'/v/filer4b/v38q001/taylor91/school/summer_2013/cs373/cs373-wcdb/WCDB/Templates'
     #'Templates',
-	'/u/zlozano/cs373/wcdb/cs373-wcdb/WCDB/Templates'
+	'/u/jkunze/CS373/cs373-wcdb/WCDB/Templates'
 )
 
 INSTALLED_APPS = (
@@ -151,3 +152,5 @@ LOGGING = {
         },
     }
 }
+
+TEST_RUNNER = 'wcdb.tests.NoTestDbDatabaseTestRunner'

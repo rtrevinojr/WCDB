@@ -7,6 +7,8 @@ from wcdb.models import Crises, People, Organizations, List_Item
 from wcdb.forms import LoginForm, UploadFileForm
 from wcdb_ie import xml_reader, xml_etree2mods, xml_mods2etree, xml_etree2xml
 import xml.etree.ElementTree as ET
+from django.shortcuts import render_to_response
+
 from django.contrib.auth.middleware import AuthenticationMiddleware
 from django.contrib.sessions.middleware import SessionMiddleware
 from django.contrib.auth import authenticate, login
@@ -70,10 +72,10 @@ def upload_file(request) :
 	return render_to_response('wcdb/upload.html', {'form' : form})
 
 
-"""
-def static_two(request):
-    return render_to_response('static2.html');
 
+def static_two(request):
+    return render_to_response('wcdb/static2.html');
+"""
 def static_three(request):
     return render_to_response('static3.html');
 
