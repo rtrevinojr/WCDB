@@ -10,6 +10,8 @@ import sys
 import StringIO
 from django.test.simple import DjangoTestSuiteRunner
 from django.http import HttpResponse
+from wcdb_ie import xml_validate
+from models import People, Crises, Organizations, List_Item
 import unittest
 
 class SimpleTest(unittest.TestCase):
@@ -54,7 +56,32 @@ class SimpleTest(unittest.TestCase):
         from views import rickymartin
         self.assertTrue(type(rickymartin(None)) == HttpResponse)
         self.assertTrue(type(rickymartin(None).content) == str)
-        
+
+    def test_xml_validate(self) :
+        xml = StringIO.StringIO("""
+        <WorldCrisis>
+          <Crisis>
+            <Person></Person>
+              <Organization></Organization>
+              <Place></Place>
+            </Crisis>
+            <Crisis>
+            <Unique>
+              <Person></Person>
+              <Organization></Organization>
+              <Place><City></City></Place>
+            </Unique>
+          </Crisis>
+        </WorldCrisis>
+        """)
+        result = xml_validate(xml, "")
+        self.assertEqual(result, True)
+
+    def test_tables_exist(self) :
+        self.assertTrue(len(People.objects.all()) >= 0)
+        self.assertTrue(len(Crises.objects.all()) >= 0)
+        self.assertTrue(len(Organizations.objects.all()) >= 0)
+        self.assertTrue(len(List_Item.objects.all()) >= 0)
 
 class NoTestDbDatabaseTestRunner(DjangoTestSuiteRunner):
     #Override setup and teardown of databases to force test runner to work.
