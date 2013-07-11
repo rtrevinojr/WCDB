@@ -24,8 +24,7 @@ Import/export data on only the ten crises, ten organizations, and ten people of 
 def xml_validate (xf, sf):
 	"""
 	Takes in an xml file and checkes it against
-	a given XML Schema. Reports an error if not
-	valid.
+	a given XML Schema. Returns false if invalid.
 	xf is an XML file
 	sf is an XML Schema file
 	return true if xf validates
@@ -47,16 +46,6 @@ def xml_reader (xf, sf):
 	sf is an XML Schema file
 	returns an ElementTree
 	"""
-	"""
-	try:
-		f = open(xf, 'r')
-	except IOError as e:
-		# handle without crashing
-		# maybe give the user a warning to 
-		# try again
-		sf.write("Fails in first try\n")
-		return False
-	"""
 	
 	if (not xml_validate(xf, sf)):
 		# handle still without crashing
@@ -77,10 +66,10 @@ def xml_reader (xf, sf):
 
 def xml_etree2mods (et):
 	"""
-	Takes in an ElementTree and builds
+	Takes in an Element and builds
 	model instances from the elements
-	et is an ElementTree
-	returns void (for now. might need to return a list of instances)
+	et is an Element
+	returns void
 	"""
 	for child in list(et) :
 		# Read in all of a person's data for our model
