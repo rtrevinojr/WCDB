@@ -293,10 +293,6 @@ def xml_mods2etree ():
 		time_elem.text = str(cr.time)
 		crisis_elem.insert(0, time_elem)
 
-		# create the summary element and add
-		summary_elem = ET.Element("Summary")
-		summary_elem.text = cr.summary
-		crisis_elem.insert(0, summary_elem)
 		
 		
 
@@ -318,7 +314,7 @@ def xml_mods2etree ():
 			crisis_elem.insert(0, li_elem)
 
 		#go through all the list items that are in common
-		xml_mods2etree_common(cr.idref, crisis_elem)
+		xml_mods2etree_common(cr, crisis_elem)
 
 
 
@@ -352,7 +348,7 @@ def xml_mods2etree ():
 		location_elem.text = per.location
 		person_elem.insert(0, location_elem)
 
-		xml_mods2etree_common(per.idref, person_elem)
+		xml_mods2etree_common(per, person_elem)
 
 		root_elem.insert(0, person_elem)
 
@@ -392,17 +388,23 @@ def xml_mods2etree ():
 				li_elem.insert(0, temp_elem)
 			organization_elem.insert(0, li_elem)
 
-		xml_mods2etree_common(org.idref, organization_elem)
+		xml_mods2etree_common(org, organization_elem)
 
 		root_elem.insert(0, organization_elem)
 		
 	return et
 
-def xml_mods2etree_common (idref, elem) :
+def xml_mods2etree_common (db_entry, elem) :
 	commons = ["Citations", "ExternalLinks", "Images", "Videos", "Maps", "Feeds"]
 	common_elem = ET.Element("Common")
+		
+	# create the summary element and add
+	summary_elem = ET.Element("Summary")
+	summary_elem.text = db_entry.summary
+	common_elem.insert(0, summary_elem)
+
 	for tag in commons :
-		list_items = List_Item.objects.filter(idref=idref, list_type=tag)
+		list_items = List_Item.objects.filter(idref=db_entry.idref, list_type=tag)
 		li_elem = ET.Element(tag)
 		for li in list_items :
 			temp_elem = ET.Element("li")

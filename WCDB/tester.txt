@@ -15,6 +15,7 @@ Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 			<Images></Images >
 			<ExternalLinks></ExternalLinks >
 			<Citations></Citations >
+			<Summary></Summary >
 		</Common >
 		<ContactInfo></ContactInfo >
 		<History></History >
@@ -34,6 +35,7 @@ Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 			<Images></Images >
 			<ExternalLinks></ExternalLinks >
 			<Citations></Citations >
+			<Summary></Summary >
 		</Common >
 		<ContactInfo></ContactInfo >
 		<History></History >
@@ -52,6 +54,7 @@ Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 			<Images></Images >
 			<ExternalLinks></ExternalLinks >
 			<Citations></Citations >
+			<Summary></Summary >
 		</Common >
 		<Location>Data</Location >
 		<Kind>Nonexistant</Kind >
@@ -70,6 +73,7 @@ Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 			<Images></Images >
 			<ExternalLinks></ExternalLinks >
 			<Citations></Citations >
+			<Summary></Summary >
 		</Common >
 		<Location>Data</Location >
 		<Kind>Nonexistant</Kind >
@@ -88,6 +92,7 @@ Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 			<Images></Images >
 			<ExternalLinks></ExternalLinks >
 			<Citations></Citations >
+			<Summary></Summary >
 		</Common >
 		<Location>India</Location >
 		<Kind>Politician</Kind >
@@ -106,6 +111,7 @@ Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 			<Images></Images >
 			<ExternalLinks></ExternalLinks >
 			<Citations></Citations >
+			<Summary></Summary >
 		</Common >
 		<WaysToHelp></WaysToHelp >
 		<ResourcesNeeded></ResourcesNeeded >
@@ -119,7 +125,6 @@ Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 		<Locations>
 			<li>University of Texas</li >
 		</Locations >
-		<Summary></Summary >
 		<Time>09:00:00</Time >
 		<Date>2013-06-27</Date >
 		<Kind>Natural Disaster</Kind >
@@ -153,6 +158,7 @@ Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 				<li>The Times of India</li >
 				<li>The Hindustan Times</li >
 			</Citations >
+			<Summary>Lorem ipsum...</Summary >
 		</Common >
 		<WaysToHelp>
 			<li href="https://pmnrf.gov.in/">Donate to Prime Minister's Relief Fund</li >
@@ -165,20 +171,19 @@ Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 			<li>Prime Minister of India undertook an aerial survey of the affected areas and announced 1,000 crore (US$170 million) aid package for disaster relief efforts in the state.</li >
 		</ResourcesNeeded >
 		<EconomicImpact>
-			<li>Ongoing large-scale crisis, impact has not been evaluated as of July 5th 2013.</li >
 			<li>Estimates over 500 Billion INR (10 Billion USD)</li >
+			<li>Ongoing large-scale crisis, impact has not been evaluated as of July 5th 2013.</li >
 		</EconomicImpact >
 		<HumanImpact>
-			<li>Over 100000 more evacuated.</li >
-			<li>Over 70000 stranded.</li >
 			<li>More than 1000 dead.</li >
+			<li>Over 70000 stranded.</li >
+			<li>Over 100000 more evacuated.</li >
 		</HumanImpact >
 		<Locations>
-			<li>Nepal</li >
-			<li>Himachal Pradesh, India</li >
 			<li>Uttarakhand, India</li >
+			<li>Himachal Pradesh, India</li >
+			<li>Nepal</li >
 		</Locations >
-		<Summary>Lorem ipsum...</Summary >
 		<Time>09:00:00</Time >
 		<Date>2013-06-14</Date >
 		<Kind>Natural Disaster</Kind >
