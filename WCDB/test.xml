@@ -81,8 +81,8 @@
     <!-- Example Crisis element -->
     <Crisis ID="CRI_WCDBPR" Name="CS w373 Project 3">
         <People>
-            <Person ID="PER_ABCD" />
-            <Person ID="PER_ASDF" />
+            <Person ID="PER_ABCDEF" />
+            <Person ID="PER_ASDFXY" />
         </People>
         <Organizations>
             <Org ID="ORG_SLACKER" />

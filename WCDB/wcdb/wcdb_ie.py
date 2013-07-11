@@ -107,6 +107,9 @@ def xml_etree2mods (et):
 							o.save()
 						p.save()
 						p.organizations.add(o)
+				elif gc.tag == "Common" :
+					for ggc in gc :
+						xml_etree2mods_common(p, ggc)
 						
 			p.save()
 
@@ -145,6 +148,7 @@ def xml_etree2mods (et):
 						c.save()
 						c.people.add(p)
 				elif gc.tag == "Locations" or gc.tag == "HumanImpact" or gc.tag == "EconomicImpact" or gc.tag == "ResourcesNeeded" or gc.tag == "WaysToHelp" : 
+					List_Item.objects.filter(idref=c.idref,list_type=gc.tag).all().delete()
 					for ggc in list(gc) :
 						li = List_Item()
 						li.idref = c.idref
@@ -162,29 +166,11 @@ def xml_etree2mods (et):
 							li.text = ggc.attrib["text"]
 						except KeyError:
 							li.text = None
+						li.save()
 
 				elif gc.tag == "Common": 
-					for ggc in list(gc) :
-						if ggc.tag == "Summary" :
-							c.summary = ggc.text.strip()
-						else : 
-							for leaf in list(ggc) : 
-								li = List_Item()
-								li.idref = c.idref
-								li.body = leaf.text
-								li.list_type = ggc.tag
-								try :
-									li.href = leaf.attrib["href"]
-								except KeyError:
-									li.href = None
-								try :
-									li.embed = leaf.attrib["embed"]
-								except KeyError:
-									li.embed = None
-								try :
-									li.text = leaf.attrib["text"]
-								except KeyError:
-									li.text = None
+					for ggc in gc :
+						xml_etree2mods_common(c, ggc)
 
 			c.save()
 		
@@ -204,9 +190,56 @@ def xml_etree2mods (et):
 					o.kind = gc.text.strip()
 				elif gc.tag == "Location" :
 					o.location = gc.text.strip()
+				elif gc.tag == "History" or gc.tag == "ContactInfo" :
+					List_Item.objects.filter(idref=o.idref,list_type=gc.tag).all().delete()
+					for ggc in list(gc) :
+						li = List_Item()
+						li.idref = o.idref
+						li.body = ggc.text.strip()
+						li.list_type = gc.tag
+						try :
+							li.href = ggc.attrib["href"]
+						except KeyError:
+							li.href = None
+						try :
+							li.embed = ggc.attrib["embed"]
+						except KeyError:
+							li.embed = None
+						try :
+							li.text = ggc.attrib["text"]
+						except KeyError:
+							li.text = None
+						li.save()
+				elif gc.tag == "Common" :
+					for ggc in list(gc) :
+						xml_etree2mods_common(o, ggc)
 
 			o.save()
 
+def xml_etree2mods_common (element, gc) :
+	List_Item.objects.filter(idref=element.idref,list_type=gc.tag).all().delete()
+	if gc.tag == "Summary" :
+		element.summary = gc.text.strip()
+	else :
+		for ggc in list(gc) :		
+			li = List_Item()
+			li.idref = element.idref
+			if ggc.text is not None :
+				li.body = ggc.text.strip()
+			li.list_type = gc.tag
+			try :
+				li.href = ggc.attrib["href"]
+			except KeyError:
+				li.href = None
+			try :
+				li.embed = ggc.attrib["embed"]
+			except KeyError:
+				li.embed = None
+			try :
+				li.text = ggc.attrib["text"]
+			except KeyError:
+				li.text = None
+			li.save()
 
 def xml_mods2etree ():
 	"""
@@ -259,25 +292,160 @@ def xml_mods2etree ():
 		time_elem = ET.Element("Time")
 		time_elem.text = str(cr.time)
 		crisis_elem.insert(0, time_elem)
-		
-		# create and fill the locations element for the crisis
-		location_elem = ET.Element("Locations")
-		for organization in cr.organizations.all() :
-			temp_elem = ET.Element("Org", { "ID" : organization.idref })
-			org_elem.insert(0, temp_elem)	
 
-		crisis_elem.insert(0, org_elem)
+		# create the summary element and add
+		summary_elem = ET.Element("Summary")
+		summary_elem.text = cr.summary
+		crisis_elem.insert(0, summary_elem)
+		
+		
+
+		# go through all the list items that aren't common
+		uncommons = ["Locations", "HumanImpact", "EconomicImpact", "ResourcesNeeded", "WaysToHelp"]
+		for tag in uncommons :
+			list_items = List_Item.objects.filter(idref=cr.idref, list_type=tag)
+			li_elem = ET.Element(tag)
+			for li in list_items :
+				temp_elem = ET.Element("li")
+				if li.href is not None :
+					temp_elem.attrib.update({"href" : li.href})
+				if li.embed is not None :
+					temp_elem.attrib.update({"embed" : li.embed})
+				if li.text is not None :
+					temp_elem.attrib.update({"text" : li.text})
+				temp_elem.text = li.body
+				li_elem.insert(0, temp_elem)
+			crisis_elem.insert(0, li_elem)
+
+		#go through all the list items that are in common
+		xml_mods2etree_common(cr.idref, crisis_elem)
+
 
 
 		# add the created crisis to the root
 		root_elem.insert(0, crisis_elem)
 
+	people_list = People.objects.all()
+	for per in people_list :
+		person_elem = ET.Element("Person", { "ID" : per.idref, "Name" : per.name })
+
+		# create and fill the crises element for the person
+		crisis_elem = ET.Element("Crises")
+		for crisis in crises_list :
+			if per in crisis.people.all() :
+				temp_elem = ET.Element("Crisis", { "ID" : crisis.idref })
+				crisis_elem.insert(0, temp_elem)
+		person_elem.insert(0, crisis_elem)
+
+		# create and fill the organizations element for the person
+		org_elem = ET.Element("Organizations")
+		for organization in per.organizations.all() :
+			temp_elem = ET.Element("Org", { "ID" : organization.idref })
+			org_elem.insert(0, temp_elem)	
+		person_elem.insert(0, org_elem)
+
+		kind_elem = ET.Element("Kind")
+		kind_elem.text = per.kind
+		person_elem.insert(0, kind_elem)
+
+		location_elem = ET.Element("Location")
+		location_elem.text = per.location
+		person_elem.insert(0, location_elem)
+
+		xml_mods2etree_common(per.idref, person_elem)
+
+		root_elem.insert(0, person_elem)
+
+	for org in Organizations.objects.all() :
+		organization_elem = ET.Element("Organization", { "ID" : org.idref, "Name" : org.name })
+		
+		# create and fill the crises element for the organization
+		crisis_elem = ET.Element("Crises")
+		for crisis in crises_list :
+			if org in crisis.organizations.all() :
+				temp_elem = ET.Element("Crisis", { "ID" : crisis.idref })
+				crisis_elem.insert(0, temp_elem)
+		organization_elem.insert(0, crisis_elem)
+
+		# create and fill the people element for the crisis
+		people_elem = ET.Element("People")
+		for person in people_list :
+			if org in person.organizations.all() :
+				temp_elem = ET.Element("Person", { "ID" : person.idref })
+				people_elem.insert(0, temp_elem)
+		organization_elem.insert(0, people_elem)
+
+		#go through lists not in common
+		uncommons = ["History", "ContactInfo"]
+		for tag in uncommons :
+			list_items = List_Item.objects.filter(idref=cr.idref, list_type=tag)
+			li_elem = ET.Element(tag)
+			for li in list_items :
+				temp_elem = ET.Element("li")
+				if li.href is not None :
+					temp_elem.attrib.update({"href" : li.href})
+				if li.embed is not None :
+					temp_elem.attrib.update({"embed" : li.embed})
+				if li.text is not None :
+					temp_elem.attrib.update({"text" : li.text})
+				temp_elem.text = li.body
+				li_elem.insert(0, temp_elem)
+			organization_elem.insert(0, li_elem)
+
+		xml_mods2etree_common(org.idref, organization_elem)
+
+		root_elem.insert(0, organization_elem)
 		
 	return et
 
+def xml_mods2etree_common (idref, elem) :
+	commons = ["Citations", "ExternalLinks", "Images", "Videos", "Maps", "Feeds"]
+	common_elem = ET.Element("Common")
+	for tag in commons :
+		list_items = List_Item.objects.filter(idref=idref, list_type=tag)
+		li_elem = ET.Element(tag)
+		for li in list_items :
+			temp_elem = ET.Element("li")
+			if li.href is not None :
+				temp_elem.attrib.update({"href" : li.href})
+			if li.embed is not None :
+				temp_elem.attrib.update({"embed" : li.embed})
+			if li.text is not None :
+				temp_elem.attrib.update({"text" : li.text})
+			temp_elem.text = li.body
+			li_elem.insert(0, temp_elem)
+		common_elem.insert(0, li_elem)
+	elem.insert(0, common_elem)
+
 def xml_etree2xml (et):
-	pass
+	et = et.getroot()
+	xml = []
+	xml_etree2xml_helper(et, xml, '')
+	return ''.join(xml)
 
-
-
+def xml_etree2xml_helper (et, xml, tabs) :
+	xml += tabs
+	xml += '<'
+	xml += et.tag
+	if et.attrib is not None :
+		for a in et.attrib :
+			xml += ' '
+			xml += a
+			xml += '="'
+			xml += et.attrib[a]
+			xml += '"'
+	xml += '>'
+	if et.text is not None :
+		xml += et.text
+	haschildren = False
+	for child in et :
+		xml += '\n'
+		xml_etree2xml_helper(child, xml, tabs + '\t')
+		haschildren = True
+	if haschildren:
+		xml += '\n'
+		xml += tabs
+	xml += '</'
+	xml += et.tag
+	xml += ' >'
 
