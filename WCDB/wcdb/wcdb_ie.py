@@ -1,7 +1,9 @@
 #!/usr/bin/python
 
+import sys
+sys.path += '/v/filer4b/v38q001/jkunze/CS373/cs373-wcdb/WCDB'
 import django
-from wcdb.models import Crises, Organizations, People, List_Item
+from models import Crises, Organizations, People, List_Item
 import xml.etree.ElementTree as ET
 import datetime
 import time
@@ -218,6 +220,12 @@ def xml_etree2mods (et):
 			o.save()
 
 def xml_etree2mods_common (element, gc) :
+	"""
+	Helper method for xml_etree2mods().
+	Takes in two ElementTree nodes, the first being a Crisis/Person/Organization.
+	The second is a node under Common.
+	This method moves that node's data into the List_Item table.
+	"""
 	List_Item.objects.filter(idref=element.idref,list_type=gc.tag).all().delete()
 	if gc.tag == "Summary" :
 		element.summary = gc.text.strip()
@@ -406,6 +414,12 @@ def xml_mods2etree ():
 	return et
 
 def xml_mods2etree_common (db_entry, elem) :
+	"""
+	Helper method for xml_mods2etree().
+	The first argument a Crisis/Person/Organization in the database.
+	The second is its matching ElementTree node in the tree being formed.
+	This method puts that element's Common data into the tree.
+	"""
 	commons = ["Feeds", "Maps", "Videos", "Images", "ExternalLinks", "Citations"]
 	common_elem = ET.Element("Common")
 		
@@ -431,12 +445,19 @@ def xml_mods2etree_common (db_entry, elem) :
 	elem.insert(0, common_elem)
 
 def xml_etree2xml (et):
+	"""
+	Takes an ElementTree and returns a string representation.
+	"""
 	et = et.getroot()
 	xml = []
-	xml_etree2xml_helper(et, xml, '')
+	xml_etree2xml_helper(et, xml)
 	return ''.join(xml)
 
-def xml_etree2xml_helper (et, xml, tabs) :
+def xml_etree2xml_helper (et, xml, tabs='') :
+	"""
+	Helper method for xml_etree2xml().
+	Recursively converts a given node to XML.
+	"""
 	xml += tabs
 	xml += '<'
 	xml += et.tag

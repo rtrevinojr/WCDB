@@ -16,7 +16,7 @@ urlpatterns = patterns('',
     url(r'^test/$', 'wcdb.views.run_tests'),
     url(r'^login/$', 'wcdb.views.my_login'),
     url(r'^wcdb/import/$', 'wcdb.views.import_file'),
-    url(r'^wcdb/export/$', 'wcdb.views.export_file'),
+    url(r'^wcdb/export/$', 'wcdb.views.export_file', name='export'),
 
     url(r'^wcdb/China_Maritime_Conflict_page.html', 'wcdb.views.chinamaritime'),
     url(r'^wcdb/Human_Trafficking_page.html', 'wcdb.views.humantrafficking'),
