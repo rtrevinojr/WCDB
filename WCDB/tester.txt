@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 WorldCrises
 Crisis {'ID': u'CRI_WCDBPR', 'Name': u'CS w373 Project 3'}
 Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
@@ -205,3 +206,5 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 		</Common >
 	</Organization >
 </WorldCrises >
+=======
+>>>>>>> ba971dae7378cedc65e14c8cc7eba52a4828addd

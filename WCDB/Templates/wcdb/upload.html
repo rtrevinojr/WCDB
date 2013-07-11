@@ -1,0 +1,13 @@
+<h1>We are at upload</h1>
+
+<p>
+please select action: 
+</p>
+
+<form action="/upload/" method="post"> {% csrf_token %}
+
+<label for="upload">File:</label>
+<input type="file" name="upload" id="upload"/>
+<input type="submit" value="Submit"/>
+
+</form>

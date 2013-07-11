@@ -112,7 +112,8 @@ TEMPLATE_DIRS = (
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
     #'/v/filer4b/v38q001/taylor91/school/summer_2013/cs373/cs373-wcdb/WCDB/Templates'
-    'Templates',
+    #'Templates',
+	'/u/jkunze/CS373/cs373-wcdb/WCDB/Templates'
 )
 
 INSTALLED_APPS = (

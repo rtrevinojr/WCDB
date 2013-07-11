@@ -1,0 +1,13 @@
+<h1>We are at login</h1>
+
+<p>
+please login:
+</p>
+
+<form action="/login/" method="post"> {% csrf_token %}
+
+<input type="text" name="username" />
+<input type="text" name="password" />
+<input type="submit" value="Submit"/>
+
+</form>
