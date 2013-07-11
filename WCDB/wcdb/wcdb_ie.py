@@ -30,14 +30,14 @@ def xml_validate (xf, sf):
 	"""
 
 	try:
-		pyxsval.parseAndValidateXmlInput(xf, xsdFile=sf)
+		pyxsval.parseAndValidateXmlInputString(xf.read(), xsdText=sf.read())
 	except XsvalError as xe:
 		# the file did not validate
 		return False
 
 	return True
 
-def xml_reader (xf, sf, et):
+def xml_reader (xf, sf):
 	"""
 	Takes in an xml file and stores
 	the content in an ElementTree object
@@ -45,7 +45,7 @@ def xml_reader (xf, sf, et):
 	sf is an XML Schema file
 	returns an ElementTree
 	"""
-	
+	"""
 	try:
 		f = open(xf, 'r')
 	except IOError as e:
@@ -54,13 +54,12 @@ def xml_reader (xf, sf, et):
 		# try again
 		sf.write("Fails in first try\n")
 		return False
-
 	"""
+	
 	if (not xml_validate(xf, sf)):
 		# handle still without crashing
 		# warn user that xml isn't valid
-		return False
-	"""	
+		return 1
 
 	try:
 		et = ET.parse(xf)
@@ -68,7 +67,7 @@ def xml_reader (xf, sf, et):
 		# assuming syntax is not valid
 		# once again tell the user that 
 		# the import did not work
-		return False
+		return 2
 	
 	return et
 
