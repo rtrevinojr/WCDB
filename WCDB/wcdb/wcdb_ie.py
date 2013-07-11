@@ -256,47 +256,102 @@ def xml_mods2etree ():
 	# set the root of the element tree to the root_elem
 	et._setroot(root_elem)
 
+
+
+	# add the orgs table to the element tree
+	for org in Organizations.objects.all() :
+		organization_elem = ET.Element("Organization", { "ID" : org.idref, "Name" : org.name })
+		
+		# Add the org's common info to the element tree
+		xml_mods2etree_common(org, organization_elem)
+
+		#go through lists not in common
+		uncommons = ["ContactInfo", "History"]
+		for tag in uncommons :
+			list_items = List_Item.objects.filter(idref=org.idref, list_type=tag)
+			li_elem = ET.Element(tag)
+			for li in list_items :
+				temp_elem = ET.Element("li")
+				if li.href is not None :
+					temp_elem.attrib.update({"href" : li.href})
+				if li.embed is not None :
+					temp_elem.attrib.update({"embed" : li.embed})
+				if li.text is not None :
+					temp_elem.attrib.update({"text" : li.text})
+				temp_elem.text = li.body
+				li_elem.insert(0, temp_elem)
+			organization_elem.insert(0, li_elem)
+
+		# create and fill the people element for the organization 
+		people_elem = ET.Element("People")
+		orgs_people_list = People.objects.all()
+		for person in orgs_people_list :
+			if org in person.organizations.all() :
+				temp_elem = ET.Element("Person", { "ID" : person.idref })
+				people_elem.insert(0, temp_elem)
+		organization_elem.insert(0, people_elem)
+
+		# create and fill the crises element for the organization
+		crisis_elem = ET.Element("Crises")
+		orgs_crises_list = Crises.objects.all()
+		for crisis in orgs_crises_list :
+			if org in crisis.organizations.all() :
+				temp_elem = ET.Element("Crisis", { "ID" : crisis.idref })
+				crisis_elem.insert(0, temp_elem)
+		organization_elem.insert(0, crisis_elem)
+
+		root_elem.insert(0, organization_elem)
+
+
+
+	# add the people table to the element tree
+	people_list = People.objects.all()
+	for per in people_list :
+		person_elem = ET.Element("Person", { "ID" : per.idref, "Name" : per.name })
+
+		# add the person's common elements to the element tree
+		xml_mods2etree_common(per, person_elem)
+
+		# add the persons location to the element tree
+		location_elem = ET.Element("Location")
+		location_elem.text = per.location
+		person_elem.insert(0, location_elem)
+
+		# add the kind of person to the element tree
+		kind_elem = ET.Element("Kind")
+		kind_elem.text = per.kind
+		person_elem.insert(0, kind_elem)
+
+		# create and fill the organizations element for the person
+		org_elem = ET.Element("Organizations")
+		for organization in per.organizations.all() :
+			temp_elem = ET.Element("Org", { "ID" : organization.idref })
+			org_elem.insert(0, temp_elem)	
+		person_elem.insert(0, org_elem)
+
+		# create and fill the crises element for the person
+		crisis_elem = ET.Element("Crises")
+		per_crises_list = Crises.objects.all()
+		for crisis in per_crises_list :
+			if per in crisis.people.all() :
+				temp_elem = ET.Element("Crisis", { "ID" : crisis.idref })
+				crisis_elem.insert(0, temp_elem)
+		person_elem.insert(0, crisis_elem)
+
+		root_elem.insert(0, person_elem)
+
+
+
 	# add the crises table to the element tree
 	crises_list = Crises.objects.all()
 	for cr in crises_list :
 		crisis_elem = ET.Element("Crisis", { "ID" : cr.idref, "Name" : cr.name })
-		
-		# create and fill the people element for the crisis
-		people_elem = ET.Element("People")
-		for person in cr.people.all() :
-			temp_elem = ET.Element("Person", { "ID" : person.idref })
-			people_elem.insert(0, temp_elem)	
 
-		crisis_elem.insert(0, people_elem)
-
-		# create and fill the organizations element for the crisis
-		org_elem = ET.Element("Organizations")
-		for organization in cr.organizations.all() :
-			temp_elem = ET.Element("Org", { "ID" : organization.idref })
-			org_elem.insert(0, temp_elem)	
-
-		crisis_elem.insert(0, org_elem)
-
-		# create the kind element and add
-		kind_elem = ET.Element("Kind")
-		kind_elem.text = cr.kind
-		crisis_elem.insert(0, kind_elem)
-
-		# create the date element and add
-		date_elem = ET.Element("Date")
-		date_elem.text = str(cr.date)
-		crisis_elem.insert(0, date_elem)
-
-		# create the time element and add
-		time_elem = ET.Element("Time")
-		time_elem.text = str(cr.time)
-		crisis_elem.insert(0, time_elem)
-
-		
-		
+		#go through all the list items that are in common
+		xml_mods2etree_common(cr, crisis_elem)
 
 		# go through all the list items that aren't common
-		uncommons = ["Locations", "HumanImpact", "EconomicImpact", "ResourcesNeeded", "WaysToHelp"]
+		uncommons = ["WaysToHelp", "ResourcesNeeded", "EconomicImpact", "HumanImpact", "Locations"]
 		for tag in uncommons :
 			list_items = List_Item.objects.filter(idref=cr.idref, list_type=tag)
 			li_elem = ET.Element(tag)
@@ -312,89 +367,44 @@ def xml_mods2etree ():
 				li_elem.insert(0, temp_elem)
 			crisis_elem.insert(0, li_elem)
 
-		#go through all the list items that are in common
-		xml_mods2etree_common(cr, crisis_elem)
+		# create the time element and add
+		time_elem = ET.Element("Time")
+		time_elem.text = str(cr.time)
+		crisis_elem.insert(0, time_elem)
 
+		# create the date element and add
+		date_elem = ET.Element("Date")
+		date_elem.text = str(cr.date)
+		crisis_elem.insert(0, date_elem)
 
+		# create the kind element and add
+		kind_elem = ET.Element("Kind")
+		kind_elem.text = cr.kind
+		crisis_elem.insert(0, kind_elem)
 
-		# add the created crisis to the root
-		root_elem.insert(0, crisis_elem)
-
-	people_list = People.objects.all()
-	for per in people_list :
-		person_elem = ET.Element("Person", { "ID" : per.idref, "Name" : per.name })
-
-		# create and fill the crises element for the person
-		crisis_elem = ET.Element("Crises")
-		for crisis in crises_list :
-			if per in crisis.people.all() :
-				temp_elem = ET.Element("Crisis", { "ID" : crisis.idref })
-				crisis_elem.insert(0, temp_elem)
-		person_elem.insert(0, crisis_elem)
-
-		# create and fill the organizations element for the person
+		# create and fill the organizations element for the crisis
 		org_elem = ET.Element("Organizations")
-		for organization in per.organizations.all() :
+		for organization in cr.organizations.all() :
 			temp_elem = ET.Element("Org", { "ID" : organization.idref })
 			org_elem.insert(0, temp_elem)	
-		person_elem.insert(0, org_elem)
 
-		kind_elem = ET.Element("Kind")
-		kind_elem.text = per.kind
-		person_elem.insert(0, kind_elem)
-
-		location_elem = ET.Element("Location")
-		location_elem.text = per.location
-		person_elem.insert(0, location_elem)
-
-		xml_mods2etree_common(per, person_elem)
-
-		root_elem.insert(0, person_elem)
-
-	for org in Organizations.objects.all() :
-		organization_elem = ET.Element("Organization", { "ID" : org.idref, "Name" : org.name })
-		
-		# create and fill the crises element for the organization
-		crisis_elem = ET.Element("Crises")
-		for crisis in crises_list :
-			if org in crisis.organizations.all() :
-				temp_elem = ET.Element("Crisis", { "ID" : crisis.idref })
-				crisis_elem.insert(0, temp_elem)
-		organization_elem.insert(0, crisis_elem)
+		crisis_elem.insert(0, org_elem)
 
 		# create and fill the people element for the crisis
 		people_elem = ET.Element("People")
-		for person in people_list :
-			if org in person.organizations.all() :
-				temp_elem = ET.Element("Person", { "ID" : person.idref })
-				people_elem.insert(0, temp_elem)
-		organization_elem.insert(0, people_elem)
+		for person in cr.people.all() :
+			temp_elem = ET.Element("Person", { "ID" : person.idref })
+			people_elem.insert(0, temp_elem)	
 
-		#go through lists not in common
-		uncommons = ["History", "ContactInfo"]
-		for tag in uncommons :
-			list_items = List_Item.objects.filter(idref=cr.idref, list_type=tag)
-			li_elem = ET.Element(tag)
-			for li in list_items :
-				temp_elem = ET.Element("li")
-				if li.href is not None :
-					temp_elem.attrib.update({"href" : li.href})
-				if li.embed is not None :
-					temp_elem.attrib.update({"embed" : li.embed})
-				if li.text is not None :
-					temp_elem.attrib.update({"text" : li.text})
-				temp_elem.text = li.body
-				li_elem.insert(0, temp_elem)
-			organization_elem.insert(0, li_elem)
+		crisis_elem.insert(0, people_elem)
 
-		xml_mods2etree_common(org, organization_elem)
-
-		root_elem.insert(0, organization_elem)
-		
+		# add the created crisis to the root
+		root_elem.insert(0, crisis_elem)
+	
 	return et
 
 def xml_mods2etree_common (db_entry, elem) :
-	commons = ["Citations", "ExternalLinks", "Images", "Videos", "Maps", "Feeds"]
+	commons = ["Feeds", "Maps", "Videos", "Images", "ExternalLinks", "Citations"]
 	common_elem = ET.Element("Common")
 		
 	# create the summary element and add
