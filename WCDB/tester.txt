@@ -1,10 +1,10 @@
-<<<<<<< HEAD
 WorldCrises
 Crisis {'ID': u'CRI_WCDBPR', 'Name': u'CS w373 Project 3'}
 Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 Person {'ID': u'PER_ASDFXY', 'Name': u'Fake Tester Guy II'}
 Person {'ID': u'PER_ABCDEF', 'Name': u'Fake Tester Guy'}
 Person {'ID': u'PER_MNSNGH', 'Name': u'Manmohan Singh'}
+Organization {'ID': u'ORG_SLACKER', 'Name': u'Professional Slacker Society'}
 Organization {'ID': u'ORG_SLACKR', 'Name': u'Professional Slacker Society'}
 Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 <WorldCrises>
@@ -15,6 +15,7 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 		</People >
 		<Organizations>
 			<Org ID="ORG_SLACKR"></Org >
+			<Org ID="ORG_SLACKER"></Org >
 		</Organizations >
 		<Kind>Natural Disaster</Kind >
 		<Date>2013-06-27</Date >
@@ -57,18 +58,18 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 			<li>Himachal Pradesh, India</li >
 		</Locations >
 		<HumanImpact>
-			<li>More than 1000 dead.</li >
-			<li>Over 70000 stranded.</li >
 			<li>Over 100000 more evacuated.</li >
+			<li>Over 70000 stranded.</li >
+			<li>More than 1000 dead.</li >
 		</HumanImpact >
 		<EconomicImpact>
 			<li>Estimates over 500 Billion INR (10 Billion USD)</li >
 			<li>Ongoing large-scale crisis, impact has not been evaluated as of July 5th 2013.</li >
 		</EconomicImpact >
 		<ResourcesNeeded>
-			<li>Prime Minister of India undertook an aerial survey of the affected areas and announced 1,000 crore (US$170 million) aid package for disaster relief efforts in the state.</li >
 			<li>The Indian Airforce has flown hundreds of sorties every day to airdrop food and fuel for trapped villages.</li >
 			<li>The Indian Army and the National Disaster Response Force were deployed to evacuate stranded people on June 15th 2013.</li >
+			<li>Prime Minister of India undertook an aerial survey of the affected areas and announced 1,000 crore (US$170 million) aid package for disaster relief efforts in the state.</li >
 		</ResourcesNeeded >
 		<WaysToHelp>
 			<li>Like a page on Facebook</li >
@@ -105,6 +106,7 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 		</Crises >
 		<Organizations>
 			<Org ID="ORG_SLACKR"></Org >
+			<Org ID="ORG_SLACKER"></Org >
 		</Organizations >
 		<Kind>Nonexistant</Kind >
 		<Location>Data</Location >
@@ -124,6 +126,7 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 		</Crises >
 		<Organizations>
 			<Org ID="ORG_SLACKR"></Org >
+			<Org ID="ORG_SLACKER"></Org >
 		</Organizations >
 		<Kind>Nonexistant</Kind >
 		<Location>Data</Location >
@@ -156,7 +159,7 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 			<Summary></Summary >
 		</Common >
 	</Person >
-	<Organization ID="ORG_SLACKR" Name="Professional Slacker Society">
+	<Organization ID="ORG_SLACKER" Name="Professional Slacker Society">
 		<Crises>
 			<Crisis ID="CRI_WCDBPR"></Crisis >
 		</Crises >
@@ -170,6 +173,31 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 		<ContactInfo>
 			<li>Email: donot@email.me</li >
 			<li>Phone: (+91) 1-800-DONTKNOW</li >
+		</ContactInfo >
+		<Common>
+			<Citations></Citations >
+			<ExternalLinks></ExternalLinks >
+			<Images></Images >
+			<Videos></Videos >
+			<Maps></Maps >
+			<Feeds></Feeds >
+			<Summary></Summary >
+		</Common >
+	</Organization >
+	<Organization ID="ORG_SLACKR" Name="Professional Slacker Society">
+		<Crises>
+			<Crisis ID="CRI_WCDBPR"></Crisis >
+		</Crises >
+		<People>
+			<Person ID="PER_ASDFXY"></Person >
+			<Person ID="PER_ABCDEF"></Person >
+		</People >
+		<History>
+			<li>I'll found it later.</li >
+		</History >
+		<ContactInfo>
+			<li>Phone: (+91) 1-800-DONTKNOW</li >
+			<li>Email: donot@email.me</li >
 		</ContactInfo >
 		<Common>
 			<Citations></Citations >
@@ -206,5 +234,3 @@ Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 		</Common >
 	</Organization >
 </WorldCrises >
-=======
->>>>>>> ba971dae7378cedc65e14c8cc7eba52a4828addd

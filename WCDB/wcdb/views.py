@@ -19,7 +19,7 @@ def index(request):
 	if request.user.is_authenticated() :
 		dummy = ET.ElementTree()
 		f = open('tester.txt', 'w')
-		tree = xml_reader("test.xml", f, dummy)
+		tree = xml_reader("test.xml", f)
 		tree = tree.getroot()
 		xml_etree2mods(tree)
 
@@ -71,7 +71,11 @@ def upload_file(request) :
 		form = UploadFileForm()
 	return render_to_response('wcdb/upload.html', {'form' : form})
 
-
+from tests import do_test
+def run_tests(request):
+    do_test()
+    return render_to_response('wcdb/test.html', {'result' : do_test()});
+    
 
 def static_two(request):
     return render_to_response('wcdb/static2.html');
