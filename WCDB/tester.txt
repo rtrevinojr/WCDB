@@ -1,197 +1,207 @@
 WorldCrises
-Organization {'ID': u'ORG_SLACKER', 'Name': u'Professional Slacker Society'}
-Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
+Crisis {'ID': u'CRI_WCDBPR', 'Name': u'CS w373 Project 3'}
+Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
 Person {'ID': u'PER_ASDFXY', 'Name': u'Fake Tester Guy II'}
 Person {'ID': u'PER_ABCDEF', 'Name': u'Fake Tester Guy'}
 Person {'ID': u'PER_MNSNGH', 'Name': u'Manmohan Singh'}
-Crisis {'ID': u'CRI_WCDBPR', 'Name': u'CS w373 Project 3'}
-Crisis {'ID': u'CRI_NRINFL', 'Name': u'2013 Northern India Floods'}
+Organization {'ID': u'ORG_SLACKR', 'Name': u'Professional Slacker Society'}
+Organization {'ID': u'ORG_PMRLFD', 'Name': u"Prime Minister's Relief Fund"}
 <WorldCrises>
-	<Organization ID="ORG_SLACKER" Name="Professional Slacker Society">
-		<Common>
-			<Feeds></Feeds >
-			<Maps></Maps >
-			<Videos></Videos >
-			<Images></Images >
-			<ExternalLinks></ExternalLinks >
-			<Citations></Citations >
-			<Summary></Summary >
-		</Common >
-		<ContactInfo></ContactInfo >
-		<History></History >
+	<Crisis ID="CRI_WCDBPR" Name="CS w373 Project 3">
 		<People>
 			<Person ID="PER_ASDFXY"></Person >
 			<Person ID="PER_ABCDEF"></Person >
 		</People >
-		<Crises>
-			<Crisis ID="CRI_WCDBPR"></Crisis >
-		</Crises >
-	</Organization >
-	<Organization ID="ORG_PMRLFD" Name="Prime Minister's Relief Fund">
-		<Common>
-			<Feeds></Feeds >
-			<Maps></Maps >
-			<Videos></Videos >
-			<Images></Images >
-			<ExternalLinks></ExternalLinks >
-			<Citations></Citations >
-			<Summary></Summary >
-		</Common >
-		<ContactInfo></ContactInfo >
-		<History></History >
-		<People>
-			<Person ID="PER_MNSNGH"></Person >
-		</People >
-		<Crises>
-			<Crisis ID="CRI_NRINFL"></Crisis >
-		</Crises >
-	</Organization >
-	<Person ID="PER_ASDFXY" Name="Fake Tester Guy II">
-		<Common>
-			<Feeds></Feeds >
-			<Maps></Maps >
-			<Videos></Videos >
-			<Images></Images >
-			<ExternalLinks></ExternalLinks >
-			<Citations></Citations >
-			<Summary></Summary >
-		</Common >
-		<Location>Data</Location >
-		<Kind>Nonexistant</Kind >
 		<Organizations>
-			<Org ID="ORG_SLACKER"></Org >
+			<Org ID="ORG_SLACKR"></Org >
 		</Organizations >
-		<Crises>
-			<Crisis ID="CRI_WCDBPR"></Crisis >
-		</Crises >
-	</Person >
-	<Person ID="PER_ABCDEF" Name="Fake Tester Guy">
-		<Common>
-			<Feeds></Feeds >
-			<Maps></Maps >
-			<Videos></Videos >
-			<Images></Images >
-			<ExternalLinks></ExternalLinks >
-			<Citations></Citations >
-			<Summary></Summary >
-		</Common >
-		<Location>Data</Location >
-		<Kind>Nonexistant</Kind >
-		<Organizations>
-			<Org ID="ORG_SLACKER"></Org >
-		</Organizations >
-		<Crises>
-			<Crisis ID="CRI_WCDBPR"></Crisis >
-		</Crises >
-	</Person >
-	<Person ID="PER_MNSNGH" Name="Manmohan Singh">
-		<Common>
-			<Feeds></Feeds >
-			<Maps></Maps >
-			<Videos></Videos >
-			<Images></Images >
-			<ExternalLinks></ExternalLinks >
-			<Citations></Citations >
-			<Summary></Summary >
-		</Common >
-		<Location>India</Location >
-		<Kind>Politician</Kind >
-		<Organizations>
-			<Org ID="ORG_PMRLFD"></Org >
-		</Organizations >
-		<Crises>
-			<Crisis ID="CRI_NRINFL"></Crisis >
-		</Crises >
-	</Person >
-	<Crisis ID="CRI_WCDBPR" Name="CS w373 Project 3">
-		<Common>
-			<Feeds></Feeds >
-			<Maps></Maps >
-			<Videos></Videos >
-			<Images></Images >
-			<ExternalLinks></ExternalLinks >
-			<Citations></Citations >
-			<Summary></Summary >
-		</Common >
-		<WaysToHelp></WaysToHelp >
-		<ResourcesNeeded></ResourcesNeeded >
-		<EconomicImpact></EconomicImpact >
+		<Kind>Natural Disaster</Kind >
+		<Date>2013-06-27</Date >
+		<Time>09:00:00</Time >
+		<Locations>
+			<li>University of Texas</li >
+		</Locations >
 		<HumanImpact>
 			<li>(yes i know this is stupid).</li >
 			<li>More than 1000 dead.</li >
 			<li>Over 70000 stranded.</li >
 			<li>Over 100000 more evacuated.</li >
 		</HumanImpact >
-		<Locations>
-			<li>University of Texas</li >
-		</Locations >
-		<Time>09:00:00</Time >
-		<Date>2013-06-27</Date >
-		<Kind>Natural Disaster</Kind >
-		<Organizations>
-			<Org ID="ORG_SLACKER"></Org >
-		</Organizations >
-		<People>
-			<Person ID="PER_ASDFXY"></Person >
-			<Person ID="PER_ABCDEF"></Person >
-		</People >
+		<EconomicImpact></EconomicImpact >
+		<ResourcesNeeded></ResourcesNeeded >
+		<WaysToHelp></WaysToHelp >
+		<Common>
+			<Citations></Citations >
+			<ExternalLinks></ExternalLinks >
+			<Images></Images >
+			<Videos></Videos >
+			<Maps></Maps >
+			<Feeds></Feeds >
+			<Summary></Summary >
+		</Common >
 	</Crisis >
 	<Crisis ID="CRI_NRINFL" Name="2013 Northern India Floods">
-		<Common>
-			<Feeds>
-				<li embed="[WHATEVER A FEED URL LOOKS LIKE]"></li >
-			</Feeds >
-			<Maps>
-				<li embed="https://www.google.com/maps?sll=30.08236989592049,79.31189246107706&sspn=3.2522150867582833,7.2072687770004205&t=m&q=uttarakhand&dg=opt&ie=UTF8&hq=&hnear=Uttarakhand,+India&ll=30.066753,79.0193&spn=2.77128,5.07019&z=8&output=embed"></li >
-			</Maps >
-			<Videos>
-				<li embed="//www.youtube.com/embed/qV3s7Sa6B6w"></li >
-			</Videos >
-			<Images>
-				<li embed="http://timesofindia.indiatimes.com/photo/15357310.cms"></li >
-				<li text="This is the alt element of the image." embed="http://images.jagran.com/ukhand-ss-02-07-13.jpg"></li >
-			</Images >
-			<ExternalLinks>
-				<li href="http://en.wikipedia.org/wiki/2013_North_India_floods">Wikipedia</li >
-			</ExternalLinks >
-			<Citations>
-				<li>The Times of India</li >
-				<li>The Hindustan Times</li >
-			</Citations >
-			<Summary>Lorem ipsum...</Summary >
-		</Common >
-		<WaysToHelp>
-			<li href="https://pmnrf.gov.in/">Donate to Prime Minister's Relief Fund</li >
-			<li>Like a page on Facebook</li >
-			<li href="http://google.org/personfinder/2013-uttrakhand-floods/">Google Person Finder</li >
-		</WaysToHelp >
-		<ResourcesNeeded>
-			<li>The Indian Airforce has flown hundreds of sorties every day to airdrop food and fuel for trapped villages.</li >
-			<li>The Indian Army and the National Disaster Response Force were deployed to evacuate stranded people on June 15th 2013.</li >
-			<li>Prime Minister of India undertook an aerial survey of the affected areas and announced 1,000 crore (US$170 million) aid package for disaster relief efforts in the state.</li >
-		</ResourcesNeeded >
-		<EconomicImpact>
-			<li>Estimates over 500 Billion INR (10 Billion USD)</li >
-			<li>Ongoing large-scale crisis, impact has not been evaluated as of July 5th 2013.</li >
-		</EconomicImpact >
+		<People>
+			<Person ID="PER_MNSNGH"></Person >
+		</People >
+		<Organizations>
+			<Org ID="ORG_PMRLFD"></Org >
+		</Organizations >
+		<Kind>Natural Disaster</Kind >
+		<Date>2013-06-14</Date >
+		<Time>09:00:00</Time >
+		<Locations>
+			<li>Nepal</li >
+			<li>Uttarakhand, India</li >
+			<li>Himachal Pradesh, India</li >
+		</Locations >
 		<HumanImpact>
 			<li>More than 1000 dead.</li >
 			<li>Over 70000 stranded.</li >
 			<li>Over 100000 more evacuated.</li >
 		</HumanImpact >
-		<Locations>
-			<li>Uttarakhand, India</li >
-			<li>Himachal Pradesh, India</li >
-			<li>Nepal</li >
-		</Locations >
-		<Time>09:00:00</Time >
-		<Date>2013-06-14</Date >
-		<Kind>Natural Disaster</Kind >
+		<EconomicImpact>
+			<li>Estimates over 500 Billion INR (10 Billion USD)</li >
+			<li>Ongoing large-scale crisis, impact has not been evaluated as of July 5th 2013.</li >
+		</EconomicImpact >
+		<ResourcesNeeded>
+			<li>Prime Minister of India undertook an aerial survey of the affected areas and announced 1,000 crore (US$170 million) aid package for disaster relief efforts in the state.</li >
+			<li>The Indian Airforce has flown hundreds of sorties every day to airdrop food and fuel for trapped villages.</li >
+			<li>The Indian Army and the National Disaster Response Force were deployed to evacuate stranded people on June 15th 2013.</li >
+		</ResourcesNeeded >
+		<WaysToHelp>
+			<li>Like a page on Facebook</li >
+			<li href="http://google.org/personfinder/2013-uttrakhand-floods/">Google Person Finder</li >
+			<li href="https://pmnrf.gov.in/">Donate to Prime Minister's Relief Fund</li >
+		</WaysToHelp >
+		<Common>
+			<Citations>
+				<li>The Hindustan Times</li >
+				<li>The Times of India</li >
+			</Citations >
+			<ExternalLinks>
+				<li href="http://en.wikipedia.org/wiki/2013_North_India_floods">Wikipedia</li >
+			</ExternalLinks >
+			<Images>
+				<li embed="http://timesofindia.indiatimes.com/photo/15357310.cms"></li >
+				<li text="This is the alt element of the image." embed="http://images.jagran.com/ukhand-ss-02-07-13.jpg"></li >
+			</Images >
+			<Videos>
+				<li embed="//www.youtube.com/embed/qV3s7Sa6B6w"></li >
+			</Videos >
+			<Maps>
+				<li embed="https://www.google.com/maps?sll=30.08236989592049,79.31189246107706&sspn=3.2522150867582833,7.2072687770004205&t=m&q=uttarakhand&dg=opt&ie=UTF8&hq=&hnear=Uttarakhand,+India&ll=30.066753,79.0193&spn=2.77128,5.07019&z=8&output=embed"></li >
+			</Maps >
+			<Feeds>
+				<li embed="[WHATEVER A FEED URL LOOKS LIKE]"></li >
+			</Feeds >
+			<Summary>Lorem ipsum...</Summary >
+		</Common >
+	</Crisis >
+	<Person ID="PER_ASDFXY" Name="Fake Tester Guy II">
+		<Crises>
+			<Crisis ID="CRI_WCDBPR"></Crisis >
+		</Crises >
+		<Organizations>
+			<Org ID="ORG_SLACKR"></Org >
+		</Organizations >
+		<Kind>Nonexistant</Kind >
+		<Location>Data</Location >
+		<Common>
+			<Citations></Citations >
+			<ExternalLinks></ExternalLinks >
+			<Images></Images >
+			<Videos></Videos >
+			<Maps></Maps >
+			<Feeds></Feeds >
+			<Summary></Summary >
+		</Common >
+	</Person >
+	<Person ID="PER_ABCDEF" Name="Fake Tester Guy">
+		<Crises>
+			<Crisis ID="CRI_WCDBPR"></Crisis >
+		</Crises >
+		<Organizations>
+			<Org ID="ORG_SLACKR"></Org >
+		</Organizations >
+		<Kind>Nonexistant</Kind >
+		<Location>Data</Location >
+		<Common>
+			<Citations></Citations >
+			<ExternalLinks></ExternalLinks >
+			<Images></Images >
+			<Videos></Videos >
+			<Maps></Maps >
+			<Feeds></Feeds >
+			<Summary></Summary >
+		</Common >
+	</Person >
+	<Person ID="PER_MNSNGH" Name="Manmohan Singh">
+		<Crises>
+			<Crisis ID="CRI_NRINFL"></Crisis >
+		</Crises >
 		<Organizations>
 			<Org ID="ORG_PMRLFD"></Org >
 		</Organizations >
+		<Kind>Politician</Kind >
+		<Location>India</Location >
+		<Common>
+			<Citations></Citations >
+			<ExternalLinks></ExternalLinks >
+			<Images></Images >
+			<Videos></Videos >
+			<Maps></Maps >
+			<Feeds></Feeds >
+			<Summary></Summary >
+		</Common >
+	</Person >
+	<Organization ID="ORG_SLACKR" Name="Professional Slacker Society">
+		<Crises>
+			<Crisis ID="CRI_WCDBPR"></Crisis >
+		</Crises >
+		<People>
+			<Person ID="PER_ASDFXY"></Person >
+			<Person ID="PER_ABCDEF"></Person >
+		</People >
+		<History>
+			<li>I'll found it later.</li >
+		</History >
+		<ContactInfo>
+			<li>Email: donot@email.me</li >
+			<li>Phone: (+91) 1-800-DONTKNOW</li >
+		</ContactInfo >
+		<Common>
+			<Citations></Citations >
+			<ExternalLinks></ExternalLinks >
+			<Images></Images >
+			<Videos></Videos >
+			<Maps></Maps >
+			<Feeds></Feeds >
+			<Summary></Summary >
+		</Common >
+	</Organization >
+	<Organization ID="ORG_PMRLFD" Name="Prime Minister's Relief Fund">
+		<Crises>
+			<Crisis ID="CRI_NRINFL"></Crisis >
+		</Crises >
 		<People>
 			<Person ID="PER_MNSNGH"></Person >
 		</People >
-	</Crisis >
+		<History>
+			<li>Founded in 1948.</li >
+		</History >
+		<ContactInfo>
+			<li>Email: donot@email.me</li >
+			<li>Phone: (+91) 1-800-DONTKNOW</li >
+		</ContactInfo >
+		<Common>
+			<Citations></Citations >
+			<ExternalLinks></ExternalLinks >
+			<Images></Images >
+			<Videos></Videos >
+			<Maps></Maps >
+			<Feeds></Feeds >
+			<Summary></Summary >
+		</Common >
+	</Organization >
 </WorldCrises >

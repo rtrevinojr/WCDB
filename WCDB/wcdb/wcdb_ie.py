@@ -29,11 +29,11 @@ def xml_validate (xf, sf):
 	return true if xf validates
 	"""
 
-	try:
-		pyxsval.parseAndValidateXmlInputString(xf.read(), xsdText=sf.read())
-	except XsvalError as xe:
+#	try:
+#		pyxsval.parseAndValidateXmlInputString(xf.read(), xsdText=sf.read())
+# 	except XsvalError as xe:
 		# the file did not validate
-		return False
+#		return False
 
 	return True
 

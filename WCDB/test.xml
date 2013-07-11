@@ -85,7 +85,7 @@
             <Person ID="PER_ASDFXY" />
         </People>
         <Organizations>
-            <Org ID="ORG_SLACKER" />
+            <Org ID="ORG_SLACKR" />
         </Organizations>
         <Kind>Natural Disaster</Kind>
         <Date>2013-06-27</Date>
@@ -120,7 +120,7 @@
             <Crisis ID="CRI_NRINFL" />
         </Crises>
         <Organizations>
-            <Org ID="ORG_SLACKER" />
+            <Org ID="ORG_SLACKR" />
         </Organizations>
         <Kind>Nonexistant</Kind>
         <Location>Data</Location>
@@ -133,7 +133,7 @@
             <Crisis ID="CRI_NRINFL" />
         </Crises>
         <Organizations>
-            <Org ID="ORG_SLACKER" />
+            <Org ID="ORG_SLACKR" />
         </Organizations>
         <Kind>Nonexistant</Kind>
         <Location>Data</Location>
@@ -161,7 +161,7 @@
     </Organization>
 
     <!-- Example Organization element -->
-    <Organization ID="ORG_SLACKER" Name="Professional Slacker Society">
+    <Organization ID="ORG_SLACKR" Name="Professional Slacker Society">
         <Crises>
             <Crisis ID="CRI_NRINFL" />
         </Crises>
