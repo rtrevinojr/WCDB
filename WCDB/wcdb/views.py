@@ -1,4 +1,5 @@
 from django.template import Context, loader
+from django.template import RequestContext
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -14,8 +15,10 @@ from django.contrib.sessions.middleware import SessionMiddleware
 from django.contrib.auth import authenticate, login
 
 def index(request):
+	return render_to_response('wcdb/index.html')
+	"""
 	t = loader.get_template('wcdb/index.html')
-	
+
 	if request.user.is_authenticated() :
 		dummy = ET.ElementTree()
 		f = open('tester.txt', 'w')
@@ -39,6 +42,7 @@ def index(request):
 		return HttpResponse(t.render(c))
 	else :
 		return render(request, 'wcdb/login.html')
+	"""
 
 def my_login(request) :
 	user =""
@@ -60,16 +64,62 @@ def my_login(request) :
 	elif request.user.is_authenticated() :
 		return render(request, 'wcdb/index.html')
 
-def upload_file(request) :
+def import_file(request) :
+	t = loader.get_template('wcdb/import.html')
 	if request.method == 'POST' :
 		form = UploadFileForm(request.POST, request.FILES)
-		if form.is_valid() :
-			# handle_uploaded_file(request.FILES['file'])
-			# we may want to handle this from a separate file ?
-			return HttpResponseRedirect('/wcdb/')
+		#if form.is_valid() :
+		# handle_uploaded_file(request.FILES['file'])
+		# we may want to handle this from a separate file ?
+		xml = request.FILES["upload"]
+		xsd = open("/u/tbc399/Documents/cs373/p3/cs373-wcdb/WCDB/WorldCrises.xsd.xml", 'r')
+		et = xml_reader(xml, xsd)
+		if (et == 1):
+			# xml is not valid against schema
+			success = 1
+		elif (et == 2):
+			success = 2
+		else: # et is an ElementTree
+			xml_etree2mods(et.getroot())
+			success = 0
+		c = RequestContext(request, {'success': success})
+		return HttpResponse(t.render(c))
 	else :
 		form = UploadFileForm()
-	return render_to_response('wcdb/upload.html', {'form' : form})
+	#return render_to_response('wcdb/import.html', {'form' : form})
+	c = RequestContext(request)
+	return HttpResponse(t.render(c))
+	
+	"""
+	# template for the upload form page
+	t = loader.get_template('wcdb/import.html')
+	# template for the landing page for a successful upload
+	if request.method == 'POST':
+		xml = request.FILES["xml"]
+		xsd = open("/u/tbc399/Documents/cs373/p3/cs373-wcdb/WCDB/WorldCrises.xsd.xml", 'r')
+		et = xml_reader(xml, xsd)
+		if (et == 1):
+			# xml is not valid against schema
+			success = 1
+		elif (et == 2):
+			success = 2
+		else: # et is an ElementTree
+			xml_etree2mods(et.getroot())
+			success = 0
+		c = RequestContext(request, {'success': success})
+		return HttpResponse(t.render(c))
+
+	c = RequestContext(request)
+	return HttpResponse(t.render(c))
+	"""
+
+def export_file (request):
+	et = xml_mods2etree()
+	xml_string = xml_etree2xml(et)
+	t = loader.get_template('wcdb/export.html')
+	c = Context({'xml_text': xml_string})
+	return HttpResponse(t.render(c))
+
 
 from tests import do_test
 def run_tests(request):
@@ -107,25 +157,3 @@ def bnpparibas(request):
 def polaris(request):
     return render_to_response('wcdb/Polaris_Project_page.html');
 
-"""
-def static_three(request):
-    return render_to_response('static3.html');
-
-def static_four(request):
-    return render_to_response('static4.html');
-
-def static_five(request):
-    return render_to_response('static5.html');
-
-def static_six(request):
-    return render_to_response('static6.html');
-
-def static_seven(request):
-    return render_to_response('static7.html');
-
-def static_eight(request):
-    return render_to_response('static8.html');
-
-def static_nine(request):
-    return render_to_response('static9.html');
-"""

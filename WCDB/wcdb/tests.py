@@ -10,6 +10,7 @@ import sys
 import StringIO
 from django.test.simple import DjangoTestSuiteRunner
 from django.http import HttpResponse
+from wcdb_ie import xml_validate
 import unittest
 
 class SimpleTest(unittest.TestCase):
@@ -18,7 +19,62 @@ class SimpleTest(unittest.TestCase):
 
         Tests that 1 + 1 always equals 2.
         """
-        self.assertEqual(1 + 1, 3)
+        self.assertEqual(1 + 1, 2)
+
+    def test_static_page(self):
+        from views import johnkerry
+        self.assertTrue(type(johnkerry(None)) == HttpResponse)
+        self.assertTrue(type(johnkerry(None).content) == str)
+        self.assertTrue(johnkerry(None).content[0:23] == '<!DOCTYPE html>\n<html>\n')
+
+    def test_static_page_many(self):
+        from views import asean
+        self.assertTrue(type(asean(None)) == HttpResponse)
+        self.assertTrue(type(asean(None).content) == str)
+        from views import bnpparibas
+        self.assertTrue(type(bnpparibas(None)) == HttpResponse)
+        self.assertTrue(type(bnpparibas(None).content) == str)
+        from views import chinamaritime
+        self.assertTrue(type(chinamaritime(None)) == HttpResponse)
+        self.assertTrue(type(chinamaritime(None).content) == str)
+        from views import humantrafficking
+        self.assertTrue(type(humantrafficking(None)) == HttpResponse)
+        self.assertTrue(type(humantrafficking(None).content) == str)
+        from views import johnkerry
+        self.assertTrue(type(johnkerry(None)) == HttpResponse)
+        self.assertTrue(type(johnkerry(None).content) == str)
+        from views import mohamedmorsi
+        self.assertTrue(type(mohamedmorsi(None)) == HttpResponse)
+        self.assertTrue(type(mohamedmorsi(None).content) == str)
+        from views import northkorea
+        self.assertTrue(type(northkorea(None)) == HttpResponse)
+        self.assertTrue(type(northkorea(None).content) == str)
+        from views import polaris
+        self.assertTrue(type(polaris(None)) == HttpResponse)
+        self.assertTrue(type(polaris(None).content) == str)
+        from views import rickymartin
+        self.assertTrue(type(rickymartin(None)) == HttpResponse)
+        self.assertTrue(type(rickymartin(None).content) == str)
+
+    def test_xml_validate(self) :
+        xml = StringIO.StringIO("""
+        <WorldCrisis>
+          <Crisis>
+            <Person></Person>
+              <Organization></Organization>
+              <Place></Place>
+            </Crisis>
+            <Crisis>
+            <Unique>
+              <Person></Person>
+              <Organization></Organization>
+              <Place><City></City></Place>
+            </Unique>
+          </Crisis>
+        </WorldCrisis>
+        """)
+        result = xml_validate(xml, "")
+        self.assertEqual(result, True)
         
 
 class NoTestDbDatabaseTestRunner(DjangoTestSuiteRunner):
@@ -37,8 +93,4 @@ def do_test():
     result = StringIO.StringIO('')
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleTest)
     unittest.TextTestRunner(stream=result,verbosity=0).run(suite)
-
-    print '****TEST OUTPUT****'
-    print result.getvalue()
-    print '****END  OUTPUT****'
     return result.getvalue()
