@@ -5,7 +5,7 @@ from wcdb.models import Crises, Organizations, People, List_Item
 import xml.etree.ElementTree as ET
 import datetime
 import time
-from minixsv import pyxsval, xsvalErrorHandler
+#from minixsv import pyxsval, xsvalErrorHandler
 
 
 """
@@ -30,7 +30,7 @@ def xml_validate (xf, sf):
 	"""
 	xf.seek(0)
 	try:
-		pyxsval.parseAndValidateXmlInputString(xf.read(), xsdText=sf.read())
+		pass #pyxsval.parseAndValidateXmlInputString(xf.read(), xsdText=sf.read())
 	except xsvalErrorHandler.XsvalError as xe:
 		# the file did not validate
 		return False
