@@ -8,7 +8,7 @@ OUR_IDS =  ['CRI_CHINAD', 'CRI_SCMARI', 'CRI_NKCONF', 'CRI_FINCRI', 'CRI_HUMTRA'
                         'PER_BROBMA', 'PER_MAGICJ', 'PER_COPETE', 'PER_VPUTIN', 'PER_JEABEL', 'PER_JONGUN',
 
                         'ORG_MAMFDN', 'ORG_FIREDP', 'ORG_PARIBS', 'ORG_ASEANA', 'ORG_POLARS',
-                        'ORG_IMFUND', 'ORG_UNINAT', 'ORG_RIBBON', 'ORG_SALARM', 'ORG_WHORGN']
+                        'ORG_IMFUND', 'ORG_UNINAT', 'ORG_RIBBON', 'ORG_SALARM', 'ORG_WHORGN', 'ORG_CHILDR']
 
 
 # missing:

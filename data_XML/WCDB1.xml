@@ -41,7 +41,7 @@
 			<Org ID="ORG_RIBBON"/>
 		</Organizations>
 		<Kind>Epidemic </Kind>
-		<Date>1900-01-01</Date>
+		<Date>1980-01-01</Date>
 		<Time>18:00:00</Time>
 		<Locations>
 			<li>Worldwide </li>
@@ -82,6 +82,7 @@ Programs encouraging sexual abstinence do not appear to affect subsequent HIV ri
 		<Organizations>
 			<Org ID="ORG_MAMFDN"/>
 			<Org ID="ORG_POLARS"/>
+			<Org ID="ORG_CHILDR"/>
 		</Organizations>
 		<Kind>Crimes against humanity</Kind>
 		<Date>2013-07-10</Date>
@@ -816,6 +817,38 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 			<Videos>
 				<li embed="http://www.youtube.com/watch?v=1GQ__6hihyE" text="Pink Ribbon Red Ribbon video"/>
 			</Videos>
+		</Common>
+	</Organization>
+	<Organization ID="ORG_CHILDR" Name="Invisible Children">
+		<Crises>
+			<Crisis ID="CRI_HUMTRA"/>
+		</Crises>
+		<Kind>Humanitarian</Kind>
+		<Location>Central Africa</Location>
+		<History>
+			<li>With the intent to film a documentary about the War in Darfur, college students, Jason Russell, Bobby Bailey and Laren Poole traveled to Africa in 2003.[6] Russell had recently graduated from film school at the University of Southern California, and after witnessing gunmen shoot at the truck in front of him while driving in northern Uganda, he discovered Joseph Kony and the Lord's Resistance Army.[7] After the incident, the group decided instead to focus on the civil war affecting the region. After returning home to the United States, the group created a documentary entitled Invisible Children: The Rough Cut, which aims to expose the plight of child soldiers and night commuters of northern Uganda.[8] The film was originally shown to the group's friends and family, but eventually reached millions of people.[8] The three men believed that the world was unaware of the conditions in Uganda and the plight of the children they met there.
+The young men set out on a mission to expose what they had witnessed in Uganda, showing screenings of their film at hundreds of high schools, colleges and churches throughout the United States. In 2004 the group founded Invisible Children, Inc as a non-profit charitable organization. They solicit donations and sell merchandise, such as bracelets, t-shirts and posters, to raise money for their cause. The money they raise is used, in part, to produce awareness films, and for humanitarian aid to northern Uganda.
+Invisible Children, Inc. supporters in Portland, Oregon participating in a Global Night Commute on April 29, 2006. The participants sleep in a public place to simulate children in Uganda sleeping in a city center to avoid capture from the Lord's Resistance Army.
+In April 2007, the group organized an event called &quot;Displace Me&quot;, in which 67,000 activists throughout the United States slept in the streets in makeshift cardboard villages, hoping to raise awareness about those displaced by the Ugandan government. Later in 2007, American rock band Fall Out Boy filmed a music video for the song &quot;I'm Like a Lawyer with the Way I'm Always Trying to Get You Off (Me &amp; You)&quot; in Uganda after hearing of the organization's cause. Fall Out Boy originally intended to create a documentary-style film, but decided to focus on a love story between two Ugandan children, opining that the treatment &quot;seemed a lot more dangerous and compelling. I mean, have you ever seen a love story between Ugandan people — especially with a rock band — on 'TRL'?&quot; Invisible Children co-founder Bobby Bailey referred to the video as &quot;groundbreaking&quot;.
+Although the LRA left Uganda in 2006 after failed peace negotiations with the government, in March 2012, Invisible Children, Inc. continued to create new awareness programs. In May 2010, President Barack Obama signed the &quot;Lord's Resistance Army Disarmament and Northern Uganda Recovery Act&quot;. Invisible Children was one of the advocacy groups that influenced the passing of the bill. Representatives of Invisible Children and other groups were present in the Oval Office when the President Barack Obama signed the law. The President told the people in attendance &quot;We have seen your reporting, your websites, your blogs, and your video postcards—you have made the plight of the children visible to us all.&quot;
+In March 2012, Invisible Children began an internet video campaign called Kony 2012. The premise of the campaign was to heighten awareness of the actions of Kony and the LRA in order to put further pressure on the U.S. government to intervene militarily in Central Africa. The campaign focused on &quot;making Kony famous&quot; in order to awaken people to his crimes and the pressure the government into military actions. The production value of the film was praised and it was suggested that the methodology used would be a trend in activism in the future. The video went viral, reaching more than 40 million views in three days after being tweeted by celebrities such as Rihanna, Oprah Winfrey, and Ryan Seacrest. Immediately following the release and success of the internet films in the Kony 2012 program, criticism of the organization's activities and finances surfaced.</li>
+		</History>
+		<ContactInfo>
+			<li>info@invisiblechildren.com</li>
+		</ContactInfo>
+		<Common>
+			<Citations>
+				<li href="http://en.wikipedia.org/wiki/Invisible_Children,_Inc.">Invisible Children, Inc. citation</li>
+			</Citations>
+			<Images>
+				<li embed="http://vharmony.uga.edu/sites/default/files/images/organizations/logos/Invisible%20Children_0.jpg" text="Invisible Children Image"/>
+			</Images>
+			<Videos>
+				<li embed="http://www.youtube.com/watch?v=RUKsyA_z7n8" text="Invisible Children video"/>
+			</Videos>
+			<Maps>
+				<li embed="http://goo.gl/maps/0BdKJ" text="Invisible Children map"/>
+			</Maps>
 		</Common>
 	</Organization>
 </WorldCrises>
