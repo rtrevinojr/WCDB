@@ -1,6 +1,96 @@
 <?xml version="1.0" ?>
 <WorldCrises>
+	<Crisis ID="CRI_HURSAN" Name="Hurricane Sandy">
+		<Organizations>
+			<Org ID="ORG_FIREDP"/>
+		</Organizations>
+		<Kind>natural disaster</Kind>
+		<Date>2012-10-29</Date>
+		<Time>05:00:00</Time>
+		<Locations>
+			<li>New York metropolitan area</li>
+		</Locations>
+		<HumanImpact>
+			<li>Hurricane Sandy was the deadliest and most destructive hurricane of the 2012 Atlantic hurricane season, as well as the second-costliest hurricane in United States history. At least 286 people were killed along the path of the storm in seven countries. In Jamaica, winds left 70% of residents without electricity, blew roofs off buildings, and killed one. In Haiti, Sandy's outer bands brought flooding that killed at least 54, caused food shortages, and left about 200,000 homeless. In the Dominican Republic, two died. In Puerto Rico, one man was swept away by a swollen river. In Cuba, there was extensive coastal flooding and wind damage inland, destroying some 15,000 homes, and killing 11.</li>
+		</HumanImpact>
+		<EconomicImpact>
+			<li>Estimates as of June 2013 assess damage to have been over $68 billion (2013 USD), a total surpassed only by Hurricane Katrina. The severe and widespread damage the storm caused in the United States, as well as its unusual merge with a frontal system, resulted in the nicknaming of the hurricane by the media and several organizations of the U.S. government "Superstorm Sandy". The storm caused about $100 million (2012 USD) in damage in Jamaica, and around $2 billion (2012 USD) in damage in Cuba.</li>
+		</EconomicImpact>
+		<ResourcesNeeded>
+			<li>Clean-up and restoration of the areas hit hardest, temporary housing for those that lost their homes. clothing and shelter donations.
+</li>
+		</ResourcesNeeded>
+		<WaysToHelp>
+			<li>FEMA has been collaborating with many national, state, tribal, and local partners in response to Hurricane Sandy, including the National Voluntary Organizations Active in Disaster (NVOAD) and the Corporation for National and Community Service. Learn more on how you can donate and volunteer responsibly to assist the survivors of Hurricane Sandy here: http://www.fema.gov/hurricane-sandy-donate-and-volunteer</li>
+		</WaysToHelp>
+		<Common>
+			<Citations>
+				<li href="http://www.fema.gov/hurricane-sandy">FEMA Hurricane sandy site</li>
+			</Citations>
+			<ExternalLinks>
+				<li href="http://en.wikipedia.org/wiki/Hurricane_Sandy">Wikipedia Hurricane Sandy site</li>
+				<li href="http://crisiswiki.org/2012_Hurricane_Sandy">Crisis Wiki Hurricane Sandy site</li>
+			</ExternalLinks>
+			<Images>
+				<li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Sandy_Oct_25_2012_0400Z.JPG/546px-Sandy_Oct_25_2012_0400Z.JPG" text="Satellite photo of hurricane Sandy"/>
+				<li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/HurricaneSANDYCheltenham.jpg/220px-HurricaneSANDYCheltenham.jpg" text="Damage to neighborhood caused by Hurricane Sandy"/>
+				<li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Sandy_Poweroutage_1.jpg/220px-Sandy_Poweroutage_1.jpg" text="Manhattan power outage caused by Hurricane Sandy"/>
+			</Images>
+			<Videos>
+				<li embed="http://www.youtube.com/watch?v=91ldZZiOqAs" text="Hurricane Sandy radar loop"/>
+			</Videos>
+			<Maps>
+				<li embed="http://google.org/crisismap/2012-sandy" text="Crisis map of Hurricane Sandy"/>
+			</Maps>
+		</Common>
+	</Crisis>
+	<Crisis ID="CRI_AIDSHI" Name="AIDS/HIV">
+		<People>
+			<Person ID="PER_MAGICJ"/>
+			<Person ID="PER_BROBMA"/>
+		</People>
+		<Organizations>
+			<Org ID="ORG_SALARM"/>
+			<Org ID="ORG_RIBBON"/>
+		</Organizations>
+		<Kind>Epidemic </Kind>
+		<Date>1900-01-01</Date>
+		<Time>18:00:00</Time>
+		<Locations>
+			<li>Worldwide </li>
+		</Locations>
+		<HumanImpact>
+			<li>25,000,000 deaths
+Genetic research indicates that HIV originated in west-central Africa during the early twentieth century. AIDS was first recognized by the Centers for Disease Control and Prevention (CDC) in 1981 and its cause—HIV infection—was identified in the early part of the decade. Since its discovery, AIDS has caused nearly 30 million deaths (as of 2009). As of 2010, approximately 34 million people are living with HIV globally. AIDS is considered a pandemic—a disease outbreak which is present over a large area and is actively spreading.
+HIV/AIDS has had a great impact on society, both as an illness and as a source of discrimination. The disease also has significant economic impacts. There are many misconceptions about HIV/AIDS such as the belief that it can be transmitted by casual non-sexual contact. The disease has also become subject to many controversies involving religion.
+AIDS stigma exists around the world in a variety of ways, including ostracism, rejection, discrimination and avoidance of HIV infected people; compulsory HIV testing without prior consent or protection of confidentiality; violence against HIV infected individuals or people who are perceived to be infected with HIV; and the quarantine of HIV infected individuals. Stigma-related violence or the fear of violence prevents many people from seeking HIV testing, returning for their results, or securing treatment, possibly turning what could be a manageable chronic illness into a death sentence and perpetuating the spread of HIV.</li>
+		</HumanImpact>
+		<EconomicImpact>
+			<li>Economic research helps to estimate the effects of HIV/AIDS on the African economy and the cost effectiveness of prevention and treatment programmes
+Economic theory predicts that HIV/AIDS reduces labour supply and productivity, reduces exports, and increases imports
+The pandemic has already reduced average national economic growth rates by 2-4% a year across Africa
+Prevention and treatment programmes and economic measures such as targeted training in skills needed in key industries will limit the economic effects of HIV/AIDS
+HIV/AIDS affects the economics of both individuals and countries. The gross domestic product of the most affected countries has decreased due to the lack of human capital. Without proper nutrition, health care and medicine, large numbers of people die from AIDS-related complications. They will not only be unable to work, but will also require significant medical care. It is estimated that as of 2007 there were 12 million AIDS orphans.
+By affecting mainly young adults, AIDS reduces the taxable population, in turn reducing the resources available for public expenditures such as education and health services not related to AIDS resulting in increasing pressure for the state's finances and slower growth of the economy. This causes a slower growth of the tax base, an effect that is reinforced if there are growing expenditures on treating the sick, training (to replace sick workers), sick pay and caring for AIDS orphans. This is especially true if the sharp increase in adult mortality shifts the responsibility and blame from the family to the government in caring for these orphans.
+At the household level, AIDS causes both loss of income and increased spending on healthcare. A study in Côte d'Ivoire showed that households with an HIV/AIDS patient, spent twice as much on medical expenses as other households. This additional expenditure also leaves less income to spend on education and other personal or family investment.</li>
+		</EconomicImpact>
+		<ResourcesNeeded>
+			<li>In many developing countries, high HIV rates are over-burdening already fragile health systems. As these health sectors struggle to provide basic health services, they must now also make HIV/AIDS prevention, services, and care available. To contain the spread and minimize the impact of HIV/AIDS, several global initiatives are making large amounts of financial and medical resources available. However, without efficient health systems, their impact will be limited.
+Consistent condom use reduces the risk of HIV transmission by approximately 80% over the long term. When condoms are used consistently by a couple in which one person is infected, the rate of HIV infection is less than 1% per year. There is some evidence to suggest that female condoms may provide an equivalent level of protection. Application of a vaginal gel containing tenofovir (a reverse transcriptase inhibitor) immediately before sex seems to reduce infection rates by approximately 40% among African women
+Circumcision in Sub-Saharan Africa "reduces the acquisition of HIV by heterosexual men by between 38% and 66% over 24 months". Based on these studies, the World Health Organization and UNAIDS both recommended male circumcision as a method of preventing female-to-male HIV transmission in 2007. Whether it protects against male-to-female transmission is disputed and whether it is of benefit in developed countries and among men who have sex with men is undetermined. Some experts fear that a lower perception of vulnerability among circumcised men may cause more sexual risk-taking behavior, thus negating its preventive effects.</li>
+		</ResourcesNeeded>
+		<WaysToHelp>
+			<li>The Ryan White HIV/AIDS Program, Federal Funding, 
+AIDS Education and Training Centers (AETC), Minority AIDS Initiative (MAI), Federal Testing Programs 
+There is currently no cure or effective HIV vaccine. Treatment consists of high active antiretroviral therapy (HAART) which slows progression of the disease[113] and as of 2010 more than 6.6 million people were taking them in low and middle income countries.[7] Treatment also includes preventive and active treatment of opportunistic infections.
+Programs encouraging sexual abstinence do not appear to affect subsequent HIV risk. Evidence for a benefit from peer education is equally poor. Comprehensive sexual education provided at school may decrease high risk behavior. A substantial minority of young people continues to engage in high-risk practices despite knowing about HIV/AIDS, underestimating their own risk of becoming infected with HIV. It is not known whether treating other sexually transmitted infections is effective in preventing HIV.</li>
+		</WaysToHelp>
+		<Common/>
+	</Crisis>
 	<Crisis ID="CRI_EGYPTR" Name="Political Unrest in Egypt">
+		<People>
+			<Person ID="PER_MMORSI"/>
+		</People>
 		<Kind>Political Unrest</Kind>
 		<Date>2013-01-16</Date>
 		<Time>06:00:00</Time>
@@ -29,6 +119,14 @@
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_HUMTRA" Name="Human trafficking">
+		<People>
+			<Person ID="PER_COPETE"/>
+			<Person ID="PER_LALOCA"/>
+		</People>
+		<Organizations>
+			<Org ID="ORG_MAMFDN"/>
+			<Org ID="ORG_POLARS"/>
+		</Organizations>
 		<Kind>Crimes against humanity</Kind>
 		<Date>2013-07-10</Date>
 		<Time>05:00:00</Time>
@@ -77,6 +175,12 @@ The Ricky Martin Foundation
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_FINCRI" Name="Global financial crisis">
+		<People>
+			<Person ID="PER_GASPAR"/>
+		</People>
+		<Organizations>
+			<Org ID="ORG_PARIBS"/>
+		</Organizations>
 		<Kind>Financial crisis</Kind>
 		<Date>2007-01-01</Date>
 		<Time>21:19:59</Time>
@@ -118,6 +222,9 @@ Organizations in charge of providing aid include the International Monetary Fund
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_NKCONF" Name="North Korean Conflict">
+		<People>
+			<Person ID="PER_JONGUN"/>
+		</People>
 		<Kind>International tension</Kind>
 		<Date>2012-12-13</Date>
 		<Time>00:50:35</Time>
@@ -152,6 +259,13 @@ Organizations in charge of providing aid include the International Monetary Fund
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_SCMARI" Name="South China Maritime Conflicts">
+		<People>
+			<Person ID="PER_JKERRY"/>
+			<Person ID="PER_VPUTIN"/>
+		</People>
+		<Organizations>
+			<Org ID="ORG_ASEANA"/>
+		</Organizations>
 		<Kind>Crimes among nations</Kind>
 		<Date>2013-07-11</Date>
 		<Time>04:06:59</Time>
@@ -192,6 +306,9 @@ Organizations in charge of providing aid include the International Monetary Fund
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_CHINAD" Name="Democracy in China">
+		<People>
+			<Person ID="PER_CYLUNG"/>
+		</People>
 		<Kind>National movement</Kind>
 		<Date>1978-07-11</Date>
 		<Time>04:22:49</Time>
@@ -228,6 +345,9 @@ Organizations in charge of providing aid include the International Monetary Fund
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_AZWILD" Name="Arizona Wildfires">
+		<Organizations>
+			<Org ID="ORG_FIREDP"/>
+		</Organizations>
 		<Kind>Natural disaster</Kind>
 		<Date>2013-06-28</Date>
 		<Time>20:24:28</Time>
@@ -256,6 +376,9 @@ Organizations in charge of providing aid include the International Monetary Fund
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_LRACON" Name="LRA Conflict">
+		<Organizations>
+			<Org ID="ORG_POLARS"/>
+		</Organizations>
 		<Kind>Military/Human Rights</Kind>
 		<Date>1987-01-01</Date>
 		<Time>21:31:17</Time>
@@ -285,6 +408,9 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_OSLOSH" Name="Oslo Shootings">
+		<People>
+			<Person ID="PER_VPUTIN"/>
+		</People>
 		<Kind>Terrorism</Kind>
 		<Date>2011-07-22</Date>
 		<Time>19:25:34</Time>
@@ -312,7 +438,30 @@ LRA or become sex slaves.</li>
 			</Videos>
 		</Common>
 	</Crisis>
+	<Person ID="PER_LALOCA" Name="Ricky Martin">
+		<Crises>
+			<Crisis ID="CRI_HUMTRA"/>
+		</Crises>
+		<Kind>Celebrity</Kind>
+		<Location>United States</Location>
+		<Common/>
+	</Person>
+	<Person ID="PER_MAGICJ" Name="Magic Johnson">
+		<Crises>
+			<Crisis ID="CRI_AIDSHI"/>
+		</Crises>
+		<Kind>Basketball player</Kind>
+		<Location>L.A.</Location>
+		<Common/>
+	</Person>
 	<Person ID="PER_BROBMA" Name="Barack Obama">
+		<Crises>
+			<Crisis ID="CRI_HURSAN"/>
+			<Crisis ID="CRI_AIDSHI"/>
+		</Crises>
+		<Organizations>
+			<Org ID="ORG_WHORGN"/>
+		</Organizations>
 		<Kind>President</Kind>
 		<Location>Washington, D.C, United States of America</Location>
 		<Common>
@@ -340,6 +489,9 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_JEABEL" Name="Jean-Max Bellerive">
+		<Crises>
+			<Crisis ID="CRI_SCMARI"/>
+		</Crises>
 		<Kind>2010 Haitian Prime Minister</Kind>
 		<Location>Haiti</Location>
 		<Common>
@@ -354,12 +506,10 @@ LRA or become sex slaves.</li>
 			</Videos>
 		</Common>
 	</Person>
-	<Person ID="PER_MAGICJ" Name="Magic Johnson">
-		<Kind>Basketball player</Kind>
-		<Location>L.A.</Location>
-		<Common/>
-	</Person>
 	<Person ID="PER_JKERRY" Name="John Kerry">
+		<Crises>
+			<Crisis ID="CRI_SCMARI"/>
+		</Crises>
 		<Kind>US Secretary of State</Kind>
 		<Location>Harry S. Truman Building, Washington D.C.</Location>
 		<Common>
@@ -378,6 +528,9 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_CYLUNG" Name="CY Leung">
+		<Crises>
+			<Crisis ID="CRI_CHINAD"/>
+		</Crises>
 		<Kind>President of the Exec. Council of HK Region</Kind>
 		<Location>Special Administrative Regions of People's Republic of China</Location>
 		<Common>
@@ -390,6 +543,9 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_GASPAR" Name="Vitor Gaspar">
+		<Crises>
+			<Crisis ID="CRI_FINCRI"/>
+		</Crises>
 		<Kind>Former Portuguese Finance Minister</Kind>
 		<Location>Portugal</Location>
 		<Common>
@@ -399,6 +555,9 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_JONGUN" Name="Kim Jong-un">
+		<Crises>
+			<Crisis ID="CRI_NKCONF"/>
+		</Crises>
 		<Kind>Supreme Leader of North Korea</Kind>
 		<Location>North Korea</Location>
 		<Common>
@@ -414,6 +573,9 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_MMORSI" Name="Mohamed Morsi">
+		<Crises>
+			<Crisis ID="CRI_EGYPTR"/>
+		</Crises>
 		<Kind>Politician</Kind>
 		<Location>Egypt</Location>
 		<Common>
@@ -426,6 +588,9 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_COPETE" Name="Enrique Pena Nieto">
+		<Crises>
+			<Crisis ID="CRI_HUMTRA"/>
+		</Crises>
 		<Kind>President of Mexico</Kind>
 		<Location>Los Pinos, Mexico</Location>
 		<Common>
@@ -438,6 +603,9 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_VPUTIN" Name="Vladimir Putin">
+		<Crises>
+			<Crisis ID="CRI_NKCONF"/>
+		</Crises>
 		<Kind>President of Russia</Kind>
 		<Location>Russia</Location>
 		<Common>
@@ -450,6 +618,9 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Organization ID="ORG_UNINAT" Name="United Nations">
+		<People>
+			<Person ID="PER_JKERRY"/>
+		</People>
 		<Kind>international organization</Kind>
 		<Location>New York City, USA</Location>
 		<History>
@@ -472,6 +643,9 @@ Since its creation, there has been controversy and criticism of the United Natio
 		</Common>
 	</Organization>
 	<Organization ID="ORG_WHORGN" Name="World Health Organization">
+		<People>
+			<Person ID="PER_BROBMA"/>
+		</People>
 		<Kind>Public Health</Kind>
 		<Location>Geneva, Switzerland</Location>
 		<History>
@@ -500,6 +674,9 @@ The constitution of the World Health Organization had been signed by all 61 coun
 		</Common>
 	</Organization>
 	<Organization ID="ORG_IMFUND" Name="International Monetary Fund">
+		<Crises>
+			<Crisis ID="CRI_FINCRI"/>
+		</Crises>
 		<Kind>economic </Kind>
 		<Location>Washington, D.C.</Location>
 		<History>
@@ -511,6 +688,10 @@ The constitution of the World Health Organization had been signed by all 61 coun
 		<Common/>
 	</Organization>
 	<Organization ID="ORG_SALARM" Name="Salvation Army">
+		<Crises>
+			<Crisis ID="CRI_HURSAN"/>
+			<Crisis ID="CRI_AIDSHI"/>
+		</Crises>
 		<Kind>Charity</Kind>
 		<Location>Alexandria, VA</Location>
 		<History>
@@ -529,6 +710,9 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 		<Common/>
 	</Organization>
 	<Organization ID="ORG_POLARS" Name="Polaris Project">
+		<Crises>
+			<Crisis ID="CRI_HUMTRA"/>
+		</Crises>
 		<Kind>NGO, humanitarian</Kind>
 		<Location>Headquarters in Washington, D.C.</Location>
 		<History>
@@ -550,6 +734,12 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 		</Common>
 	</Organization>
 	<Organization ID="ORG_ASEANA" Name="ASEAN">
+		<Crises>
+			<Crisis ID="CRI_SCMARI"/>
+		</Crises>
+		<People>
+			<Person ID="PER_JKERRY"/>
+		</People>
 		<Kind>Geo-political and economic organization</Kind>
 		<Location>Jakarta, indonesia</Location>
 		<History>
@@ -571,6 +761,9 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 		</Common>
 	</Organization>
 	<Organization ID="ORG_PARIBS" Name="BNP Paribas">
+		<Crises>
+			<Crisis ID="CRI_FINCRI"/>
+		</Crises>
 		<Kind>Global banking group</Kind>
 		<Location>Boulevard des Italiens, Paris, France</Location>
 		<History>
@@ -592,6 +785,9 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 		</Common>
 	</Organization>
 	<Organization ID="ORG_FIREDP" Name="Prescott Fire Department">
+		<Crises>
+			<Crisis ID="CRI_HURSAN"/>
+		</Crises>
 		<Kind>Municipal fire department</Kind>
 		<Location>Prescott, Arizona</Location>
 		<History>
@@ -616,6 +812,9 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 		</Common>
 	</Organization>
 	<Organization ID="ORG_MAMFDN" Name="Somaly Mam Foundation">
+		<Crises>
+			<Crisis ID="CRI_HUMTRA"/>
+		</Crises>
 		<Kind>Nonprofit humanitarian organization</Kind>
 		<Location>New York</Location>
 		<History>
@@ -637,6 +836,9 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 		</Common>
 	</Organization>
 	<Organization ID="ORG_RIBBON" Name="Pink Ribbon Red Ribbon">
+		<Crises>
+			<Crisis ID="CRI_AIDSHI"/>
+		</Crises>
 		<Kind>Humanitarian</Kind>
 		<Location>Africa and Latin America</Location>
 		<History>
