@@ -16,33 +16,6 @@ from django.contrib.auth import authenticate, login
 
 def index(request):
 	return render_to_response('wcdb/index.html')
-	"""
-	t = loader.get_template('wcdb/index.html')
-
-	if request.user.is_authenticated() :
-		dummy = ET.ElementTree()
-		f = open('tester.txt', 'w')
-		tree = xml_reader("test.xml", f)
-		tree = tree.getroot()
-		xml_etree2mods(tree)
-
-		db_tree = xml_mods2etree()
-
-		f.write(db_tree.getroot().tag + "\n")
-		for c in list(db_tree.getroot()) :
-			f.write(c.tag + " " +  str(c.attrib) + "\n")
-		f.write(xml_etree2xml(db_tree))
-
-		peeps = People.objects.all()
-		crises = Crises.objects.all()
-		orgs = Organizations.objects.all()
-		c = Context({'p' : peeps, 'c' : crises, 'o' : orgs, })
-
-		f.close()
-		return HttpResponse(t.render(c))
-	else :
-		return render(request, 'wcdb/login.html')
-	"""
 
 def my_login(request) :
 	user =""
@@ -89,29 +62,6 @@ def import_file(request) :
 	#return render_to_response('wcdb/import.html', {'form' : form})
 	c = RequestContext(request)
 	return HttpResponse(t.render(c))
-	
-	"""
-	# template for the upload form page
-	t = loader.get_template('wcdb/import.html')
-	# template for the landing page for a successful upload
-	if request.method == 'POST':
-		xml = request.FILES["xml"]
-		xsd = open("/u/tbc399/Documents/cs373/p3/cs373-wcdb/WCDB/WorldCrises.xsd.xml", 'r')
-		et = xml_reader(xml, xsd)
-		if (et == 1):
-			# xml is not valid against schema
-			success = 1
-		elif (et == 2):
-			success = 2
-		else: # et is an ElementTree
-			xml_etree2mods(et.getroot())
-			success = 0
-		c = RequestContext(request, {'success': success})
-		return HttpResponse(t.render(c))
-
-	c = RequestContext(request)
-	return HttpResponse(t.render(c))
-	"""
 
 def export_file (request):
 	et = xml_mods2etree()
@@ -123,9 +73,7 @@ def export_file (request):
 
 from tests import do_test
 def run_tests(request):
-    do_test()
     return render_to_response('wcdb/test.html', {'result' : do_test()});
-    
 
 def static_two(request):
     return render_to_response('wcdb/static2.html');

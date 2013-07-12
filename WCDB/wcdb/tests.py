@@ -10,11 +10,29 @@ import sys
 import StringIO
 from django.test.simple import DjangoTestSuiteRunner
 from django.http import HttpResponse
-from wcdb_ie import xml_validate
+from django.conf import settings
+from wcdb_ie import xml_validate, xml_reader, xml_etree2mods
 from models import People, Crises, Organizations, List_Item
 import unittest
 
 class SimpleTest(unittest.TestCase):
+
+    def setUp(self):
+        import MySQLdb
+        db_connection = MySQLdb.connect(host='z', user='zlozano', passwd='Ml6BaCJP8y')
+        cursor = db_connection.cursor()
+        try :
+            cursor.execute('DROP DATABASE IF EXISTS test_cs373_zlozano')
+        except Warning as w:
+            pass
+        cursor.execute('CREATE DATABASE test_cs373_zlozano')
+        sql = file('wcdb/makedb.sql', 'r').read()
+        cursor.close()
+        db_connection = MySQLdb.connect(host='z', user='zlozano', passwd='Ml6BaCJP8y', db='test_cs373_zlozano')
+        cursor = db_connection.cursor()
+        cursor.execute(sql)
+        cursor.close()
+
     def test_basic_addition(self):
         """
 
@@ -57,8 +75,8 @@ class SimpleTest(unittest.TestCase):
         self.assertTrue(type(rickymartin(None)) == HttpResponse)
         self.assertTrue(type(rickymartin(None).content) == str)
 
-    def test_xml_validate(self) :
-        xml = StringIO.StringIO("""
+        """    def test_xml_validate(self) :
+        xml = StringIO.StringIO(
         <WorldCrisis>
           <Crisis>
             <Person></Person>
@@ -73,15 +91,50 @@ class SimpleTest(unittest.TestCase):
             </Unique>
           </Crisis>
         </WorldCrisis>
-        """)
+        )
         result = xml_validate(xml, "")
-        self.assertEqual(result, True)
+        self.assertEqual(result, 1) """
 
     def test_tables_exist(self) :
         self.assertTrue(len(People.objects.all()) >= 0)
         self.assertTrue(len(Crises.objects.all()) >= 0)
         self.assertTrue(len(Organizations.objects.all()) >= 0)
         self.assertTrue(len(List_Item.objects.all()) >= 0)
+
+    def test_add_to_models(self) :
+        xml = StringIO.StringIO('''<WorldCrises><Crisis ID="CRI_EGYPTR" Name="Political Unrest in Egypt">
+		<Kind>Political Unrest</Kind>
+		<Date>2013-01-16</Date>
+		<Time>06:00:00</Time>
+		<Locations>
+			<li>Egypt, Africa</li>
+		</Locations>
+		<HumanImpact>
+			<li>Human deaths, political turmoil, economic hardships for the population in general.</li>
+		</HumanImpact>
+		<EconomicImpact>
+			<li>Creates   complications for economic reform caused by previous regime fallout. If approved, the loan will come with strict conditions. In order to receive it, the IMF instead of collateral it will require that Egypt implement economic reforms usually in the form of the unpopular austerity measures to cut Egypt's deficit. This translates into a cut in spending on public benefits, social services and development projects. It also comes with an increase in taxes on items such as food, alcohol and cigarettes and petroleum derived products which also include gasoline and cause higher fees for public services including transportation.</li>
+		</EconomicImpact>
+		<ResourcesNeeded>
+			<li>None used other than previous loans to help Egypt of previous political unrest.</li>
+		</ResourcesNeeded>
+		<WaysToHelp>
+			<li>Still pending a $4.8 billion loan from the International Monetary Fund (IMF)</li>
+		</WaysToHelp>
+		<Common>
+			<Images>
+				<li embed="http://www.csmonitor.com/var/ezflow_site/storage/images/media/content/2012/6-25-12-mohamed-morsi/12947278-1-eng-US/6-25-12-Mohamed-Morsi_full_600.jpg" text="Morsi picture"/>
+			</Images>
+			<Videos>
+				<li embed="http://www.youtube.com/watch?v=K9d_P58qMx4" text="Mohamed Morsi - president elect"/>
+			</Videos>
+		</Common>
+	</Crisis></WorldCrises>''')
+        xml_etree2mods(xml_reader(xml, file('Schema.xsd.xml', 'r')).getroot())
+        self.assertTrue(len(Crises.objects.all()) == 1)
+        self.assertEqual(Crises.objects.get(idref='CRI_EGYPTR').kind, 'Political Unrest')
+        self.assertEqual(List_Item.objects.get(idref='CRI_EGYPTR',list_type='Locations').body, 'Egypt, Africa')
+
 
 class NoTestDbDatabaseTestRunner(DjangoTestSuiteRunner):
     #Override setup and teardown of databases to force test runner to work.
@@ -96,7 +149,16 @@ class NoTestDbDatabaseTestRunner(DjangoTestSuiteRunner):
         pass
 
 def do_test():
+    settings.RUNNING_OFF_TEST_DB = True
     result = StringIO.StringIO('')
     suite = unittest.TestLoader().loadTestsFromTestCase(SimpleTest)
     unittest.TextTestRunner(stream=result,verbosity=0).run(suite)
+    settings.RUNNING_OFF_TEST_DB = False
+
+    import MySQLdb
+    db_connection = MySQLdb.connect(host='z', user='zlozano', passwd='Ml6BaCJP8y')
+    cursor = db_connection.cursor()
+    cursor.execute('DROP DATABASE IF EXISTS test_cs373_zlozano')
+
     return result.getvalue()
+

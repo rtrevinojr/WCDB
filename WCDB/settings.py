@@ -12,14 +12,26 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'cs373_zlozano',                      # Or path to database file if using sqlite3.
-        'USER': 'zlozano',                      # Not used with sqlite3.
-        'PASSWORD': 'Ml6BaCJP8y',                  # Not used with sqlite3.
-        'HOST': 'z',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'NAME': 'cs373_zlozano', # Or path to database file if using sqlite3.
+        'USER': 'zlozano', # Not used with sqlite3.
+        'PASSWORD': 'Ml6BaCJP8y', # Not used with sqlite3.
+        'HOST': 'z', # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '', # Set to empty string for default. Not used with sqlite3.
         'TEST_NAME': 'cs373_zlozano',
+    },
+    'test': {
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'test_cs373_zlozano', # Or path to database file if using sqlite3.
+        'USER': 'zlozano', # Not used with sqlite3.
+        'PASSWORD': 'Ml6BaCJP8y', # Not used with sqlite3.
+        'HOST': 'z', # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '', # Set to empty string for default. Not used with sqlite3.
+        'TEST_NAME': 'test_cs373_zlozano', # Or path to database file if using sqlite3.
     }
 }
+
+DATABASE_ROUTERS = ['wcdb.routers.test_router']
+
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/{{ docs_version }}/ref/settings/#allowed-hosts
@@ -153,4 +165,6 @@ LOGGING = {
     }
 }
 
-TEST_RUNNER = 'wcdb.tests.NoTestDbDatabaseTestRunner'
+#TEST_RUNNER = 'wcdb.tests.NoTestDbDatabaseTestRunner'
+
+RUNNING_OFF_TEST_DB = False
