@@ -5,6 +5,7 @@ from models import Crises, Organizations, People, List_Item
 from minixsv import pyxsval, xsvalErrorHandler
 #pydoc refuses to run if it sees the above imports and they aren't commented out
 import xml.etree.ElementTree as ET
+import xml.parsers.expat
 import datetime
 import time
 
@@ -33,6 +34,9 @@ def xml_validate (xf, sf):
 		pyxsval.parseAndValidateXmlInputString(xf.read(), xsdText=sf.read())
 	except xsvalErrorHandler.XsvalError as xe:
 		# the file did not validate
+		return False
+	except xml.parsers.expat.ExpatError as ee:
+		# the input was bad
 		return False
 
 	return True
@@ -242,7 +246,7 @@ def xml_mods2etree ():
 	"""
 	Takes all model instances and converts
 	them to xml
-	returns a string representing the xml
+	returns an ElementTree representing the xml
 	"""
 	
 	# create an element tree for our data
