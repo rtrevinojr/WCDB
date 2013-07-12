@@ -1,44 +1,34 @@
 <?xml version="1.0" ?>
 <WorldCrises>
-	<Crisis ID="CRI_HURSAN" Name="Hurricane Sandy">
-		<Kind>natural disaster</Kind>
-		<Date>2012-10-29</Date>
-		<Time>05:00:00</Time>
+	<Crisis ID="CRI_EGYPTR" Name="Political Unrest in Egypt">
+		<People>
+			<Person ID="PER_MMORSI"/>
+		</People>
+		<Kind>Political Unrest</Kind>
+		<Date>2013-01-16</Date>
+		<Time>06:00:00</Time>
 		<Locations>
-			<li>New York metropolitan area</li>
+			<li>Egypt, Africa</li>
 		</Locations>
 		<HumanImpact>
-			<li>Hurricane Sandy was the deadliest and most destructive hurricane of the 2012 Atlantic hurricane season, as well as the second-costliest hurricane in United States history. At least 286 people were killed along the path of the storm in seven countries. In Jamaica, winds left 70% of residents without electricity, blew roofs off buildings, and killed one. In Haiti, Sandy's outer bands brought flooding that killed at least 54, caused food shortages, and left about 200,000 homeless. In the Dominican Republic, two died. In Puerto Rico, one man was swept away by a swollen river. In Cuba, there was extensive coastal flooding and wind damage inland, destroying some 15,000 homes, and killing 11.</li>
+			<li>Human deaths, political turmoil, economic hardships for the population in general.</li>
 		</HumanImpact>
 		<EconomicImpact>
-			<li>Estimates as of June 2013 assess damage to have been over $68 billion (2013 USD), a total surpassed only by Hurricane Katrina. The severe and widespread damage the storm caused in the United States, as well as its unusual merge with a frontal system, resulted in the nicknaming of the hurricane by the media and several organizations of the U.S. government "Superstorm Sandy". The storm caused about $100 million (2012 USD) in damage in Jamaica, and around $2 billion (2012 USD) in damage in Cuba.</li>
+			<li>Creates   complications for economic reform caused by previous regime fallout. If approved, the loan will come with strict conditions. In order to receive it, the IMF instead of collateral it will require that Egypt implement economic reforms usually in the form of the unpopular austerity measures to cut Egypt's deficit. This translates into a cut in spending on public benefits, social services and development projects. It also comes with an increase in taxes on items such as food, alcohol and cigarettes and petroleum derived products which also include gasoline and cause higher fees for public services including transportation.</li>
 		</EconomicImpact>
 		<ResourcesNeeded>
-			<li>Clean-up and restoration of the areas hit hardest, temporary housing for those that lost their homes. clothing and shelter donations.
-</li>
+			<li>None used other than previous loans to help Egypt of previous political unrest.</li>
 		</ResourcesNeeded>
 		<WaysToHelp>
-			<li>FEMA has been collaborating with many national, state, tribal, and local partners in response to Hurricane Sandy, including the National Voluntary Organizations Active in Disaster (NVOAD) and the Corporation for National and Community Service. Learn more on how you can donate and volunteer responsibly to assist the survivors of Hurricane Sandy here: http://www.fema.gov/hurricane-sandy-donate-and-volunteer</li>
+			<li>Still pending a $4.8 billion loan from the International Monetary Fund (IMF)</li>
 		</WaysToHelp>
 		<Common>
-			<Citations>
-				<li href="http://www.fema.gov/hurricane-sandy">FEMA Hurricane sandy site</li>
-			</Citations>
-			<ExternalLinks>
-				<li href="http://en.wikipedia.org/wiki/Hurricane_Sandy">Wikipedia Hurricane Sandy site</li>
-				<li href="http://crisiswiki.org/2012_Hurricane_Sandy">Crisis Wiki Hurricane Sandy site</li>
-			</ExternalLinks>
 			<Images>
-				<li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/7/7d/Sandy_Oct_25_2012_0400Z.JPG/546px-Sandy_Oct_25_2012_0400Z.JPG" text="Satellite photo of hurricane Sandy"/>
-				<li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/HurricaneSANDYCheltenham.jpg/220px-HurricaneSANDYCheltenham.jpg" text="Damage to neighborhood caused by Hurricane Sandy"/>
-				<li embed="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Sandy_Poweroutage_1.jpg/220px-Sandy_Poweroutage_1.jpg" text="Manhattan power outage caused by Hurricane Sandy"/>
+				<li embed="http://www.csmonitor.com/var/ezflow_site/storage/images/media/content/2012/6-25-12-mohamed-morsi/12947278-1-eng-US/6-25-12-Mohamed-Morsi_full_600.jpg" text="Morsi picture"/>
 			</Images>
 			<Videos>
-				<li embed="http://www.youtube.com/watch?v=91ldZZiOqAs" text="Hurricane Sandy radar loop"/>
+				<li embed="http://www.youtube.com/watch?v=K9d_P58qMx4" text="Mohamed Morsi - president elect"/>
 			</Videos>
-			<Maps>
-				<li embed="http://google.org/crisismap/2012-sandy" text="Crisis map of Hurricane Sandy"/>
-			</Maps>
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_AIDSHI" Name="AIDS/HIV">
@@ -74,7 +64,7 @@ At the household level, AIDS causes both loss of income and increased spending o
 		<ResourcesNeeded>
 			<li>In many developing countries, high HIV rates are over-burdening already fragile health systems. As these health sectors struggle to provide basic health services, they must now also make HIV/AIDS prevention, services, and care available. To contain the spread and minimize the impact of HIV/AIDS, several global initiatives are making large amounts of financial and medical resources available. However, without efficient health systems, their impact will be limited.
 Consistent condom use reduces the risk of HIV transmission by approximately 80% over the long term. When condoms are used consistently by a couple in which one person is infected, the rate of HIV infection is less than 1% per year. There is some evidence to suggest that female condoms may provide an equivalent level of protection. Application of a vaginal gel containing tenofovir (a reverse transcriptase inhibitor) immediately before sex seems to reduce infection rates by approximately 40% among African women
-Circumcision in Sub-Saharan Africa "reduces the acquisition of HIV by heterosexual men by between 38% and 66% over 24 months". Based on these studies, the World Health Organization and UNAIDS both recommended male circumcision as a method of preventing female-to-male HIV transmission in 2007. Whether it protects against male-to-female transmission is disputed and whether it is of benefit in developed countries and among men who have sex with men is undetermined. Some experts fear that a lower perception of vulnerability among circumcised men may cause more sexual risk-taking behavior, thus negating its preventive effects.</li>
+Circumcision in Sub-Saharan Africa &quot;reduces the acquisition of HIV by heterosexual men by between 38% and 66% over 24 months&quot;. Based on these studies, the World Health Organization and UNAIDS both recommended male circumcision as a method of preventing female-to-male HIV transmission in 2007. Whether it protects against male-to-female transmission is disputed and whether it is of benefit in developed countries and among men who have sex with men is undetermined. Some experts fear that a lower perception of vulnerability among circumcised men may cause more sexual risk-taking behavior, thus negating its preventive effects.</li>
 		</ResourcesNeeded>
 		<WaysToHelp>
 			<li>The Ryan White HIV/AIDS Program, Federal Funding, 
@@ -84,39 +74,9 @@ Programs encouraging sexual abstinence do not appear to affect subsequent HIV ri
 		</WaysToHelp>
 		<Common/>
 	</Crisis>
-	<Crisis ID="CRI_EGYPTR" Name="Political Unrest in Egypt">
-		<People>
-			<Person ID="PER_MMORSI"/>
-		</People>
-		<Kind>Political Unrest</Kind>
-		<Date>2013-01-16</Date>
-		<Time>06:00:00</Time>
-		<Locations>
-			<li>Egypt, Africa</li>
-		</Locations>
-		<HumanImpact>
-			<li>Human deaths, political turmoil, economic hardships for the population in general.</li>
-		</HumanImpact>
-		<EconomicImpact>
-			<li>Creates   complications for economic reform caused by previous regime fallout. If approved, the loan will come with strict conditions. In order to receive it, the IMF instead of collateral it will require that Egypt implement economic reforms usually in the form of the unpopular austerity measures to cut Egypt's deficit. This translates into a cut in spending on public benefits, social services and development projects. It also comes with an increase in taxes on items such as food, alcohol and cigarettes and petroleum derived products which also include gasoline and cause higher fees for public services including transportation.</li>
-		</EconomicImpact>
-		<ResourcesNeeded>
-			<li>None used other than previous loans to help Egypt of previous political unrest.</li>
-		</ResourcesNeeded>
-		<WaysToHelp>
-			<li>Still pending a $4.8 billion loan from the International Monetary Fund (IMF)</li>
-		</WaysToHelp>
-		<Common>
-			<Images>
-				<li embed="http://www.csmonitor.com/var/ezflow_site/storage/images/media/content/2012/6-25-12-mohamed-morsi/12947278-1-eng-US/6-25-12-Mohamed-Morsi_full_600.jpg" text="Morsi picture"/>
-			</Images>
-			<Videos>
-				<li embed="http://www.youtube.com/watch?v=K9d_P58qMx4" text="Mohamed Morsi - president elect"/>
-			</Videos>
-		</Common>
-	</Crisis>
 	<Crisis ID="CRI_HUMTRA" Name="Human trafficking">
 		<People>
+			<Person ID="PER_COPETE"/>
 			<Person ID="PER_LALOCA"/>
 		</People>
 		<Organizations>
@@ -153,20 +113,24 @@ The Ricky Martin Foundation
 			</Citations>
 			<ExternalLinks>
 				<li href="http://www.somaly.org/sites/default/files/logo.gif">Somaly Mam Foundation</li>
+				<li href="http://en.wikipedia.org/wiki/Invisible_Children,_Inc.">Invisible Children, Inc. citation</li>
 			</ExternalLinks>
 			<Images>
 				<li embed="http://cdn.theatlantic.com/static/mt/assets/international/Lisa_Kristine_com-Bricks-Nepal-615.jpg" text="Lisa with bricks"/>
 				<li embed="http://www.justice-generation.com/wp-content/uploads/2012/11/Polaris-logo_highquality.jpg" text="Polaris project logo"/>
+				<li embed="http://vharmony.uga.edu/sites/default/files/images/organizations/logos/Invisible%20Children_0.jpg" text="Invisible Children Image"/>
 			</Images>
 			<Videos>
 				<li embed="http://youtu.be/_iNBKlBcXkY" text="21st Century Sex Slaves Documentary (Human Trafficking)"/>
 				<li embed="https://www.youtube.com/watch?v=LqaELY3420g" text="National Human Trafficking Awareness Day"/>
 				<li embed="http://www.youtube.com/watch?v=d3Pc-FgEB7k" text="The Road to Traffik"/>
+				<li embed="http://www.youtube.com/watch?v=RUKsyA_z7n8" text="Invisible Children video"/>
 			</Videos>
 			<Maps>
 				<li embed="https://maps.google.com/maps?q=north+korea&amp;hl=en&amp;sll=30.307761,-97.753401&amp;sspn=0.661563,1.053314&amp;hnear=North+Korea&amp;t=m&amp;z=6" text="Map of North Korean conflict"/>
 				<li embed="https://maps.google.com/maps?q=Washington,+DC&amp;hl=en&amp;sll=30.307761,-97.753401&amp;sspn=0.661563,1.053314&amp;oq=washing&amp;hnear=Washington,+District+of+Columbia&amp;t=m&amp;z=11" text="DC Location for Polaris Project"/>
 				<li embed="https://maps.google.com/maps?q=somaly+mam+foundation&amp;hl=en&amp;ll=38.822591,-40.429687&amp;spn=128.809524,269.648438&amp;sll=39.095963,-76.992187&amp;sspn=128.637065,269.648438&amp;hq=somaly+mam+foundation&amp;t=m&amp;z=2" text="Somaly Mam Foundation"/>
+				<li embed="http://goo.gl/maps/0BdKJ" text="Invisible Children map"/>
 			</Maps>
 		</Common>
 	</Crisis>
@@ -176,6 +140,7 @@ The Ricky Martin Foundation
 		</People>
 		<Organizations>
 			<Org ID="ORG_PARIBS"/>
+			<Org ID="ORG_IMFUND"/>
 		</Organizations>
 		<Kind>Financial crisis</Kind>
 		<Date>2007-01-01</Date>
@@ -247,14 +212,23 @@ Organizations in charge of providing aid include the International Monetary Fund
 				<li embed="http://static.guim.co.uk/sys-images/Guardian/Pix/audio/video/2013/3/30/1364646107382/North-Korean-Army-005.jpg" text="North Korean Army"/>
 				<li embed="http://www.csmonitor.com/var/ezflow_site/storage/images/media/content/2013/0408-north-korea-missiles-sized.jpg/15493645-1-eng-US/0408-NORTH-KOREA-MISSILES-sized.jpg_full_600.jpg" text="North Korea Missiles"/>
 				<li embed="http://cdn.cnwimg.com/wp-content/uploads/2013/03/Kim-Jong-Un.jpg" text="Kim Jong-Un picture"/>
+				<li embed="http://www.helpinghandskorea.org/wp-content/uploads/2013/07/20130619_inq_twowed19-a.jpg" text="Helping Hands image"/>
+				<li embed="http://4.bp.blogspot.com/-lYlcMdXMJb4/TpIpnwTai9I/AAAAAAAAABw/v6fGE3921qg/s320/LINKlogo.png" text="LiNK Image"/>
 			</Images>
 			<Videos>
 				<li embed="http://www.youtube.com/watch?v=eLqixAy75tU" text="US vs NK: A potential crisis?"/>
 				<li embed="http://www.youtube.com/watch?v=TSXucNYWGdQ" text="Kim Jong-Un video"/>
+				<li embed="http://www.youtube.com/watch?v=nBzHCVv5GeQ" text="LiNK video"/>
 			</Videos>
+			<Maps>
+				<li embed="http://goo.gl/maps/A5pGj" text="LiNK location"/>
+			</Maps>
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_SCMARI" Name="South China Maritime Conflicts">
+		<People>
+			<Person ID="PER_JKERRY"/>
+		</People>
 		<Organizations>
 			<Org ID="ORG_ASEANA"/>
 		</Organizations>
@@ -365,6 +339,9 @@ Organizations in charge of providing aid include the International Monetary Fund
 			<Images>
 				<li embed="http://freebeacon.com/wp-content/uploads/2013/07/Arizona-wildfire-AP.jpg" text="Arizona wildfires"/>
 			</Images>
+			<Maps>
+				<li embed="http://www.abc15.com/subindex/news/wildfires" text="Arizona wildfires map"/>
+			</Maps>
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_LRACON" Name="LRA Conflict">
@@ -391,6 +368,9 @@ LRA or become sex slaves.</li>
 			<Citations>
 				<li href="http://www.youtube.com/watch?v=uYURvl8WXFU">Inside the LRA conflict</li>
 			</Citations>
+			<ExternalLinks>
+				<li href="http://goo.gl/maps/DtsQi">South Sudan</li>
+			</ExternalLinks>
 			<Images>
 				<li embed="http://yesicare.files.wordpress.com/2010/05/child-soldiers_crdimitri-falk-02.jpg" text="LRA child soldiers"/>
 			</Images>
@@ -422,27 +402,13 @@ LRA or become sex slaves.</li>
 			<Videos>
 				<li embed="http://www.youtube.com/watch?v=uub7Sk8HLic" text="Oslo: we will never forget"/>
 			</Videos>
+			<Maps>
+				<li embed="http://goo.gl/maps/TIavV" text="Oslo location"/>
+			</Maps>
 		</Common>
 	</Crisis>
-	<Person ID="PER_LALOCA" Name="Ricky Martin">
-		<Crises>
-			<Crisis ID="CRI_HUMTRA"/>
-		</Crises>
-		<Kind>Celebrity</Kind>
-		<Location>United States</Location>
-		<Common/>
-	</Person>
-	<Person ID="PER_MAGICJ" Name="Magic Johnson">
-		<Crises>
-			<Crisis ID="CRI_AIDSHI"/>
-		</Crises>
-		<Kind>Basketball player</Kind>
-		<Location>L.A.</Location>
-		<Common/>
-	</Person>
 	<Person ID="PER_BROBMA" Name="Barack Obama">
 		<Crises>
-			<Crisis ID="CRI_HURSAN"/>
 			<Crisis ID="CRI_AIDSHI"/>
 		</Crises>
 		<Organizations>
@@ -489,7 +455,29 @@ LRA or become sex slaves.</li>
 			</Videos>
 		</Common>
 	</Person>
+	<Person ID="PER_MAGICJ" Name="Magic Johnson">
+		<Crises>
+			<Crisis ID="CRI_AIDSHI"/>
+		</Crises>
+		<Kind>Basketball player</Kind>
+		<Location>L.A.</Location>
+		<Common/>
+	</Person>
+	<Person ID="PER_LALOCA" Name="Ricky Martin">
+		<Crises>
+			<Crisis ID="CRI_HUMTRA"/>
+		</Crises>
+		<Kind>Celebrity</Kind>
+		<Location>United States</Location>
+		<Common/>
+	</Person>
 	<Person ID="PER_JKERRY" Name="John Kerry">
+		<Crises>
+			<Crisis ID="CRI_SCMARI"/>
+		</Crises>
+		<Organizations>
+			<Org ID="ORG_ASEANA"/>
+		</Organizations>
 		<Kind>US Secretary of State</Kind>
 		<Location>Harry S. Truman Building, Washington D.C.</Location>
 		<Common>
@@ -568,6 +556,9 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_COPETE" Name="Enrique Pena Nieto">
+		<Crises>
+			<Crisis ID="CRI_HUMTRA"/>
+		</Crises>
 		<Kind>President of Mexico</Kind>
 		<Location>Los Pinos, Mexico</Location>
 		<Common>
@@ -660,7 +651,6 @@ The constitution of the World Health Organization had been signed by all 61 coun
 	</Organization>
 	<Organization ID="ORG_SALARM" Name="Salvation Army">
 		<Crises>
-			<Crisis ID="CRI_HURSAN"/>
 			<Crisis ID="CRI_AIDSHI"/>
 		</Crises>
 		<Kind>Charity</Kind>
@@ -708,6 +698,9 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 		<Crises>
 			<Crisis ID="CRI_SCMARI"/>
 		</Crises>
+		<People>
+			<Person ID="PER_JKERRY"/>
+		</People>
 		<Kind>Geo-political and economic organization</Kind>
 		<Location>Jakarta, indonesia</Location>
 		<History>
@@ -776,6 +769,7 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 			</Videos>
 			<Maps>
 				<li embed="https://maps.google.com/maps?q=prescott+fire+department&amp;hl=en&amp;sll=48.860407,2.174548&amp;sspn=0.237617,0.526657&amp;hq=fire+department&amp;hnear=Prescott,+Yavapai,+Arizona&amp;t=m&amp;z=10" text="Fire department, Prescott"/>
+				<li embed="http://www.abc15.com/subindex/news/wildfires" text="Arizona wildfires map"/>
 			</Maps>
 		</Common>
 	</Organization>
@@ -819,6 +813,9 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 			<Images>
 				<li embed="http://www.bushcenter.org/sites/default/files/PRRR%20Hero%20Crop.jpg" text="Pink Ribbon Red Ribbon"/>
 			</Images>
+			<Videos>
+				<li embed="http://www.youtube.com/watch?v=1GQ__6hihyE" text="Pink Ribbon Red Ribbon video"/>
+			</Videos>
 		</Common>
 	</Organization>
 </WorldCrises>
