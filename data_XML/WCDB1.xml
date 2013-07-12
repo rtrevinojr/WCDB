@@ -1,9 +1,6 @@
 <?xml version="1.0" ?>
 <WorldCrises>
 	<Crisis ID="CRI_HURSAN" Name="Hurricane Sandy">
-		<Organizations>
-			<Org ID="ORG_FIREDP"/>
-		</Organizations>
 		<Kind>natural disaster</Kind>
 		<Date>2012-10-29</Date>
 		<Time>05:00:00</Time>
@@ -120,7 +117,6 @@ Programs encouraging sexual abstinence do not appear to affect subsequent HIV ri
 	</Crisis>
 	<Crisis ID="CRI_HUMTRA" Name="Human trafficking">
 		<People>
-			<Person ID="PER_COPETE"/>
 			<Person ID="PER_LALOCA"/>
 		</People>
 		<Organizations>
@@ -259,10 +255,6 @@ Organizations in charge of providing aid include the International Monetary Fund
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_SCMARI" Name="South China Maritime Conflicts">
-		<People>
-			<Person ID="PER_JKERRY"/>
-			<Person ID="PER_VPUTIN"/>
-		</People>
 		<Organizations>
 			<Org ID="ORG_ASEANA"/>
 		</Organizations>
@@ -376,9 +368,6 @@ Organizations in charge of providing aid include the International Monetary Fund
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_LRACON" Name="LRA Conflict">
-		<Organizations>
-			<Org ID="ORG_POLARS"/>
-		</Organizations>
 		<Kind>Military/Human Rights</Kind>
 		<Date>1987-01-01</Date>
 		<Time>21:31:17</Time>
@@ -408,9 +397,6 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Crisis>
 	<Crisis ID="CRI_OSLOSH" Name="Oslo Shootings">
-		<People>
-			<Person ID="PER_VPUTIN"/>
-		</People>
 		<Kind>Terrorism</Kind>
 		<Date>2011-07-22</Date>
 		<Time>19:25:34</Time>
@@ -489,9 +475,6 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_JEABEL" Name="Jean-Max Bellerive">
-		<Crises>
-			<Crisis ID="CRI_SCMARI"/>
-		</Crises>
 		<Kind>2010 Haitian Prime Minister</Kind>
 		<Location>Haiti</Location>
 		<Common>
@@ -507,9 +490,6 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_JKERRY" Name="John Kerry">
-		<Crises>
-			<Crisis ID="CRI_SCMARI"/>
-		</Crises>
 		<Kind>US Secretary of State</Kind>
 		<Location>Harry S. Truman Building, Washington D.C.</Location>
 		<Common>
@@ -588,9 +568,6 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_COPETE" Name="Enrique Pena Nieto">
-		<Crises>
-			<Crisis ID="CRI_HUMTRA"/>
-		</Crises>
 		<Kind>President of Mexico</Kind>
 		<Location>Los Pinos, Mexico</Location>
 		<Common>
@@ -603,9 +580,6 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Person ID="PER_VPUTIN" Name="Vladimir Putin">
-		<Crises>
-			<Crisis ID="CRI_NKCONF"/>
-		</Crises>
 		<Kind>President of Russia</Kind>
 		<Location>Russia</Location>
 		<Common>
@@ -618,9 +592,6 @@ LRA or become sex slaves.</li>
 		</Common>
 	</Person>
 	<Organization ID="ORG_UNINAT" Name="United Nations">
-		<People>
-			<Person ID="PER_JKERRY"/>
-		</People>
 		<Kind>international organization</Kind>
 		<Location>New York City, USA</Location>
 		<History>
@@ -737,9 +708,6 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 		<Crises>
 			<Crisis ID="CRI_SCMARI"/>
 		</Crises>
-		<People>
-			<Person ID="PER_JKERRY"/>
-		</People>
 		<Kind>Geo-political and economic organization</Kind>
 		<Location>Jakarta, indonesia</Location>
 		<History>
@@ -786,7 +754,7 @@ In 1994, the Chronicle of Philanthropy, an industry publication, released the re
 	</Organization>
 	<Organization ID="ORG_FIREDP" Name="Prescott Fire Department">
 		<Crises>
-			<Crisis ID="CRI_HURSAN"/>
+			<Crisis ID="CRI_AZWILD"/>
 		</Crises>
 		<Kind>Municipal fire department</Kind>
 		<Location>Prescott, Arizona</Location>
