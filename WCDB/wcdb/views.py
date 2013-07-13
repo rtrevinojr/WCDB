@@ -45,7 +45,7 @@ def import_file(request) :
 		# handle_uploaded_file(request.FILES['file'])
 		# we may want to handle this from a separate file ?
 		xml = request.FILES["upload"]
-		xsd = open("/u/tbc399/Documents/cs373/p3/cs373-wcdb/WCDB/WorldCrises.xsd.xml", 'r')
+		xsd = open("WorldCrises.xsd.xml", 'r')
 		et = xml_reader(xml, xsd)
 		if (et == 1):
 			# xml is not valid against schema
