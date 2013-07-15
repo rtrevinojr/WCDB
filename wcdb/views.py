@@ -6,3 +6,6 @@ def export_prompt (request) :
 
 def export_raw (request) :
     return render_to_response('export_raw.html', {'xml' : '<table>\n\t<nice things>\n\t\t<chocolate></chocolate>\n\t</nice things>\n</table>'})
+
+def export_download(request) :
+    return HttpResponse('<table>\n\t<nice things>\n\t\t<chocolate></chocolate>\n\t</nice things>\n</table>', context_type='text/plain')
