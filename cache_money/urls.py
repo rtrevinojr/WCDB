@@ -11,7 +11,7 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'cache_money.views.home', name='home'),
     # url(r'^cache_money/', include('cache_money.foo.urls')),
-    url(r'^wcdb/export/$', include('views.export_prompt')),
+    url(r'^wcdb/export/$', views.export_prompt),
     url(r'^wcdb/export/text/$', include('views.export_text')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
