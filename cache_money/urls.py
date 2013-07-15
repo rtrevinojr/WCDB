@@ -12,7 +12,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'cache_money.views.home', name='home'),
     # url(r'^cache_money/', include('cache_money.foo.urls')),
     url(r'^wcdb/export/$', views.export_prompt),
-    url(r'^wcdb/export/text/$', views.export_text),
+    url(r'^wcdb/export/raw/$', views.export_raw),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
