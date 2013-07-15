@@ -1,4 +1,5 @@
 # Django settings for cache_money project.
+import os
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -65,6 +66,7 @@ STATIC_ROOT = ''
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
+PROJ_DIR = os.path.dirname(__file__)
 STATIC_URL = '/static/'
 
 # Additional locations of static files
@@ -107,7 +109,6 @@ ROOT_URLCONF = 'cache_money.urls'
 # Python dotted path to the WSGI application used by Django's runserver.
 WSGI_APPLICATION = 'cache_money.wsgi.application'
 
-import os
 PROJ_DIR = os.path.dirname(__file__)
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
