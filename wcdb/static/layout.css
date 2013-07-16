@@ -23,6 +23,7 @@ span
     font-family: 'BenchNine', sans-serif;
     text-align: left;
     margin: 5%;
+    color: #E9E6E6;
         /*display: inline;*/
     font-size: 58px;
 }
@@ -46,7 +47,7 @@ nav.menu
     margin-top: 0;
     font-family: 'BenchNine';
     font-size: 25px;
-    color: #000000;
+    color: #A4A4A4;
 
 }
 
@@ -81,7 +82,7 @@ nav.menu ul:after {
 
 nav.menu ul li {
 	float: left;
-    color: #000000;
+    color: #A4A4A4;
 }
 
 nav.menu ul li:hover {
@@ -89,18 +90,18 @@ nav.menu ul li:hover {
 }
 
 nav.menu ul li:hover a {
-	color: #E9E6E6;
+	color: #000000;
 }
 
 /* Taylor addition to fix the drop down link colors */
 nav.menu ul li:hover ul li a {
-	color: #000000;
+	color: #E9E6E6;
 }
 
 nav.menu ul li a {
 	display: block; padding: 5px 40px;
 	text-decoration: none;
-	color: #000000;
+	color: #E9E6E6;
 }
 
 nav.menu ul ul li {
@@ -111,13 +112,13 @@ nav.menu ul ul li {
 
 nav.menu ul ul li a {
 	padding: 8px 40px;
-	color: #000000;
+	color: #E9E6E6;
 
 }	
 
 /* was changed from ul ul li a:hover*/
 nav.menu ul li ul li a:hover {
-	color: #E9E6E6;
+	color: #000000;
 }
 
 /* End Top Menu */
