@@ -90,7 +90,7 @@ nav.menu ul li:hover {
 }
 
 nav.menu ul li:hover a {
-	color: #000000;
+	color: #046EC8;
 }
 
 /* Taylor addition to fix the drop down link colors */
@@ -118,7 +118,7 @@ nav.menu ul ul li a {
 
 /* was changed from ul ul li a:hover*/
 nav.menu ul li ul li a:hover {
-	color: #000000;
+	color: #046EC8;
 }
 
 /* End Top Menu */
