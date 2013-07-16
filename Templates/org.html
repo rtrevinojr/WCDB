@@ -30,12 +30,11 @@
 				font-size: 58px;
 			}
 
-            h2
+            .headings
             {
 				font-family: 'BenchNine', sans-serif;
                 font-size: 28px;
                 color: #AFAFAF;
-                margin-bottom: -24px;
             }
 
 			@font-face
@@ -178,14 +177,18 @@
                     float: center;
                 }
 
-                .slider_frame p
-                {
-				    font-family: 'BenchNine', sans-serif;
-                    font-size: 19px;
-                    color: #AFAFAF;
-                    margin-right: 15px;
-                    text-align: justify;
-                }
+            .p1
+            {
+			    font-family: 'BenchNine', sans-serif;
+                font-size: 19px;
+                color: #AFAFAF;
+                margin-right: 15px;
+                text-align: justify;
+            }
+            .UL1
+            {
+            	list-style-type: none;
+            }
 		</style>
 	</head>
 	<body>
@@ -213,12 +216,9 @@
         <table border=1 class="slider_frame">
             <tr>
             <td id="org_history" style="text-align: left; vertical-align: top;"> 
-                <h2>{{ org_name }}org_name</h2>
-                <p>
+                <h2 class="headings">{{ org_name }}org_name</h2>
+                <p class="p1">
                     {{ org_history }} org_history
-                </p>
-                <p>
-                    
                 </p>
             </td>
             <td id="slider">
@@ -230,7 +230,32 @@
             </td>
             <td style="vertical-align: top">
             	<div id="org_info">
-            	This is going to be organization information.
+            		<p class="p1"><span class="headings">Type:</span>{{ org_type }}</P>
+            		<p class="p1"><span class="headings">Location:</span>{{ org_loc }}</P>
+            		<p><span class="headings">Contact:</span></P>
+            			<ul class="UL1">
+            				{% for con in org_contact %}
+            					<li><a href="{{ con }}" class="p1">{{?}}</a></li>
+            				{% empty %}
+            					<li class="p1">No contact info found</li>
+            				{% endfor %}
+            			</ul>
+            		<p><span class="headings">External Links:</span></P>
+            			<ul class="UL1">
+            				{% for ext in org_external %}
+            					<li><a href="{{ ext }}" class="p1">{{?}}</a></li>
+            				{% empty %}
+            					<li class="p1">No external links found</li>
+            				{% endfor %}
+            			</ul>
+            		<p><span class="headings">Social Media:</span></P>
+            			<ul class="UL1">
+            				{% for soc in org_media %}
+            					<li><a href="{{ soc }}" class="p1">{{?}}</a></li>
+            				{% empty %}
+            					<li class="p1">No social media found</li>
+            				{% endfor %}
+            			</ul>
             	</div>
             </td>
             </tr>
