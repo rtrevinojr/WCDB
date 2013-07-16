@@ -1,0 +1,158 @@
+/*
+LICENSE
+
+Copyright (c) 2012, David Lewthwaite, www.lewty.org.uk, dave@lewty.org.uk
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/* Begin Top Menu  */
+
+nav.menu
+{
+    display: inline;
+    float: right;
+    position: relative;
+    margin-top: 0;
+    font-family: 'BenchNine';
+    font-size: 25px;
+    color: #000000;
+
+}
+
+nav.menu ul ul {
+	display: none;
+}
+
+	nav.menu ul li:hover > ul {
+		display: block;
+		z-index: 2;
+		opacity: 0.95;
+	}
+
+nav.menu ul {
+	background: rgb(110, 4, 4, 0.3); 
+	padding: 0px 20px;
+	/*border-radius: 10px; */ 
+	list-style: none;
+	position: relative;
+	display: inline-block;
+}
+	nav.menu ul:after {
+		content: ""; clear: both; display: block;
+	}
+
+nav.menu ul li {
+	float: left;
+    color: #000000;
+}
+	nav.menu ul li:hover {
+		background: rgb(110, 4, 4, 0.3);
+	}
+		nav.menu ul li:hover a {
+				color: #AFAFAF;
+		}
+        nav.menu ul ul li a {
+            color: #000000;
+        }
+	
+	nav.menu ul li a {
+		display: block; padding: 5px 40px;
+		text-decoration: none;
+        color: #000000;
+	}
+
+nav.menu ul ul {
+	background: transparent; border-radius: 0px; padding: 0;
+    margin-top: 0px;
+	position: absolute; top: 100%;
+}
+	nav.menu ul ul li {
+		float: none; 
+		position: relative;
+        color: #000000;
+	}
+		nav.menu ul ul li a {
+			padding: 8px 40px;
+            color: #000000;
+		
+		}	
+			nav.menu ul ul li a:hover {
+				color: #AFAFAF;
+			}
+
+nav.menu ul ul ul {
+	position: absolute; left: 100%; top:0;
+}
+/* End Top Menu */
+
+
+
+
+/* Begin NAV Options */
+nav.option ul {
+        list-style: none; overflow: hidden; position: relative;
+}
+        nav.option ul li {
+                float: left; margin: 0 20px 0 0;
+        }   
+                nav.option ul li a { 
+                        display: block; width: 110px; height: 110px;
+                }   
+                        nav.option ul li.add a { 
+                                background-color: #658C8A;
+                                background-position: center center;
+                        	background-image: url(add.png); background-repeat: no-repeat;
+                        }  
+                        nav.option ul li.view a { 
+                                background-color: #658C8A;
+                                background-position: center center;
+                        	background-image: url(view.png); background-repeat: no-repeat;
+                        }   
+                        nav.option ul li.mail a { 
+                                background-color: #658C8A;
+                                background-position: center center;
+                        	background-image: url(mail.png); background-repeat: no-repeat;
+                        }   
+    			nav.option ul li.edit a { 
+                                background-color: #658C8A;
+                                background-position: center center;
+                        	background-image: url(edit.png); background-repeat: no-repeat;
+                        }  
+                        nav.option ul li.log a { 
+                                background-color: #658C8A;
+                                background-position: center center;
+                        	background-image: url(logentry.png); background-repeat: no-repeat;
+                        }
+
+                                nav.option ul li a span {
+                                        font: 50px "Dosis", sans-serif; text-transform: uppercase; 
+                                        position: absolute; left: 400px; top: 29px;
+                                        display: none;
+                                }   
+                                        nav.option ul li a:hover span {
+                                                display: block;
+                                        }   
+    
+                                nav.option ul li.add a span {
+                                        color: #658C8A;
+                                }   
+                                nav.option ul li.view a span {
+                                        color: #658C8A;
+                                }   
+                                nav.option ul li.mail a span {
+                                        color: #658C8A;
+                                }   
+				nav.option ul li.edit a span {
+                                        color: #658C8A;
+                                }   
+                                nav.option ul li.log a span {
+                                        color: #658C8A;
+                                }
+/* end NAV Options */
