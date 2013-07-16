@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+		<meta charset="utf-8">
+		<link href='http://fonts.googleapis.com/css?family=BenchNine' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Sarina' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+        <link href="static/wcdb/js-image-slider.css" rel="stylesheet" type="text/css" />
+        <script src="static/wcdb/js-image-slider.js" type="text/javascript"></script>
+		<title>Cache Money | World Crises DB</title>
+        <script src= https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js></script>
+		<style>
+			body
+			{
+				background-image: url(static/wcdb/bg-body.jpg);
+			}
+
+			h1
+			{
+				font-family: 'BenchNine', sans-serif;
+				text-align: center;
+				font-size: 40px;
+			}
+
+            h2
+            {
+				font-family: 'BenchNine', sans-serif;
+                font-size: 28px;
+            }
+
+			@font-face
+			{
+				font-family: MyFirstFont;
+				src: url(static/wcdb/Cicle_Semi.ttf);
+			}
+	
+			a:link
+			{
+				text-decoration: none;
+				color: #2B2B2B;
+			}
+
+			a:visited
+			{
+				text-decoration: none;
+				color: #2B2B2B;
+			}
+
+			a:hover
+			{
+				color: #FFFFFF;
+			}
+
+            a:active
+            {
+                color: #FFFFFF;
+            }
+	
+			.nav
+			{
+				border-top: 1px solid #2B2B2B;
+				border-bottom: 1px solid #2B2B2B;
+				padding: 10px 40px; 
+				margin: 20px;
+				text-align: center;
+				width: auto;
+				display: inline-block;
+				font-size: 24px;
+				font-family: MyFirstFont;
+			}
+
+			.nav:hover
+			{
+				background-color: #EE0505; 
+			}
+			
+            .nav:active
+			{
+				background-color: #EE0505; 
+			}
+
+			.header_div
+			{
+				text-align: center;
+				height: 100;
+				border-bottom: 10px solid #2B2B2B;
+			}
+
+            .bio
+            {
+                overflow: hidden; 
+                margin: 15px; 
+                border: 4px solid #EE0505;
+                background-color: transparent;
+                width: 200px;
+                min-height: 248px;
+                display: inline-block;
+                box-shadow: 2px 2px 5px #888888;
+
+            }
+                .bio p
+                {
+
+				    font-family: 'BenchNine', sans-serif;
+                    font-size: 14px;
+                    text-align: left;
+                    margin-left: 5px;
+                }
+
+                .bio a:hover
+                {
+                    color: #05E6EE;
+                }
+
+            .bio_outter
+            {
+                width: 100%;
+                margin-left: auto ;
+                margin-right: auto ;
+                text-align:center;
+            }
+
+            .bio_header
+            {
+				font-family: 'Courgette', sans-serif;
+				font-size: 16px;
+                text-align: left;
+                margin-left: 10px;
+            }
+
+            .slider_frame
+            {
+                width:70%;
+                border: 6px solid #2B2B2B;
+                margin:auto;
+                margin-top: 100px;
+                margin-bottom: 100px;
+                box-shadow: 4px 4px 5px #888888;
+            }
+                .slider_frame td
+                {
+                    float: center;
+                }
+
+                .slider_frame p
+                {
+				    font-family: 'BenchNine', sans-serif;
+                    font-size: 16px;
+                    margin-left: 5px;
+                }
+			#org_info
+			{
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="header_div">
+			<a href="#">
+				<div class="nav">
+					Home
+				</div>
+			</a>
+			<a href="#">
+				<div class="nav">
+					Crises
+				</div>
+			</a>
+			<a href="#">
+				<div class="nav">
+					Organizations
+				</div>
+			</a>
+			<a href="#">
+				<div class="nav">
+					People
+				</div>
+			</a>
+			<a href="#">
+				<div class="nav">
+					Utilities
+				</div>
+			</a>
+		<h1>ORGANIZATION | {{ org_name }}</h1>
+		</div>
+		
+		<div id="org_info">
+			This is the spot where organization info will go.
+		</div>
+<!--
+        <table class="slider_frame">
+            <tr>
+            <td> <h2 style="margin: 5px;">What is this?</h2><p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi malesuada, ligula sit amet tempor euismod, purus justo congue ante, at interdum lectus urna at ante. Cras sollicitudin pharetra libero, et ultrices nunc vehicula nec. Duis luctus diam consectetur facilisis consectetur. Nunc non urna sed lectus blandit condimentum. Maecenas congue aliquet velit, commodo viverra nulla bibendum sed. Vivamus id euismod enim. Vestibulum interdum mattis massa a vulputate. Nullam mollis nisi vestibulum sollicitudin accumsan.</p> </td>
+            <td>
+                <div id="slider">
+                    <img style="width: 200px; height: 150px" src="static/wcdb/Corgi1.jpg" alt="Look! a cute corgi" />
+                    <img style="width: 200px; height: 150px" src="static/wcdb/Corgi2.jpg" alt="Here are two Corgis playing... cute" />
+                    <img style="width: 200px; height: 150px" src="static/wcdb/Corgi3.jpg" alt="Alas! another corgi" />
+                    <img style="width: 200px; height: 150px" src="static/wcdb/pug1.jpg" alt="The pug life chose me." />
+                </div>
+            </td>
+            </tr>
+        </table>
+        
+        <div class="bio_outter">
+            <div class="bio">
+                <h2 class="bio_header">James Kunze</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+            <div class="bio">
+                <h2 class="bio_header">Travis Cammack</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+            <div class="bio">
+                <h2 class="bio_header">Rene Trevi&ntilde;o</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+        </div>
+        <div class="bio_outter">
+            <div class="bio">
+                <h2 class="bio_header">Andy Echeverr&iacute;a</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+            <div class="bio">
+                <h2 class="bio_header">Taylor Connon</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+            <div class="bio">
+                <h2 class="bio_header">Zachary Lozano</h2>
+                <p>
+                    I am a Junior CS student interning at <a href="http://www.solisystems.com">SoliSYSTEMS</a> as a developer, primarily producing web-applications for internal use.  I also split my time at the University of Texas ITS Help Desk as a student consultant. <br><br> You can reach me at zlozano@utexas.edu or follow me on <a href="https://twitter.com/zaclozano">Twitter.</a>
+                </p>
+            </div>
+        </div>
+-->
+	</body>
+</html>
