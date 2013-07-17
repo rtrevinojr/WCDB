@@ -11,9 +11,9 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'cache_money.views.home', name='home'),
     # url(r'^cache_money/', include('cache_money.foo.urls')),
-    url(r'^wcdb/export/$', views.export_prompt),
-    url(r'^wcdb/export/raw/$', views.export_raw),
-    url(r'^wcdb/export/download/$', views.export_download),
+    url(r'^wcdb/export/$', views.export_prompt, name="export"),
+    url(r'^wcdb/export/raw/$', views.export_raw, name="export_raw"),
+    url(r'^wcdb/export/download/$', views.export_download, name="export_download"),
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
