@@ -1,7 +1,7 @@
 # Create your views here.
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
-from wcdb_ie import xml_mods2etree, xml_etree2xml
+from wcdb.wcdb_ie import xml_mods2etree, xml_etree2xml
 
 def export_prompt (request) :
     return render_to_response('export_prompt.html', {'xml' : get_exported_table()})
