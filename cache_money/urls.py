@@ -11,7 +11,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'cache_money.views.home', name='home'),
     # url(r'^cache_money/', include('cache_money.foo.urls')),
-    url(r'^wcdb/export/$', views.export_prompt, name="export"),
+    url(r'^wcdb/export/$', TemplateView.as_view(template_name='export_prompt.html'), name="export"),
+    #url(r'^wcdb/export/$', views.export_prompt, name="export"),
     url(r'^wcdb/export/raw/$', views.export_raw, name="export_raw"),
     url(r'^wcdb/export/download/$', views.export_download, name="export_download"),
 
