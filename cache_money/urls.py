@@ -20,5 +20,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
 	# leave off  wcdb
-    url(r'^/$', TemplateView.as_view(template_name='index.html'), name="wcdb"),
+    url(r'^(home)?/?$', TemplateView.as_view(template_name='index.html'), name="wcdb"),
 )
