@@ -1,6 +1,7 @@
 # Create your views here.
 from django.shortcuts import render_to_response
 from django.http import HttpResponse
+from django.db import DatabaseError
 from wcdb.wcdb_export import xml_mods2etree, xml_etree2xml
 
 def export_prompt (request) :
@@ -15,4 +16,7 @@ def export_download(request) :
     return response
 
 def get_exported_table() :
-    return xml_etree2xml(xml_mods2etree())
+    try:
+        return xml_etree2xml(xml_mods2etree())
+    except DatabaseError:
+        return "<TableNotInitialized>\n\t<ohno></ohno>\n</TableNotInitialized>"
