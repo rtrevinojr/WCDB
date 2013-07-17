@@ -180,6 +180,10 @@ nav.bio ul {
                                         color: #E9E6E6;
                                         /*text-align: justify;*/
                                 }   
+                                    nav.bio ul li a span h3{
+                                        font: 20px "BenchNine", sans-serif;
+                                        margin:0;
+                                    }
                                         nav.bio ul li a:hover span {
                                                 display: block;
                                         }   
