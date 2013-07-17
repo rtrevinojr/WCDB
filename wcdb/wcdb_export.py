@@ -238,6 +238,3 @@ def xml_etree2xml_helper (et, xml, tabs='') :
 	xml += '</'
 	xml += et.tag
 	xml += ' >'
-
-def init_db () :
-    
