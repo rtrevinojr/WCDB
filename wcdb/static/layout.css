@@ -1,0 +1,291 @@
+/*
+LICENSE
+
+Copyright (c) 2012, David Lewthwaite, www.lewty.org.uk, dave@lewty.org.uk
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+
+    Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+    Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+body
+{
+    background-image: url(bg-body.jpg);
+    margin: 0;
+    padding: 0;
+}
+
+span.header
+{
+    font-family: 'BenchNine', sans-serif;
+    text-align: left;
+    margin: 5%;
+    color: #E9E6E6;
+        /*display: inline;*/
+    font-size: 58px;
+}
+
+h2
+{
+    font-family: 'BenchNine', sans-serif;
+    font-size: 28px;
+    color: #E9E6E6;
+     margin-bottom: -24px;
+}
+
+p
+{
+
+        font-family: 'BenchNine', sans-serif;
+        font-size: 19px;
+        color: #E9E6E6;
+        margin-right: 15px;
+        text-align: justify;
+}
+
+/* Begin Top Menu  */
+
+/* Full table control */
+nav.menu
+{
+    display: inline;
+    float: right;
+    position: relative;
+    margin-top: 0;
+    font-family: 'BenchNine';
+    font-size: 25px;
+    color: #A4A4A4;
+
+}
+
+/* Control of second level lists (drop down level 1) */
+nav.menu ul ul {
+	display: none;
+	background: transparent; border-radius: 0px; padding: 0;
+    margin-top: 0px;
+	position: absolute; top: 100%;
+
+}
+
+nav.menu ul li:hover > ul {
+	display: block;
+	z-index: 2;
+	opacity: 0.95;
+}
+
+/* control of the first level list (main nav bar) */
+nav.menu ul {
+	background: rgb(110, 4, 4, 0.3); 
+	padding: 0px 20px;
+	/*border-radius: 10px; */ 
+	list-style: none;
+	position: relative;
+	display: inline-block;
+}
+
+nav.menu ul:after {
+	content: ""; clear: both; display: block;
+}
+
+nav.menu ul li {
+	float: left;
+    color: #A4A4A4;
+}
+
+nav.menu ul li:hover {
+	background: rgb(110, 4, 4, 0.3);
+}
+
+nav.menu ul li:hover a {
+	color: #046EC8;
+}
+
+/* Taylor addition to fix the drop down link colors */
+nav.menu ul li:hover ul li a {
+	color: #E9E6E6;
+}
+
+nav.menu ul li a {
+	display: block; padding: 5px 40px;
+	text-decoration: none;
+	color: #E9E6E6;
+}
+
+nav.menu ul ul li {
+	float: none; 
+	position: relative;
+	color: #000000;
+}
+
+nav.menu ul ul li a {
+	padding: 8px 40px;
+	color: #E9E6E6;
+
+}	
+
+/* was changed from ul ul li a:hover*/
+nav.menu ul li ul li a:hover {
+	color: #046EC8;
+}
+
+/* End Top Menu */
+
+
+
+
+/* Begin NAV Options */
+nav.bio ul {
+        list-style: none; position: relative;
+        padding: 12px;
+}
+        nav.bio ul li {
+                float: left; margin: 0 20px 0 0;
+                display: block;
+        }   
+                nav.bio ul li a { 
+                        display: block; width: 110px; height: 110px;
+                }   
+                        nav.bio ul li.andy a { 
+                                background-image: url(place_holder.gif);
+                                background-position: top center;
+                        }  
+                        nav.bio ul li.james a { 
+                                background-image: url(place_holder.gif);
+                                background-position: center center;
+                        }   
+                        nav.bio ul li.taylor a { 
+                                background-image: url(place_holder.gif);
+                                background-position: center center;
+                        }   
+    			        nav.bio ul li.rene a { 
+                                background-image: url(place_holder.gif);
+                                background-position: center center;
+                        }  
+                        nav.bio ul li.travis a { 
+                                background-image: url(place_holder.gif);
+                                background-position: center center;
+                        }
+                        nav.bio ul li.zac a { 
+                                background-image: url(zac.jpg);
+                                background-position: top center;
+                        }
+
+                                nav.bio ul li a span {
+                                        font: 18px "BenchNine", sans-serif;
+                                        position: absolute; left: 800px; top: 9px;
+                                        display: none;
+                                        color: #E9E6E6;
+                                        /*text-align: justify;*/
+                                }   
+                                    nav.bio ul li a span h3{
+                                        font: 20px "BenchNine", sans-serif;
+                                        margin:0;
+                                    }
+                                        nav.bio ul li a:hover span {
+                                                display: block;
+                                        }   
+    
+                                nav.bio ul li.andy a span {
+                                        color: #E9E6E6;
+                                }   
+                                nav.bio ul li.james a span {
+                                        color: #E9E6E6;
+                                }   
+                                nav.bio ul li.taylor a span {
+                                        color: #E9E6E6;
+                                }   
+				                nav.bio ul li.rene a span {
+                                        color: #E9E6E6;
+                                }   
+                                nav.bio ul li.log a span {
+                                        color: #E9E6E6;
+                                }
+/*end NAV Options */
+
+				
+.header_div
+{
+    background-color: rgba(110, 4, 4, 0.3); /* Color white with alpha 0.9*/
+    height: 80px;
+}
+
+/*
+.bio
+{
+    overflow: hidden; 
+    margin: 15px; 
+    border: 4px solid rgba(110, 4, 4, 0.3);
+    background-color: transparent;
+    width: 180px;
+    min-height: 228px;
+    display: inline-block;
+}
+    .bio p
+    {
+
+	    font-family: 'BenchNine', sans-serif;
+        font-size: 14px;
+        text-align: left;
+        margin-left: 5px;
+    }
+    .bio a:hover
+    {   
+        color: #05E6EE;
+    }   
+
+    .bio h3
+    {   
+        font-family: 'BenchNine', sans-serif;
+        font-size: 28px;
+        margin-bottom: -6px;
+        margin-left: 5px;
+    }   
+*/
+.bio_outter
+{   
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-bottom: 10px;
+}   
+
+.bio_header
+{   
+    font-family: 'Courgette', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 10px;
+}   
+
+.slider_frame
+{   
+    width:1100px;
+    margin:auto;
+    margin-top: 70px;
+    margin-bottom: 70px;
+}   
+    .slider_frame td
+    {   
+        float: center;
+    }   
+
+    .slider_frame p
+    {   
+        font-family: 'BenchNine', sans-serif;
+        font-size: 19px;
+        color: #E9E6E6;
+        margin-right: 15px;
+        text-align: justify;
+    }
+div.footer
+{
+
+        font-family: 'BenchNine', sans-serif;
+        font-size: 19px;
+        color: #E9E6E6;
+        text-align:center;
+        padding-bottom: 10px;
+}

@@ -1,0 +1,303 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=9,chrome=1"/>
+		<meta charset="utf-8">
+		<link href='http://fonts.googleapis.com/css?family=BenchNine' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Sarina' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Courgette' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Michroma' rel='stylesheet' type='text/css'>
+        <link href="{{ STATIC_URL }}js-image-slider.css" rel="stylesheet" type="text/css" />
+        <link href="{{ STATIC_URL }}layout.css" rel="stylesheet" type="text/css" />
+        <script src="{{ STATIC_URL }}js-image-slider.js" type="text/javascript"></script>
+		<title>Cache Money | World Crises DB</title>
+        <script src= https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js></script>
+		<style>
+			body
+			{
+				background-image: url({{ STATIC_URL }}bg-body.jpg);
+                margin: 0;
+                padding: 0;
+			}
+
+			span
+			{
+				font-family: 'BenchNine', sans-serif;
+				text-align: left;
+                margin: 5%;
+                /*display: inline;*/
+				font-size: 58px;
+			}
+
+            .headings
+            {
+				font-family: 'BenchNine', sans-serif;
+                font-size: 28px;
+                color: #AFAFAF;
+            }
+
+			@font-face
+			{
+				font-family: MyFirstFont;
+				src: url(static/wcdb/Cicle_Semi.ttf);
+			}
+	
+			a:link
+			{
+				text-decoration: none;
+				color: #212020;
+			}
+
+			a:visited
+			{
+				text-decoration: none;
+				color: #2B2B2B;
+			}
+
+			a:hover
+			{
+				color: #AFAFAF;
+			}
+
+            a:active
+            {
+                color: #FFFFFF;
+            }
+	
+			.nav
+			{
+				/*border-top: 1px solid #2B2B2B;
+				border-bottom: 1px solid #2B2B2B;*/
+				padding: 15px; 20px; 
+				text-align: center;
+				width: auto;
+				display: inline-block;
+                font-family: 'BenchNine';
+				font-size: 32px;
+                font-color: #212020;
+                vertical-align: bottom;
+                float:right;
+                line-height: 53px;
+			}
+
+			.nav:hover
+			{
+			}
+			
+            .nav:active
+			{
+				background-color: #EE0505; 
+			}
+
+			.header_div
+			{
+                background-color: rgba(110, 4, 4, 0.3); /* Color white with alpha 0.9*/
+                height: 80px;
+			}
+
+			#org_info
+			{
+				overflow: hidden; 
+                margin-left: 50px; 
+                margin-top: 0px;
+                padding: 10px;
+                border: 4px solid rgba(110, 4, 4, 0.3);
+                background-color: transparent;
+                width: 500px;
+                display: inline-block;
+			}
+			#org_history
+			{	
+				text-align: left;
+				vertical-align: top;
+				width: 200px;
+			}
+            .bio
+            {
+                overflow: hidden; 
+                margin: 15px; 
+                border: 4px solid rgba(110, 4, 4, 0.3);
+                background-color: transparent;
+                width: 180px;
+                min-height: 228px;
+                display: inline-block;
+                /*box-shadow: 2px 2px 5px #888888;*/
+
+            }
+                .bio p
+                {
+
+				    font-family: 'BenchNine', sans-serif;
+                    font-size: 14px;
+                    text-align: left;
+                    margin-left: 5px;
+                }
+
+                .bio a:hover
+                {
+                    color: #05E6EE;
+                }
+
+                .bio h3
+                {
+				    font-family: 'BenchNine', sans-serif;
+                    font-size: 28px;
+                    /*color: #AFAFAF;*/
+                    margin-bottom: -6px;
+                    margin-left: 5px;
+                }
+
+            .bio_outter
+            {
+                width: 100%;
+                margin-left: auto ;
+                margin-right: auto ;
+                text-align:center;
+            }
+
+            .bio_header
+            {
+				font-family: 'Courgette', sans-serif;
+				font-size: 16px;
+                text-align: left;
+                margin-left: 10px;
+            }
+
+            .slider_frame
+            {
+            	
+                width:100%;
+                margin-right: auto;
+                margin-top: 70px;
+                margin-bottom: 70px;
+            }
+                .slider_frame td
+                {
+                    float: center;
+                }
+
+            .p1
+            {
+			    font-family: 'BenchNine', sans-serif;
+                font-size: 19px;
+                color: #AFAFAF;
+                margin-right: 15px;
+                text-align: justify;
+            }
+            .UL1
+            {
+            	list-style-type: none;
+            }
+		</style>
+	</head>
+	<body>
+		<div class="header_div">
+		<span >WCDB | Organizations | {{ org_name }}</span>
+			
+<nav class="menu">
+    <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Crises</a></li>
+        <li><a href="">People</a></li>
+        <li><a href="wcdb/org/">Organizations</a></li>
+        <li><a href="">Utilities</a>
+            <ul>
+                <li><a href="">Import</a></li>
+                <li><a href="">Export</a></li>
+                <li><a href="">UnitTests</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+		</div>
+
+        <table border=1 class="slider_frame">
+            <tr>
+            <td id="org_history" style="text-align: left; vertical-align: top;"> 
+                <h2 class="headings">{{ org_name }}org_name</h2>
+                <p class="p1">
+                    {{ org_history }} org_history
+                </p>
+            </td>
+            <td id="slider">
+                <!--<div id="slider">-->
+                {% for img in org_images %}
+                    <img style="width: 200px; height: 150px" src="{{ img }}" />
+                {% endfor %}
+                <!--</div>-->
+            </td>
+            <td style="vertical-align: top">
+            	<div id="org_info">
+            		<p class="p1"><span class="headings">Type:</span>{{ org_type }}</P>
+            		<p class="p1"><span class="headings">Location:</span>{{ org_loc }}</P>
+            		<p><span class="headings">Contact:</span></P>
+            			<!--<ul class="UL1">
+            				{% for con in org_contact %}
+            					<li><a href="{{ con }}" class="p1">{{con}}</a></li>
+            				{% empty %}
+            					<li class="p1">No contact info found</li>
+            				{% endfor %}
+            			</ul>-->
+            		<p><span class="headings">External Links:</span></P>
+            			<!--<ul class="UL1">
+            				{% for ext in org_external %}
+            					<li><a href="{{ ext }}" class="p1">{{ext}}</a></li>
+            				{% empty %}
+            					<li class="p1">No external links found</li>
+            				{% endfor %}
+            			</ul>-->
+            		<p><span class="headings">Social Media:</span></P>
+            			<!--<ul class="UL1">
+            				{% for soc in org_media %}
+            					<li><a href="{{ soc }}" class="p1">{{soc}}</a></li>
+            				{% empty %}
+            					<li class="p1">No social media found</li>
+            				{% endfor %}
+            			</ul>-->
+            	</div>
+            </td>
+            </tr>
+        </table>
+        <!--
+        <div class="bio_outter">
+            <div class="bio">
+                <h3 class="bio_header">James Kunze</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+            <div class="bio">
+                <h3 class="bio_header">Travis Cammack</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+            <div class="bio">
+                <h3 class="bio_header">Rene Trevi&ntilde;o</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+            <div class="bio">
+                <h3 class="bio_header">Andy Echeverr&iacute;a</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+            <div class="bio">
+                <h3 class="bio_header">Taylor Connon</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+            <div class="bio">
+                <h3 class="bio_header">Zachary Lozano</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin faucibus leo sit amet commodo rutrum. Aenean sit amet diam porttitor, egestas est sed, mattis purus. Ut egestas, quam non vehicula egestas, odio dolor cursus lacus, vel suscipit velit enim vel sapien. Cras elementum laoreet diam, in pellentesque lectus euismod ac.
+                </p>
+            </div>
+        </div>-->
+	</body>
+</html>
